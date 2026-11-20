@@ -1,6 +1,6 @@
 # 22 Crack Shot
 
-An informal club for smoothbore rimfire enthusiasts (18+), reviving backyard .22 shot-shell games: thrown round crackers, gallery rows, and the lore of Mossberg Targo, Mo-Skeet-O, the Stevens Crack Shot, and the old carnival shooting galleries. A *Gallery Games* project.
+An informal club for smoothbore rimfire enthusiasts (18+), reviving backyard .22 shot-shell games: thrown round crackers, gallery rows, and the lore of Mossberg Targo, Mo-Skeet-O, the Stevens Crack Shot, and the old carnival shooting galleries. A *Gallery Games* project. The house challenge is [Pull the Sleeve](https://22crackshot.com/pull-the-sleeve): count the sleeve, shoot every cracker, and score as a percent. The Short Stack is the 13-cracker short-format round.
 
 ## What's here
 
@@ -8,7 +8,7 @@ An informal club for smoothbore rimfire enthusiasts (18+), reviving backyard .22
 |---|---|---|
 | `site/` | The club website (plain HTML/CSS, no build step), deployed on Vercel | MIT ([LICENSE](LICENSE)) |
 | `designs/` | 3D-printable traps, cracker rails, stands, holders, score boards | CC BY-NC-SA 4.0 ([LICENSE-DESIGNS.txt](LICENSE-DESIGNS.txt)) |
-| `targets/` | Printable Letter-size PDF targets and score cards | CC BY-NC-SA 4.0 |
+| `targets/` | Printable Letter-size PDF targets and Pull the Sleeve / Short Stack score cards | CC BY-NC-SA 4.0 |
 
 The 22 Crack Shot name, logos, and cracker mark are club branding and are **not** covered by either license; please don't use them on merchandise.
 
