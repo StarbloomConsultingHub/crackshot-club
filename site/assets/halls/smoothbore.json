@@ -12,7 +12,6 @@
    "tags": [
     "Boys’ rifles"
    ],
-   "art": "rifle:block",
    "summary": "The smoothbore Favorite: same as the No. 17 but with a smooth barrel and no rear sight. Exists in .32 rimfire shot too, which makes it the core of our .32 honorable mention.",
    "details": [
     [
@@ -64,7 +63,6 @@
    "tags": [
     "Boys’ rifles"
    ],
-   "art": "rifle:block",
    "summary": "Our namesake. Stevens sold the side-lever Crack Shot from 1890 and the under-lever No. 26 from 1912; the 26½ is the same gun with a smooth bore \"intended for shot cartridges.\" In 1902 a Crack Shot cost $2.25.",
    "details": [
     [
@@ -117,7 +115,6 @@
     "Boys’ rifles",
     "Cousin (not .22)"
    ],
-   "art": "rifle:bolt",
    "summary": "Winchester's only U.S. 9mm Flobert garden gun, roughly 20,000 made and unserialized. A cousin, not a .22, but it belongs in any shot-cartridge hall.",
    "details": [
     [
@@ -165,7 +162,6 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "art": "rifle:bolt",
    "summary": "Smoothbore variant of the prewar Model 41, listed on Remington's history pages. Uncommon and thinly documented.",
    "details": [
     [
@@ -209,7 +205,6 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "art": "rifle:bolt",
    "summary": "Barrel stamped \"SMOOTH BORE – RECESS CHOKE\" with a shotgun bead. Marlin collectors also mention rare 101SB and 80SB smoothbores from the 1940s (unverified).",
    "details": [
     [
@@ -261,7 +256,6 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "art": "rifle:bolt",
    "summary": "The plain-Jane Winchester smoothbore. The Miniature Target Bore version is the rare one.",
    "details": [
     [
@@ -313,7 +307,6 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "art": "rifle:pump",
    "summary": "The blue chip of the Hall. Early guns used Fred Routledge's stepped bore; Winchester then made its own counterbore to avoid royalties. Look for matted receivers and \"FOR SHOT ONLY.\"",
    "details": [
     [
@@ -365,7 +358,6 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "art": "rifle:pump",
    "summary": "The Mo-Skeet-O pump. Barrels stamped \"ROUTLEDGE BORE,\" Mo-Skeet-O, or smoothbore. Routledge partnered with Remington on the bore.",
    "details": [
     [
@@ -417,7 +409,6 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "art": "rifle:bolt",
    "summary": "The working-class Mo-Skeet-O guns. Watch for SB, Mo-Skeet-O, or Skeetrap stamps. Easy to walk past at a gun show.",
    "details": [
     [
@@ -469,7 +460,6 @@
    "tags": [
     "Postwar & revival"
    ],
-   "art": "rifle:bolt",
    "summary": "A special-order Routledge barrel on the humble 514. Gun Digest: add about $100 over a standard 514.",
    "details": [
     [
@@ -517,7 +507,6 @@
    "tags": [
     "Targo"
    ],
-   "art": "rifle:bolt",
    "summary": "Mossberg's miniature-skeet system: smoothbore bolt guns, a Model 1A barrel-mounted trap, and 2 11/16-inch birds. All bolt guns, no pumps. 26T and B42T are the scarce ones (+20%); a complete case and accessories add about 50%.",
    "details": [
     [
@@ -573,7 +562,6 @@
    "tags": [
     "Postwar & revival"
    ],
-   "art": "rifle:bolt",
    "summary": "Mossberg tried again in 1961 with NRA backing. A Mossberg VP later said breaking birds with No. 12 shot was \"just too difficult and discouraging for most shooters.\" We think crackers fix that.",
    "details": [
     [
@@ -625,7 +613,6 @@
    "tags": [
     "Postwar & revival"
    ],
-   "art": "rifle:pump",
    "summary": "The last factory smoothbore pump from a big U.S. maker, until the Henry lever gun changed the game.",
    "details": [
     [
@@ -673,7 +660,6 @@
    "tags": [
     "Postwar & revival"
    ],
-   "art": "rifle:nylon",
    "summary": "Space-age Mohawk-brown nylon meets backyard skeet. Gun Digest singles out the 24-inch SB as a small subset (forum talk: ~200 guns, unverified).",
    "details": [
     [
@@ -717,7 +703,6 @@
    "tags": [
     "Modern"
    ],
-   "art": "rifle:bolt",
    "summary": "Bright front bead, no rear sight, marketed as a \"Garden Gun\" for snake shot.",
    "details": [
     [
@@ -766,7 +751,6 @@
     "Modern",
     "Cousin (not .22)"
    ],
-   "art": "rifle:break",
    "summary": "Europe's garden-gun cartridge in a folding modern package. A cousin, not a .22. The common rifled Little Badger .22 is a different gun.",
    "details": [
     [
@@ -814,7 +798,6 @@
    "tags": [
     "Modern"
    ],
-   "art": "rifle:lever",
    "summary": "The only smoothbore .22 in current production that we know of. Capacity 14 (LR) / 11 (WMR) per Henry's spec table. Overall length 36.5 in.",
    "details": [
     [
@@ -862,7 +845,6 @@
   "tags": [
    "End of the hall"
   ],
-  "art": "cracker",
   "body": [
    "<strong>Yes, there really was a .32.</strong> What’s confirmed: Stevens catalogued its boys’-rifle smoothbores for <strong>.32 rimfire shot cartridges</strong> as well as .22. The <strong>Favorite No.&nbsp;20</strong> was “chambered for the 22 or 32 rimfire shot cartridges and has a smoothbore barrel and no rear sight” (Standard Catalog of Firearms, 2001, as quoted), and Wikipedia lists the <strong>Crack Shot No.&nbsp;26½</strong> for “.22LR Shot Cartridges, .32 Rimfire Shot Cartridges.” The gun our club is named for came in .32 shot.",
    "<strong>Ammo:</strong> .32 rimfire shot loads existed. A Canadian collector reports shooting a No.&nbsp;20 with CIL .32 Long Shot (#10, 1935-dated). That’s one collector’s report.",

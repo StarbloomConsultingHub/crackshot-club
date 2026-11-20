@@ -1,48 +1,536 @@
-/* Hall Engine: walk-in museum corridor (CSS 3D). Shared by Crack Shot halls.
-   Theme with CSS variables on .hx (see docs/hall-engine.md). */
-.hx,.hx-modal{--hx-wall:#F3E6C8;--hx-wainscot:#C41E3A;--hx-trim:#C4A354;--hx-floor-a:#1C2E4A;--hx-floor-b:#2A4063;--hx-ceil:#14213A;--hx-ink:#1C2E4A;--hx-plaque:#FBF4E2;--hx-accent:#C41E3A}
-.hx{position:relative;margin:1rem 0 1.5rem;border-radius:8px;overflow:hidden;background:var(--hx-ceil);color:var(--hx-ink);border:4px solid var(--hx-trim);user-select:none;-webkit-user-select:none}
-.hx-stage{position:relative;isolation:isolate;z-index:0;height:min(72vh,640px);min-height:360px;perspective:700px;perspective-origin:50% 50%;overflow:hidden;outline:none;touch-action:none;cursor:grab}
-.hx-stage:focus-visible{box-shadow:inset 0 0 0 3px var(--hx-trim)}
-.hx-world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
-.hx-world>*{position:absolute;left:0;top:0;transform-origin:0 0;backface-visibility:visible}
-.hx-floor{background:conic-gradient(var(--hx-floor-a) 25%,var(--hx-floor-b) 0 50%,var(--hx-floor-a) 0 75%,var(--hx-floor-b) 0) 0 0/80px 80px}
-.hx-ceil{background:linear-gradient(90deg,var(--hx-ceil) 0 12%,#1f3050 12% 88%,var(--hx-ceil) 88%),var(--hx-ceil)}
-.hx-ceil::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,#ffe9a8 5px,rgba(255,233,168,.0) 7px) 0 0/40px 40px repeat-x;background-position:center 8%;opacity:.95}
-.hx-wall{background:linear-gradient(to bottom,var(--hx-trim) 0 1.5%,var(--hx-wall) 1.5% 60%,var(--hx-trim) 60% 62%,var(--hx-wainscot) 62% 97%,#7a1224 97%);}
-.hx-wall::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(28,46,74,.06) 0 2px,transparent 2px 46px)}
-.hx-end{background:radial-gradient(ellipse at 50% 40%,#2c4572,var(--hx-ceil) 70%);display:flex;align-items:center;justify-content:center}
-.hx-plaque{transform-origin:50% 50%!important;width:300px;padding:10px 12px 12px;border:none;margin:0;font:inherit;text-align:center;cursor:pointer;color:var(--hx-ink);background:var(--hx-plaque);
-  box-shadow:0 0 0 6px var(--hx-trim),0 0 0 8px #8c6f2c,0 18px 30px rgba(0,0,0,.35);border-radius:3px}
-.hx-plaque:hover,.hx-plaque:focus-visible,.hx-plaque.is-near{box-shadow:0 0 0 6px var(--hx-accent),0 0 0 8px #7a1224,0 0 40px rgba(255,220,140,.75);outline:none}
-.hx-plaque svg{display:block;width:100%;height:auto}
-.hx-plaque .hx-pt{display:block;font-family:Rye,Georgia,serif;font-size:19px;line-height:1.15;margin:4px 0 2px}
-.hx-plaque .hx-ps{display:block;font-size:13px;opacity:.8}
-.hx-plaque .hx-tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--hx-ink);color:var(--hx-plaque);padding:1px 6px;border-radius:2px}
-.hx-plaque.hx-final{width:420px;background:var(--hx-trim);box-shadow:0 0 0 8px var(--hx-ink),0 0 0 11px var(--hx-trim),0 0 60px rgba(255,220,140,.6)}
-.hx-plaque.hx-final .hx-pt{font-size:28px}
-.hx-plaque.hx-final .hx-ps{font-size:15px;opacity:1}
-.hx-lamp{width:120px;height:120px;pointer-events:none;background:radial-gradient(circle,rgba(255,236,170,.55),rgba(255,236,170,0) 70%)}
-/* HUD */
-.hx-hud{position:absolute;left:0;right:0;bottom:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem;padding:.55rem;background:linear-gradient(to top,rgba(20,33,58,.92),rgba(20,33,58,0));z-index:3}
-.hx-btn{font:inherit;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;background:var(--hx-accent);color:#fff;border:2px solid var(--hx-trim);border-radius:999px;padding:.4rem .85rem;cursor:pointer;min-width:44px;min-height:40px;touch-action:none}
-.hx-btn.ghost{background:rgba(20,33,58,.85)}
-.hx-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
-.hx-now{position:absolute;left:0;right:0;top:0;padding:.5rem .8rem;color:#fff;font-size:.92rem;letter-spacing:.04em;background:linear-gradient(to bottom,rgba(20,33,58,.9),rgba(20,33,58,0));z-index:3;display:flex;justify-content:space-between;gap:.6rem;pointer-events:none}
-.hx-now b{font-family:Rye,Georgia,serif;font-weight:400;color:var(--hx-trim)}
-.hx-bar{position:absolute;left:0;bottom:0;height:4px;background:var(--hx-trim);z-index:4;width:0}
-.hx-hint{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);z-index:3;background:rgba(20,33,58,.88);color:#fff;padding:.7rem 1rem;border-radius:8px;border:2px solid var(--hx-trim);text-align:center;font-size:.95rem;max-width:88%;pointer-events:none;transition:opacity .6s}
-.hx-hint.gone{opacity:0}
-/* Modal card */
-.hx-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(10,18,34,.72);padding:1rem}
-.hx-modal.open{display:flex}
-.hx-card{background:var(--hx-plaque);color:var(--hx-ink);max-width:640px;width:100%;max-height:88vh;overflow:auto;border-radius:8px;border-top:8px solid var(--hx-accent);box-shadow:0 0 0 4px var(--hx-trim);padding:1rem 1.2rem 1.2rem;position:relative;user-select:text;-webkit-user-select:text}
-.hx-card h2{margin:.3rem 0 .2rem;font-family:Rye,Georgia,serif;font-weight:400;font-size:1.5rem;line-height:1.15}
-.hx-card .hx-sub{margin:0 0 .6rem;opacity:.85}
-.hx-card dl{display:grid;grid-template-columns:auto 1fr;gap:.25rem .8rem;margin:.6rem 0}
-.hx-card dt{font-weight:600}.hx-card dd{margin:0}
-.hx-card .hx-src{font-size:.85rem}
-.hx-card .hx-close{position:absolute;right:.5rem;top:.4rem;font-size:1.6rem;line-height:1;background:none;border:none;color:var(--hx-ink);cursor:pointer;padding:.2rem .5rem}
-.hx-card .hx-nav{display:flex;justify-content:space-between;gap:.5rem;margin-top:.8rem}
-.hx-card svg{width:100%;max-width:420px;height:auto;display:block;margin:.2rem auto}
-@media (max-width:760px){.hx-stage{height:62vh;min-height:330px}.hx-btn{font-size:.8rem;padding:.35rem .65rem}.hx-now{font-size:.8rem}}
+/* The walk-in rooms share their display cases and controls. The collection
+   changes the wall finish, metalwork, and painted woodwork. */
+.museum-hall {
+  --hx-wall: #9c9d84;
+  --hx-wainscot: #615143;
+  --hx-trim: #b59861;
+  --hx-ceil: #c7bb9f;
+  --hx-ink: #222c26;
+  --hx-plaque: #faf7ef;
+  --hx-accent: #304d42;
+  --hx-rail: #26362f;
+  --hx-rule: #cfccbe;
+  --hx-muted: #535c53;
+  --hx-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --hx-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #f4f2ea;
+}
+.museum-hall[data-collection="midway"] {
+  --hx-wall: #a67968;
+  --hx-wainscot: #503c34;
+  --hx-trim: #be9c68;
+  --hx-ceil: #c8b599;
+  --hx-accent: #673c36;
+  --hx-rail: #3c2c29;
+}
+.museum-hall .marquee {
+  height: 3px;
+  background: var(--hx-trim);
+}
+.museum-hall main {
+  color: var(--hx-ink);
+  font: 1rem/1.65 var(--hx-sans);
+  padding-block: clamp(1.5rem, 4vw, 3.5rem) 4rem;
+}
+.museum-hall main > .wrap {
+  max-width: 70rem;
+  padding-inline: clamp(1rem, 3.4vw, 2.5rem);
+}
+.museum-hall main h1,
+.museum-hall main h2,
+.museum-hall main h3,
+.hx-card h2 {
+  font-family: var(--hx-serif);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  color: var(--hx-ink);
+  text-wrap: balance;
+}
+.museum-hall main h1 {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 1.02;
+  margin: 0 0 .7rem;
+}
+.museum-hall .lede-s {
+  color: var(--hx-muted);
+  max-width: 46rem;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+.museum-hall .viewtoggle {
+  border: 1px solid #a4a99d;
+  border-radius: 3px;
+  margin: .1rem 0 .2rem;
+  background: #faf9f3;
+}
+.museum-hall .viewtoggle .vt {
+  min-height: 42px;
+  padding: .4rem 1rem;
+  color: var(--hx-ink);
+  font: 600 .875rem/1.2 var(--hx-sans);
+  letter-spacing: .012em;
+  text-transform: none;
+}
+.museum-hall .viewtoggle .vt.on { background: var(--hx-accent); color: white; }
+.museum-hall .viewtoggle .vt:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
+
+.hx {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1rem 0 .6rem;
+  border: 1px solid #3a3327;
+  border-radius: 3px;
+  background: var(--hx-rail);
+  color: var(--hx-plaque);
+  box-shadow: 0 3px 9px #332b1d24;
+  user-select: none;
+}
+.hx-stage {
+  position: relative;
+  order: 1;
+  isolation: isolate;
+  overflow: hidden;
+  height: clamp(300px, 56vh, 500px);
+  background: #352f24;
+  perspective: 700px;
+  perspective-origin: 50% 50%;
+  outline: none;
+  touch-action: none;
+  cursor: grab;
+}
+.hx:not(:has(.hx-stage)) { min-height: clamp(395px, calc(56vh + 95px), 595px); }
+.hx-wall-back {
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--hx-wall) 0 66%, var(--hx-wainscot) 66%);
+}
+.hx-stage:active { cursor: grabbing; }
+.hx-stage:focus-visible::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 3px;
+  border: 2px solid white;
+  outline: 1px solid #30271a;
+}
+.hx-world {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.hx-world > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  backface-visibility: visible;
+}
+
+/* Each bay is one tile deep and three tiles wide. Light falls away from
+   the centre aisle towards the edge of the photographed parquet. */
+.hx-floor {
+  background-color: #856648;
+  background-image:
+    linear-gradient(90deg, #21130976, transparent 20%, #f8dfa71f 51%, transparent 81%, #21130976),
+    url("halls/materials/parquet.webp");
+  background-size: 100% 100%, 33.333% 100%;
+  background-blend-mode: normal, normal;
+}
+.hx-bench-shadow { background: radial-gradient(ellipse,#241b12a6,transparent 68%); pointer-events: none; }
+.hx-bench-seat {
+  background: repeating-linear-gradient(0deg,#8e7657 0 1px,#6e5238 2px 20px,#49392b 21px 22px);
+  border: 1px solid #3b2e20;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 3px #ad8d622b;
+}
+.hx-bench-edge { background: linear-gradient(#735638,#3d3024); }
+.hx-bench-base { background: linear-gradient(90deg,#3e3324,#776044 12%,#594937 80%,#3e3324); }
+
+.hx-ceil {
+  background-color: var(--hx-ceil);
+  background-image:
+    linear-gradient(90deg, #4c3a2873, transparent 15% 85%, #4c3a2873),
+    linear-gradient(180deg, #665741 0, #c7bfa6 3px, #9d8c74 6px, #807059 9px, #4a3d2b82 12px, transparent 22px),
+    url("halls/materials/plaster.webp");
+  background-size: auto, auto, 50% auto;
+  background-blend-mode: normal, normal, soft-light;
+}
+.hx-ceil::after {
+  content: "";
+  position: absolute;
+  inset: 12% 16% 17%;
+  border: 2px solid #796b54;
+  box-shadow: inset 0 1px 3px #473b2e88, 0 1px 2px #f5edd9;
+  background: radial-gradient(ellipse at 50% 42%, #f7edd166, transparent 66%);
+}
+.hx-wall {
+  background-color: var(--hx-wall);
+  background-image:
+    linear-gradient(180deg, #3d30255c, transparent 9% 64%, #342a204d 80%, #342a207d),
+    radial-gradient(ellipse at 53% 34%, #fff2cd59, transparent 66%),
+    url("halls/materials/plaster.webp");
+  background-size: auto, auto, auto 64%;
+  background-blend-mode: normal, soft-light, soft-light;
+  box-shadow: inset 0 5px 0 #9f9277, inset 0 8px 0 #655c49, inset 0 11px 0 #c6b997;
+}
+.hx-wall::before {
+  content: "";
+  position: absolute;
+  inset: 66% 0 0;
+  background:
+    linear-gradient(180deg, #bc9c70 0, #69533b 3px, #2d251d 7px, #9d8260 9px, transparent 13px calc(100% - 10px), #32281f 100%),
+    repeating-linear-gradient(2deg, #21170d08 0 1px, transparent 2px 6px),
+    var(--hx-wainscot);
+  box-shadow: 0 -2px 4px #32281d4a;
+}
+.hx-wall::after {
+  content: "";
+  position: absolute;
+  inset: calc(66% + 18px) 7% 13px;
+  border: 3px solid #4c3d2b;
+  outline: 1px solid #b39b76;
+  box-shadow: inset 1px 2px 4px #241a1266, 1px 2px 1px #aa927380;
+  background: linear-gradient(135deg, #35281928, transparent 58%);
+}
+.hx-end {
+  background: radial-gradient(ellipse at 50% 32%, #f5dfa85c, transparent 70%), var(--hx-wall);
+  border: 10px double var(--hx-wainscot);
+}
+.hx-lamp {
+  width: 110px;
+  height: 24px;
+  pointer-events: none;
+  transform-origin: center !important;
+}
+.hx-lamp::before,
+.hx-lamp::after {
+  content: "";
+  position: absolute;
+}
+.hx-lamp::before {
+  top: 0;
+  left: 45%;
+  width: 10%;
+  height: 55%;
+  background: linear-gradient(90deg, #51402a, #b39d76, #655238);
+}
+.hx-lamp::after {
+  inset: 42% 3% 14%;
+  border-radius: 3px;
+  border: 1px solid #58472f;
+  background: linear-gradient(#c8b58f, #a18a63 40%, #695234 72%, #ffedbb 84%);
+  box-shadow: 0 4px 8px #ffe5a747;
+}
+
+/* Typography is sized in scene pixels. The engine scales each display as
+   the visitor walks. The uncropped photograph sits inside its own mount. */
+.hx-plaque {
+  transform-origin: center !important;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 11px 13px 12px;
+  margin: 0;
+  border: 3px ridge #8e7552;
+  border-radius: 1px;
+  background: #efe8d7;
+  color: #292c26;
+  text-align: left;
+  font: 15px/1.3 var(--hx-sans);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px #382e23, 0 0 0 6px #887356, 1px 8px 10px #1e160e59;
+}
+.hx-plaque:hover,
+.hx-plaque:focus-visible,
+.hx-plaque.is-near { outline: 2px solid #efd8a0; outline-offset: 5px; }
+.hx-plaque:focus-visible { outline: 4px solid white; }
+.hx-mount {
+  display: grid;
+  place-items: center;
+  height: 112px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background: #e6dfce;
+  border: 1px solid #a89776;
+}
+.hx-mount img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.hx-plaque .hx-tag,
+.hx-photo-label {
+  display: block;
+  font: 650 .75rem/1.4 var(--hx-sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.hx-plaque .hx-tag { color: #575a48; margin: 0 0 6px; }
+.hx-plaque.hx-record { padding: 18px 20px; background: #e6dec9; }
+.hx-plaque .hx-pt {
+  display: block;
+  font: 400 24px/1.03 var(--hx-serif);
+  letter-spacing: -.03em;
+}
+.hx-plaque .hx-ps { display: block; margin-top: 5px; font: 14px/1.3 var(--hx-sans); color: #4a4d43; }
+.hx-plaque.hx-final { width: 420px; padding: 18px 22px; }
+.hx-final .hx-pt { font-size: 30px; }
+
+.hx-now,
+.hx-hud {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--hx-sans);
+  background: var(--hx-rail);
+}
+.hx-now {
+  order: 0;
+  justify-content: space-between;
+  padding: .55rem clamp(.65rem, 2.2vw, 1.3rem);
+  border-bottom: 1px solid var(--hx-trim);
+  color: #e5e3d5;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+.hx-now b { color: #fffaf0; font-weight: 600; }
+.hx-now > :last-child { flex: none; }
+.hx-hud {
+  order: 2;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: .5rem;
+  border-top: 1px solid #b99c6c;
+}
+.hx-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: .45rem .9rem;
+  border: 1px solid #cec4aa;
+  border-radius: 2px;
+  background: #ece7d8;
+  color: #25372d;
+  font: 600 .875rem/1.15 var(--hx-sans);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.hx-btn.ghost { color: #f7f4e8; background: transparent; border-color: #b5b2a180; }
+.hx-btn:hover { background: white; color: #24352b; }
+.hx-btn:focus-visible { outline: 3px solid #e8ca83; outline-offset: 2px; }
+.hx-btn:disabled { opacity: .48; cursor: default; }
+.hx-bar {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #eed299;
+}
+.hx-hint {
+  position: absolute;
+  z-index: 2;
+  bottom: 4.6rem;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  transform: translateX(-50%);
+  padding: .4rem .8rem;
+  border-radius: 2px;
+  color: #fffdf6;
+  background: #1c2822ed;
+  text-align: center;
+  font: .875rem/1.4 var(--hx-sans);
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.hx-hint.gone { opacity: 0; }
+.museum-hall #walk-view > p.src {
+  margin-top: .65rem;
+  max-width: 80ch;
+  font: .875rem/1.55 var(--hx-sans);
+  color: var(--hx-muted);
+  opacity: 1;
+}
+
+/* Reading rooms and the printed catalogue share the same object credit. */
+.hx-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  place-items: center;
+  padding: clamp(.5rem, 3vw, 2rem);
+  background: #142018d9;
+}
+.hx-modal.open { display: grid; }
+.hx-card {
+  position: relative;
+  width: min(100%, 47rem);
+  max-height: 92vh;
+  max-height: 92dvh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1.1rem, 3.5vw, 2.4rem);
+  border: 1px solid #b6a684;
+  border-top: 4px solid var(--hx-trim);
+  border-radius: 2px;
+  background: var(--hx-plaque);
+  color: var(--hx-ink);
+  box-shadow: 0 14px 65px #05090570;
+  font: 1rem/1.6 var(--hx-sans);
+}
+.hx-close {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  float: right;
+  width: 44px;
+  height: 44px;
+  margin: -.5rem -.5rem .4rem .6rem;
+  border-radius: 50%;
+  border: 1px solid var(--hx-rule);
+  background: var(--hx-plaque);
+  color: var(--hx-ink);
+  font: 1.65rem/1 var(--hx-sans);
+  cursor: pointer;
+}
+.hx-card h2 {
+  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+  line-height: 1.07;
+  margin: .35rem 0 .45rem;
+}
+.hx-card .hx-sub { margin: 0 0 1rem; color: var(--hx-muted); }
+.hx-card .hx-tag {
+  display: inline-block;
+  color: var(--hx-accent);
+  font: 650 .75rem/1.5 var(--hx-sans);
+  text-transform: uppercase;
+  letter-spacing: .085em;
+  margin-right: .75rem;
+}
+.hx-photo { clear: both; margin: 1.1rem 0; }
+.hx-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(48vh, 24rem);
+  object-fit: contain;
+  background: #e8e5da;
+}
+.hx-photo figcaption {
+  padding: .6rem 0 .65rem;
+  border-bottom: 1px solid var(--hx-rule);
+  color: var(--hx-muted);
+  font: .875rem/1.5 var(--hx-sans);
+  overflow-wrap: anywhere;
+}
+.hx-credit { display: block; font: .8rem/1.5 var(--hx-sans); margin-top: .35rem; }
+.hx-reference { display: block; margin-top: .35rem; }
+.hx-photo-label { color: var(--hx-accent); margin: 0 0 .2rem; }
+.hx-card a,
+.museum-hall main a:not(.btn) { color: var(--hx-accent); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.hx-card a:hover,
+.museum-hall main a:not(.btn):hover { color: #151b17; }
+.hx-card dl,
+.museum-hall .exhibit dl {
+  display: grid;
+  grid-template-columns: minmax(4rem, max-content) minmax(0,1fr);
+  column-gap: 1rem;
+  row-gap: .4rem;
+  margin: 1rem 0;
+}
+.hx-card dt, .museum-hall .exhibit dt { font-weight: 650; }
+.hx-card dd, .museum-hall .exhibit dd { margin: 0; overflow-wrap: anywhere; }
+.hx-card .hx-src { font-size: .875rem; overflow-wrap: anywhere; }
+.hx-card .hx-nav { display: flex; justify-content: space-between; gap: .6rem; padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--hx-rule); }
+.hx-nav .hx-btn { background: var(--hx-accent); color: #fff; border-color: var(--hx-accent); }
+.hx-nav .ghost { background: transparent; color: var(--hx-accent); }
+.hx-card :focus-visible, .museum-hall #list-view :focus-visible { outline: 2px solid #875620; outline-offset: 3px; }
+
+.museum-hall #list-view { margin-top: 1.8rem; }
+.museum-hall #list-view h2 { margin-top: 1.4em; }
+.museum-hall .hall-tools {
+  position: static;
+  padding: 1rem 0;
+  border-block: 1px solid var(--hx-rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--hx-ink);
+}
+.museum-hall .hall-tools input {
+  min-height: 44px;
+  max-width: 34rem;
+  border: 1px solid #a6a99a;
+  border-radius: 2px;
+  background: var(--hx-plaque);
+  color: var(--hx-ink);
+}
+.museum-hall .chip {
+  min-height: 36px;
+  padding: .3rem .65rem;
+  border-color: #a9ad9e;
+  border-radius: 2px;
+  color: var(--hx-accent);
+  font-size: .875rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.museum-hall .chip.on, .museum-hall .chip:hover { background: var(--hx-accent); border-color: var(--hx-accent); color: white; }
+.museum-hall .hall-tools .count { color: var(--hx-muted); }
+.museum-hall .hall-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.15rem; align-items: start; }
+.museum-hall .exhibit {
+  min-width: 0;
+  padding: clamp(.9rem, 2vw, 1.3rem);
+  border: 1px solid var(--hx-rule);
+  border-top: 2px solid #8f8d77;
+  border-radius: 2px;
+  background: var(--hx-plaque);
+  overflow-wrap: anywhere;
+  scroll-margin-top: 1rem;
+}
+.museum-hall .exhibit h3 {
+  margin: .4rem 0;
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  line-height: 1.12;
+}
+.museum-hall .exhibit .maker { font-size: .9rem; line-height: 1.45; color: var(--hx-muted); opacity: 1; }
+.museum-hall .exhibit .tag { line-height: 1.4; }
+.museum-hall .exhibit .tag span {
+  margin-right: .35rem;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--hx-accent);
+  font-weight: 650;
+}
+.museum-hall .exhibit .hx-photo { margin-block: .7rem 1rem; }
+.museum-hall .exhibit .hx-photo img { height: 11rem; }
+.museum-hall .exhibit details { padding-top: .6rem; border-top: 1px solid var(--hx-rule); }
+.museum-hall .exhibit details summary { color: var(--hx-accent); font-size: .9rem; font-weight: 650; }
+.museum-hall .exhibit dl { display: block; }
+.museum-hall .exhibit dt:not(:first-child) { margin-top: .6rem; }
+
+@media (max-width: 640px) {
+  .hx-stage { height: clamp(290px, 48vh, 390px); }
+  .hx-hud { gap: .3rem; }
+  .hx-hud .hx-btn { padding-inline: .55rem; }
+  .hx-now { gap: .3rem; font-size: .8rem; }
+  .hx-card dl { display: block; }
+  .hx-card dd { margin-bottom: .55rem; }
+  .hx-card h2 { padding-right: .25rem; }
+  .museum-hall #list-view { margin-top: 1rem; }
+}
+@media (max-width: 360px) {
+  .hx-hud { gap: .18rem; padding-inline: .2rem; }
+  .hx-hud .hx-btn { min-width: 40px; padding-inline: .3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hx-hint { transition: none; }
+}
