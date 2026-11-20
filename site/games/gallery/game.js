@@ -139,18 +139,16 @@ function finalScreen(){
     '<div class="stats"><span><b>'+acc+'%</b>accuracy</span><span><b>'+g.hits+'</b>hits</span><span><b>'+g.best+'</b>best streak</span></div>'+
     '<textarea rows="3" readonly aria-label="Share text">'+share+'</textarea>'+
     '<div class="btns"><button data-act="share">Copy my score</button><button class="ghost" data-focus data-act="again">Play again</button><a class="btn ghost" href="/games">More games</a></div>'+
-    '<p class="fine">Copying just puts the text on your clipboard. Nothing is posted.</p>');
+    '<p class="archive-link"><a href="/gallery-atlas#coney-island">Meet the Coney Island maker behind the iron gallery tradition</a></p>');
   ui.el.querySelector('[data-act=share]').onclick=function(){CS.copy(share,this)};
 }
 function titleScreen(){
   g.mode='title';
-  ui.show('<p class="kicker">Crack Shot arcade \u00b7 game 1</p><h2>Gallery Row</h2>'+
-    '<p>Step up to the counter. Three conveyor belts of cast-iron ducks, rabbits, and owls, two brass bells, two spinners, and a cracker bullseye. One tube of '+AMMO+' shots per round, '+ROUNDS+' rounds, and the belt speeds up each time.</p>'+
-    '<ul><li><strong>Aim &amp; shoot:</strong> click or tap a target.</li><li>Owl 30 \u00b7 Rabbit 20 \u00b7 Duck 10 \u00b7 Gold duck 50 + 3 shots \u00b7 Bell 50 \u00b7 Spinner 15 \u00b7 Cracker bullseye 100</li><li>5 hits in a row = \u00d72, 10 = \u00d73, 15 = \u00d74. A miss resets it.</li><li>Empty the tube early and leftover time pays a bonus, scaled by your accuracy.</li></ul>'+
-    '<p class="keys"><kbd>P</kbd>/<kbd>Esc</kbd> pause \u00b7 <kbd>M</kbd> mute \u00b7 <kbd>Space</kbd> start</p>'+
-    '<p>High score: <strong>'+CS.fmt(HI.get())+'</strong></p>'+
-    '<div class="btns"><button data-focus data-act="start">Step right up</button></div>'+
-    '<p class="fine">Original game inspired by classic carnival shooting galleries. Just for fun; always follow real-world range safety.</p>');
+  ui.show('<p class="kicker">22 Crack Shot Arcade</p><h2>Gallery Row</h2>'+
+    '<p>Three timed rounds on a moving midway. Click or tap the painted animals and ring the bells to build your score.</p>'+
+    '<div class="btns"><button data-focus data-act="start">Play Gallery Row</button></div>'+
+    '<details class="cabinet-rules"><summary>Scoring and controls</summary><ul><li><strong>Aim &amp; shoot:</strong> click or tap a target.</li><li>Owl 30 \u00b7 Rabbit 20 \u00b7 Duck 10 \u00b7 Gold duck 50 + 3 shots \u00b7 Bell 50 \u00b7 Spinner 15 \u00b7 Cracker bullseye 100</li><li>5 hits in a row = \u00d72, 10 = \u00d73, 15 = \u00d74. A miss resets it.</li><li>Empty the tube early and leftover time pays a bonus, scaled by your accuracy.</li></ul><p>P or Esc to pause. M to mute.</p></details>'+
+    '<p class="fine">Personal best · '+CS.fmt(HI.get())+' points</p>');
 }
 function pauseScreen(){
   ui.show('<p class="kicker">Gallery Row</p><h2>Paused</h2><p>Score <strong>'+CS.fmt(g.score)+'</strong> \u00b7 Round '+(g.round+1)+' \u00b7 '+g.ammo+' shots left</p>'+
@@ -240,7 +238,7 @@ function respawn(r,t){t.up=true;t.f=0;t.gold=r.type==='duck'&&g.mode==='play'&&M
 /* ---------------- draw ---------------- */
 function draw(){
   st.begin();var W=L.W,H=L.H,i;
-  ctx.save();if(g.shake>0)ctx.translate(R(-g.shake,g.shake),R(-g.shake,g.shake));
+  ctx.save();if(g.shake>0 && !CS.reduceMotion())ctx.translate(R(-g.shake,g.shake),R(-g.shake,g.shake));
   ctx.drawImage(bg,0,0,W,H);
   holes.forEach(function(h){ctx.globalAlpha=h.t>5?1-(h.t-5)/2:1;ctx.fillStyle='#0a1220';ctx.beginPath();ctx.arc(h.x,h.y,3.2,0,TAU);ctx.fill();ctx.strokeStyle='rgba(243,230,200,.35)';ctx.lineWidth=1;ctx.stroke()});ctx.globalAlpha=1;
   if(plate)drawPlate(plate);
@@ -325,7 +323,7 @@ function drawRifle(){
   ctx.fillStyle='#2b2b2b';ctx.fillRect(len*0.48,-3.5,len*0.52,7);
   ctx.fillStyle='#7a4620';ctx.fillRect(len*0.55-g.recoil*8,1,len*0.2,8);
   ctx.fillStyle=P.brass;ctx.fillRect(len-4,-6,4,3);
-  if(g.flash>0){ctx.globalAlpha=g.flash;ctx.fillStyle='#fff3c4';ctx.beginPath();for(var i=0;i<10;i++){var a=i*TAU/10,r=i%2?7:18+R(0,8);ctx.lineTo(len+10+Math.cos(a)*r,Math.sin(a)*r)}ctx.fill();ctx.globalAlpha=1}
+  if(g.flash>0 && !CS.reduceMotion()){ctx.globalAlpha=g.flash;ctx.fillStyle='#fff3c4';ctx.beginPath();for(var i=0;i<10;i++){var a=i*TAU/10,r=i%2?7:18+R(0,8);ctx.lineTo(len+10+Math.cos(a)*r,Math.sin(a)*r)}ctx.fill();ctx.globalAlpha=1}
   ctx.restore();
 }
 function drawAim(){

@@ -6,7 +6,7 @@ var P=CS.PAL,R=CS.rand,A=CS.audio,TAU=Math.PI*2,lerp=CS.lerp;
 var cv=document.getElementById('c'),L={},st,ctx,bg=document.createElement('canvas'),parts=CS.particles(),pops=[],halves=[];
 var HI=CS.hi('crackshot'),HIS=CS.hi('crackshot-sleeve');
 var SLEEVE=25,THROWS=13; // 12 pairs + 1 single = 25 crackers, same as the club's Cracker Count string
-var g={mode:'title',sleeve:1,score:0,res:[],throwIdx:0,phase:'pull',phaseT:0,shots:3,crackers:[],paused:false,total:0,shotsFired:0,best:0,stop:0,shake:0,flash:0,crow:{y:0,mood:'',t:0},outcome:'',cleanCount:0,sleeveBreaks:[]};
+var g={mode:'title',sleeve:1,score:0,res:[],throwIdx:0,phase:'pull',phaseT:0,shots:3,crackers:[],paused:false,successfulShots:0,shotsFired:0,best:0,stop:0,shake:0,flash:0,crow:{y:0,mood:'',t:0},outcome:'',cleanCount:0,sleeveBreaks:[]};
 var aim={x:480,y:260,show:false,tap:0,kick:0,pellets:[],pt:0,over:false};
 var img=new Image();img.src='/games/assets/cracker.png';
 st=CS.stage(cv,layout);ctx=st.ctx;
@@ -52,7 +52,7 @@ function cacheBG(){
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(L.W)cacheBG()});
 
 /* ---------------- flow ---------------- */
-function newGame(){g.sleeve=1;g.score=0;g.total=0;g.shotsFired=0;g.cleanCount=0;g.sleeveBreaks=[];startSleeve()}
+function newGame(){g.sleeve=1;g.score=0;g.best=0;g.successfulShots=0;g.shotsFired=0;g.cleanCount=0;g.sleeveBreaks=[];startSleeve()}
 function startSleeve(){
   g.res=[];for(var i=0;i<SLEEVE;i++)g.res.push(null);g.throwIdx=0;g.crackers=[];halves.length=0;pops.length=0;parts.clear();
   g.mode='play';g.paused=false;ui.hide();ui.pauseIcon(false);
@@ -99,7 +99,7 @@ function endSleeve(){
 function sleeveRow(){return '<p aria-hidden="true" style="letter-spacing:2px;font-size:1.1rem;line-height:1.2;word-break:break-all">'+g.res.map(function(r){return r==='hit'?'<span style="color:#b8913a">\u25CF</span>':'<span style="color:#C41E3A">\u00d7</span>'}).join('')+'</p>'}
 function finalScreen(lastB){
   g.mode='over';A.sad();
-  var isNew=HI.set(g.score),hi=HI.get(),bestS=HIS.get(),acc=g.shotsFired?Math.round(g.total/g.shotsFired*100):0;
+  var isNew=HI.set(g.score),hi=HI.get(),bestS=HIS.get(),acc=g.shotsFired?Math.round(g.successfulShots/g.shotsFired*100):0;
   var title=g.cleanCount?'Clean Sleeve club':g.best>=22?'Crack Shot':g.best>=18?'Sharpshooter':g.best>=15?'Cracker Smasher':'Crumb Bum';
   var share='Cracker Count (arcade): best sleeve '+g.best+'/25, '+g.sleeveBreaks.length+' sleeve'+(g.sleeveBreaks.length>1?'s':'')+', '+CS.fmt(g.score)+' pts in Crack Shot, the thrown-cracker game from the Crack Shot .22 LR Club. Can you clean a sleeve? '+location.origin+'/games/crackshot';
   ui.show('<p class="kicker">Out of crackers \u00b7 sleeve '+g.sleeve+'</p><h2>'+title+'</h2><p class="big">'+CS.fmt(g.score)+'</p>'+(isNew?'<p class="new">\u2605 New high score \u2605</p>':'<p>High score: <strong>'+CS.fmt(hi)+'</strong></p>')+
@@ -112,13 +112,11 @@ function finalScreen(lastB){
 }
 function titleScreen(){
   g.mode='title';
-  ui.show('<img class="ico" src="/games/assets/cracker.png" alt=""><p class="kicker">Crack Shot arcade \u00b7 game 2</p><h2>Crack Shot</h2>'+
-    '<p>The trap throws round, scalloped crackers in pairs. You\'ve got a smoothbore and a pocket of .22 shot shells: <strong>3 shots per pair</strong>. A sleeve is 25 crackers, just like the club\'s Cracker Count. Break enough to earn the next sleeve, which throws faster.</p>'+
-    '<ul><li><strong>Aim:</strong> move the shot-pattern ring (mouse) or just tap where the cracker is (touch).</li><li>Anything inside the ring breaks. Dead center <em>smokes</em> it into crumbs.</li><li>Hit them early while they\'re close and big. They shrink as they fly off.</li><li>Break both with one shot for a <strong>Two-fer</strong>. 25 for 25 is a <strong>Clean Sleeve</strong>.</li><li>Watch out for Crumbs the crow. He laughs at misses.</li></ul>'+
-    '<p class="keys"><kbd>P</kbd>/<kbd>Esc</kbd> pause \u00b7 <kbd>M</kbd> mute \u00b7 <kbd>Space</kbd> start</p>'+
-    '<p>High score: <strong>'+CS.fmt(HI.get())+'</strong> \u00b7 Best sleeve: <strong>'+HIS.get()+'/25</strong></p>'+
-    '<div class="btns"><button data-focus data-act="start">Pull!</button></div>'+
-    '<p class="fine">Original game inspired by classic light-gun games. Just for fun; always follow real-world range safety.</p>');
+  ui.show('<p class="kicker">22 Crack Shot Arcade</p><h2>Crack Shot</h2>'+
+    '<p>A sleeve of 25 crackers and a crow keeping score. Tap or click the flying crackers and see how far you can go.</p>'+
+    '<div class="btns"><button data-focus data-act="start">Play Crack Shot</button></div>'+
+    '<details class="cabinet-rules"><summary>Scoring and controls</summary><ul><li>A sleeve contains 25 crackers. A complete sleeve of breaks earns the Clean Sleeve badge.</li><li>Your score counts both crackers in a double break. Accuracy counts a successful click or tap once.</li><li>Each completed quota unlocks the next sleeve.</li></ul><p>P or Esc to pause. M to mute.</p></details>'+
+    '<p class="fine">Personal best · '+CS.fmt(HI.get())+' points</p>');
 }
 function pauseScreen(){
   ui.show('<p class="kicker">Crack Shot</p><h2>Paused</h2><p>Sleeve '+g.sleeve+' \u00b7 '+breaks()+' broken \u00b7 score '+CS.fmt(g.score)+'</p>'+
@@ -140,7 +138,8 @@ function fire(p){
   var hits=[];
   g.crackers.forEach(function(c){if(c.state!=='fly'||c.t<=0)return;var d=Math.hypot(p.x-c.x,p.y-c.y);
     if(d<=L.pr+c.r*0.72){hits.push({c:c,smoked:d<=L.pr*0.42+c.r*0.45})}});
-  hits.forEach(function(h){var c=h.c;c.state='broken';g.res[c.slot]='hit';g.total++;
+  if (hits.length) g.successfulShots++;
+  hits.forEach(function(h){var c=h.c;c.state='broken';g.res[c.slot]='hit';
     var pts=(h.smoked?150:100)*g.sleeve;g.score+=pts;
     pops.push({x:c.x,y:c.y-c.r-8,t:0,text:(h.smoked?'SMOKED! ':'BREAK! ')+'+'+pts,col:h.smoked?P.cream:P.brass,big:h.smoked});
     burst(c,h.smoked)});
@@ -190,9 +189,9 @@ function drawCracker(x,y,r,rot,alpha){if(!img.complete||!img.naturalWidth){ctx.f
   ctx.save();ctx.globalAlpha=alpha==null?1:alpha;ctx.translate(x,y);ctx.rotate(rot);ctx.drawImage(img,-r,-r,r*2,r*2);ctx.restore()}
 function draw(){
   st.begin();var W=L.W,H=L.H,i;
-  ctx.save();if(g.shake>0)ctx.translate(R(-g.shake,g.shake),R(-g.shake,g.shake));
+  ctx.save();if(g.shake>0 && !CS.reduceMotion())ctx.translate(R(-g.shake,g.shake),R(-g.shake,g.shake));
   ctx.drawImage(bg,0,0,W,H);
-  if(g.flash>0){ctx.fillStyle='rgba(255,246,214,'+(g.flash*0.12)+')';ctx.fillRect(0,0,W,L.groundBottom)}
+  if(g.flash>0 && !CS.reduceMotion()){ctx.fillStyle='rgba(255,246,214,'+(g.flash*0.12)+')';ctx.fillRect(0,0,W,L.groundBottom)}
   // crow behind trap house
   drawCrow();
   // trap house

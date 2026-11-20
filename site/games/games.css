@@ -36,3 +36,11 @@ body.game{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow
 .panel .keys{font-size:.85rem;color:#4a4a4a}
 .panel kbd{font:600 .8rem Oswald,sans-serif;border:1px solid #b9a77a;border-bottom-width:2px;border-radius:4px;padding:0 .35em;background:#fff}
 .panel img.ico{width:72px;height:72px;margin:-.2rem auto 0;display:block}
+
+.cabinet-rules {margin:1rem auto .65rem;text-align:left;border-block:1px solid #b7a77f}
+.cabinet-rules summary {cursor:pointer;font-weight:600;padding:.5rem 0}
+.panel .archive-link {margin:1rem auto .25rem;font-family:Georgia,serif}
+.archive-link a {color:var(--navy);text-underline-offset:.18em}
+.game :is(a,button,summary):focus-visible {outline:3px solid #b55716;outline-offset:3px}
+.gbtns button {width:44px;height:44px}
+@media(max-width:500px){.panel {padding:1.15rem 1.1rem}.gbar h1 small {display:none}}
