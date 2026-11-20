@@ -1,0 +1,48 @@
+/* Hall Engine: walk-in museum corridor (CSS 3D). Shared by Crack Shot halls.
+   Theme with CSS variables on .hx (see docs/hall-engine.md). */
+.hx,.hx-modal{--hx-wall:#F3E6C8;--hx-wainscot:#C41E3A;--hx-trim:#C4A354;--hx-floor-a:#1C2E4A;--hx-floor-b:#2A4063;--hx-ceil:#14213A;--hx-ink:#1C2E4A;--hx-plaque:#FBF4E2;--hx-accent:#C41E3A}
+.hx{position:relative;margin:1rem 0 1.5rem;border-radius:8px;overflow:hidden;background:var(--hx-ceil);color:var(--hx-ink);border:4px solid var(--hx-trim);user-select:none;-webkit-user-select:none}
+.hx-stage{position:relative;isolation:isolate;z-index:0;height:min(72vh,640px);min-height:360px;perspective:700px;perspective-origin:50% 50%;overflow:hidden;outline:none;touch-action:none;cursor:grab}
+.hx-stage:focus-visible{box-shadow:inset 0 0 0 3px var(--hx-trim)}
+.hx-world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.hx-world>*{position:absolute;left:0;top:0;transform-origin:0 0;backface-visibility:visible}
+.hx-floor{background:conic-gradient(var(--hx-floor-a) 25%,var(--hx-floor-b) 0 50%,var(--hx-floor-a) 0 75%,var(--hx-floor-b) 0) 0 0/80px 80px}
+.hx-ceil{background:linear-gradient(90deg,var(--hx-ceil) 0 12%,#1f3050 12% 88%,var(--hx-ceil) 88%),var(--hx-ceil)}
+.hx-ceil::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,#ffe9a8 5px,rgba(255,233,168,.0) 7px) 0 0/40px 40px repeat-x;background-position:center 8%;opacity:.95}
+.hx-wall{background:linear-gradient(to bottom,var(--hx-trim) 0 1.5%,var(--hx-wall) 1.5% 60%,var(--hx-trim) 60% 62%,var(--hx-wainscot) 62% 97%,#7a1224 97%);}
+.hx-wall::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(28,46,74,.06) 0 2px,transparent 2px 46px)}
+.hx-end{background:radial-gradient(ellipse at 50% 40%,#2c4572,var(--hx-ceil) 70%);display:flex;align-items:center;justify-content:center}
+.hx-plaque{transform-origin:50% 50%!important;width:300px;padding:10px 12px 12px;border:none;margin:0;font:inherit;text-align:center;cursor:pointer;color:var(--hx-ink);background:var(--hx-plaque);
+  box-shadow:0 0 0 6px var(--hx-trim),0 0 0 8px #8c6f2c,0 18px 30px rgba(0,0,0,.35);border-radius:3px}
+.hx-plaque:hover,.hx-plaque:focus-visible,.hx-plaque.is-near{box-shadow:0 0 0 6px var(--hx-accent),0 0 0 8px #7a1224,0 0 40px rgba(255,220,140,.75);outline:none}
+.hx-plaque svg{display:block;width:100%;height:auto}
+.hx-plaque .hx-pt{display:block;font-family:Rye,Georgia,serif;font-size:19px;line-height:1.15;margin:4px 0 2px}
+.hx-plaque .hx-ps{display:block;font-size:13px;opacity:.8}
+.hx-plaque .hx-tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--hx-ink);color:var(--hx-plaque);padding:1px 6px;border-radius:2px}
+.hx-plaque.hx-final{width:420px;background:var(--hx-trim);box-shadow:0 0 0 8px var(--hx-ink),0 0 0 11px var(--hx-trim),0 0 60px rgba(255,220,140,.6)}
+.hx-plaque.hx-final .hx-pt{font-size:28px}
+.hx-plaque.hx-final .hx-ps{font-size:15px;opacity:1}
+.hx-lamp{width:120px;height:120px;pointer-events:none;background:radial-gradient(circle,rgba(255,236,170,.55),rgba(255,236,170,0) 70%)}
+/* HUD */
+.hx-hud{position:absolute;left:0;right:0;bottom:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem;padding:.55rem;background:linear-gradient(to top,rgba(20,33,58,.92),rgba(20,33,58,0));z-index:3}
+.hx-btn{font:inherit;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;background:var(--hx-accent);color:#fff;border:2px solid var(--hx-trim);border-radius:999px;padding:.4rem .85rem;cursor:pointer;min-width:44px;min-height:40px;touch-action:none}
+.hx-btn.ghost{background:rgba(20,33,58,.85)}
+.hx-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.hx-now{position:absolute;left:0;right:0;top:0;padding:.5rem .8rem;color:#fff;font-size:.92rem;letter-spacing:.04em;background:linear-gradient(to bottom,rgba(20,33,58,.9),rgba(20,33,58,0));z-index:3;display:flex;justify-content:space-between;gap:.6rem;pointer-events:none}
+.hx-now b{font-family:Rye,Georgia,serif;font-weight:400;color:var(--hx-trim)}
+.hx-bar{position:absolute;left:0;bottom:0;height:4px;background:var(--hx-trim);z-index:4;width:0}
+.hx-hint{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);z-index:3;background:rgba(20,33,58,.88);color:#fff;padding:.7rem 1rem;border-radius:8px;border:2px solid var(--hx-trim);text-align:center;font-size:.95rem;max-width:88%;pointer-events:none;transition:opacity .6s}
+.hx-hint.gone{opacity:0}
+/* Modal card */
+.hx-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(10,18,34,.72);padding:1rem}
+.hx-modal.open{display:flex}
+.hx-card{background:var(--hx-plaque);color:var(--hx-ink);max-width:640px;width:100%;max-height:88vh;overflow:auto;border-radius:8px;border-top:8px solid var(--hx-accent);box-shadow:0 0 0 4px var(--hx-trim);padding:1rem 1.2rem 1.2rem;position:relative;user-select:text;-webkit-user-select:text}
+.hx-card h2{margin:.3rem 0 .2rem;font-family:Rye,Georgia,serif;font-weight:400;font-size:1.5rem;line-height:1.15}
+.hx-card .hx-sub{margin:0 0 .6rem;opacity:.85}
+.hx-card dl{display:grid;grid-template-columns:auto 1fr;gap:.25rem .8rem;margin:.6rem 0}
+.hx-card dt{font-weight:600}.hx-card dd{margin:0}
+.hx-card .hx-src{font-size:.85rem}
+.hx-card .hx-close{position:absolute;right:.5rem;top:.4rem;font-size:1.6rem;line-height:1;background:none;border:none;color:var(--hx-ink);cursor:pointer;padding:.2rem .5rem}
+.hx-card .hx-nav{display:flex;justify-content:space-between;gap:.5rem;margin-top:.8rem}
+.hx-card svg{width:100%;max-width:420px;height:auto;display:block;margin:.2rem auto}
+@media (max-width:760px){.hx-stage{height:62vh;min-height:330px}.hx-btn{font-size:.8rem;padding:.35rem .65rem}.hx-now{font-size:.8rem}}

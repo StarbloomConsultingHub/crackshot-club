@@ -91,3 +91,8 @@ ol.timeline li::before{content:"";position:absolute;left:-11px;top:.55rem;width:
 .hall-table{font-size:.88rem}
 .none{font-style:italic}
 @media (max-width:760px){.hall-tools{position:static}.exhibit{scroll-margin-top:1rem}}
+/* view toggle */
+.viewtoggle{display:inline-flex;border:2px solid var(--navy);border-radius:999px;overflow:hidden;margin:.8rem 0 .2rem}
+.viewtoggle .vt{font:inherit;text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;padding:.45rem 1rem;border:none;background:transparent;color:var(--navy);cursor:pointer}
+.viewtoggle .vt.on{background:var(--navy);color:var(--cream)}
+kbd{font-family:inherit;font-size:.85em;background:var(--paper);border:1px solid rgba(28,46,74,.4);border-bottom-width:2px;border-radius:3px;padding:0 .3em}

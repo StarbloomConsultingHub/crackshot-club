@@ -1,0 +1,895 @@
+{
+ "schema": "crackshot-hall/1",
+ "title": "The Smoothbore Hall",
+ "updated": "2026-11-20",
+ "exhibits": [
+  {
+   "id": "stevens-20",
+   "title": "Favorite No. 20",
+   "plaqueTitle": "Stevens Favorite No. 20",
+   "subtitle": "J. Stevens Arms · c. 1894–1935 (Favorite family; No. 20 end date not isolated)",
+   "plaqueSub": "c. 1894–1935",
+   "tags": [
+    "Boys’ rifles"
+   ],
+   "art": "rifle:block",
+   "summary": "The smoothbore Favorite: same as the No. 17 but with a smooth barrel and no rear sight. Exists in .32 rimfire shot too, which makes it the core of our .32 honorable mention.",
+   "details": [
+    [
+     "Maker",
+     "J. Stevens Arms"
+    ],
+    [
+     "Years",
+     "c. 1894–1935 (Favorite family; No. 20 end date not isolated)"
+    ],
+    [
+     "Action",
+     "Falling-block single shot, takedown"
+    ],
+    [
+     "Barrel",
+     "24 in (some reported 22 in)"
+    ],
+    [
+     "Chamber",
+     ".22 rimfire shot or .32 rimfire shot"
+    ],
+    [
+     "Value snapshot",
+     "$75–$250 (2011 Blue Book grades, 60%–100%); $150 sold (2011 Proxibid). Unverified for today's market."
+    ]
+   ],
+   "sources": [
+    [
+     "Wikipedia: Stevens Boys Rifles",
+     "https://en.wikipedia.org/wiki/Stevens_Boys_Rifles"
+    ],
+    [
+     "SASS Wire thread quoting 2001 Standard Catalog of Firearms & 2011 Blue Book (18 Jan 2012)",
+     "https://forums.sassnet.com/index.php?/topic/182391-ot-old-gun-gurus-stevens-favorite-smooth-bore/"
+    ],
+    [
+     "Proxibid lot (2011)",
+     "https://www.proxibid.com/lotinformation/11990964/stevens-favorite-mod-20-rifle-22-cal-smoothbore"
+    ]
+   ]
+  },
+  {
+   "id": "stevens-26half",
+   "title": "Crack Shot No. 26½",
+   "plaqueTitle": "Stevens Crack Shot No. 26½",
+   "subtitle": "J. Stevens Arms · Within No. 26 run, 1912–1939 (+1943 batch); exact 26½ years disputed",
+   "plaqueSub": "Within No. 26 run, 1912–1939",
+   "tags": [
+    "Boys’ rifles"
+   ],
+   "art": "rifle:block",
+   "summary": "Our namesake. Stevens sold the side-lever Crack Shot from 1890 and the under-lever No. 26 from 1912; the 26½ is the same gun with a smooth bore \"intended for shot cartridges.\" In 1902 a Crack Shot cost $2.25.",
+   "details": [
+    [
+     "Maker",
+     "J. Stevens Arms"
+    ],
+    [
+     "Years",
+     "Within No. 26 run, 1912–1939 (+1943 batch); exact 26½ years disputed"
+    ],
+    [
+     "Action",
+     "Falling-block single shot, under-lever, takedown"
+    ],
+    [
+     "Barrel",
+     "18 or 22 in (as No. 26)"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot or .32 rimfire shot"
+    ],
+    [
+     "Value snapshot",
+     "$250 sold (iCollector, 2025). One comp only: unverified as a range. 2011 Blue Book put it about $25 under a No. 20."
+    ]
+   ],
+   "sources": [
+    [
+     "Wikipedia: Stevens Boys Rifles",
+     "https://en.wikipedia.org/wiki/Stevens_Boys_Rifles"
+    ],
+    [
+     "iCollector lot (2025)",
+     "https://www.icollector.com/Stevens-Crack-Shot-Model-26-1-2-22-Shot-Rifle_i57207488"
+    ],
+    [
+     "SASS Wire thread quoting 2001 Standard Catalog of Firearms & 2011 Blue Book (18 Jan 2012)",
+     "https://forums.sassnet.com/index.php?/topic/182391-ot-old-gun-gurus-stevens-favorite-smooth-bore/"
+    ]
+   ]
+  },
+  {
+   "id": "win-36",
+   "title": "Model 36",
+   "plaqueTitle": "Winchester Model 36",
+   "subtitle": "Winchester · 1920–1927",
+   "plaqueSub": "1920–1927",
+   "tags": [
+    "Boys’ rifles",
+    "Cousin (not .22)"
+   ],
+   "art": "rifle:bolt",
+   "summary": "Winchester's only U.S. 9mm Flobert garden gun, roughly 20,000 made and unserialized. A cousin, not a .22, but it belongs in any shot-cartridge hall.",
+   "details": [
+    [
+     "Maker",
+     "Winchester"
+    ],
+    [
+     "Years",
+     "1920–1927"
+    ],
+    [
+     "Action",
+     "Bolt single shot (cocking-piece)"
+    ],
+    [
+     "Barrel",
+     "18 in"
+    ],
+    [
+     "Chamber",
+     "9mm Flobert rimfire shot (also 9mm ball)"
+    ],
+    [
+     "Value snapshot",
+     "$400–$800 typical (GUNS Magazine, 2023); individual hammers to ~$1,080 reported, unverified."
+    ]
+   ],
+   "sources": [
+    [
+     "GUNS Magazine: \"Winchester Model 36 Smoothbore 9mm\"",
+     "https://gunsmagazine.com/guns/winchester-model-36-smoothbore-9mm/"
+    ],
+    [
+     "gunserials.com: Model 36",
+     "https://gunserials.com/winchester/model-36"
+    ]
+   ]
+  },
+  {
+   "id": "rem-41sb",
+   "title": "41 SB Targetmaster",
+   "plaqueTitle": "Remington 41 SB",
+   "subtitle": "Remington · c. 1936–1939 (parent 41)",
+   "plaqueSub": "c. 1936–1939",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "art": "rifle:bolt",
+   "summary": "Smoothbore variant of the prewar Model 41, listed on Remington's history pages. Uncommon and thinly documented.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "c. 1936–1939 (parent 41)"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "—"
+    ],
+    [
+     "Chamber",
+     ".22 S/L/LR shot"
+    ],
+    [
+     "Value snapshot",
+     "No reliable comp found (unverified)."
+    ]
+   ],
+   "sources": [
+    [
+     "Tincanbandit: \"The Remington 500 Series Rifles\" (Dec 2018)",
+     "https://tincanbandit.blogspot.com/2018/12/featured-gun-remington-500-series-rifles.html"
+    ]
+   ]
+  },
+  {
+   "id": "marlin-100sb",
+   "title": "Model 100SB",
+   "plaqueTitle": "Marlin 100SB",
+   "subtitle": "Marlin · 1936–1941",
+   "plaqueSub": "1936–1941",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "art": "rifle:bolt",
+   "summary": "Barrel stamped \"SMOOTH BORE – RECESS CHOKE\" with a shotgun bead. Marlin collectors also mention rare 101SB and 80SB smoothbores from the 1940s (unverified).",
+   "details": [
+    [
+     "Maker",
+     "Marlin"
+    ],
+    [
+     "Years",
+     "1936–1941"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "—"
+    ],
+    [
+     "Chamber",
+     ".22 S/L/LR; marked \"FOR 22 LONG RIFLE SHOT CTGS\""
+    ],
+    [
+     "Value snapshot",
+     "No dated sold price captured (unverified)."
+    ]
+   ],
+   "sources": [
+    [
+     "Rock Island Auction: Marlin 100SB lot",
+     "https://www.rockislandauction.com/detail/5014/781/marlin-model-100sb-smooth-bore-single-shot-bolt-action-rifle"
+    ],
+    [
+     "Rimfire Central: Old Marlin single shot",
+     "https://www.rimfirecentral.com/threads/old-marlin-single-shot.99595"
+    ],
+    [
+     "Marlin Collectors forum: .22 smoothbores",
+     "https://marlin-collectors.com/forum/viewtopic.php?t=13308"
+    ]
+   ]
+  },
+  {
+   "id": "win-67sb",
+   "title": "Model 67 Smoothbore / Miniature Target Bore",
+   "plaqueTitle": "Winchester Model 67 SB",
+   "subtitle": "Winchester · SB from 1936 or 1937; Miniature Target Bore from 1940",
+   "plaqueSub": "SB from 1936 or 1937",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "art": "rifle:bolt",
+   "summary": "The plain-Jane Winchester smoothbore. The Miniature Target Bore version is the rare one.",
+   "details": [
+    [
+     "Maker",
+     "Winchester"
+    ],
+    [
+     "Years",
+     "SB from 1936 or 1937; Miniature Target Bore from 1940"
+    ],
+    [
+     "Action",
+     "Bolt single shot, takedown"
+    ],
+    [
+     "Barrel",
+     "— (standard 67 was 27 in; confirm)"
+    ],
+    [
+     "Chamber",
+     ".22 S/L/LR shot; Miniature Target Bore: .22 LR shot"
+    ],
+    [
+     "Value snapshot",
+     "About $500 in NRA Good (American Rifleman method: +100% over a $250 67A); Miniature Target Bore est. $1,700–$2,300 (Cowan's estimate, unrealized)."
+    ]
+   ],
+   "sources": [
+    [
+     "American Rifleman: \"This Old Gun: Winchester Model 67\"",
+     "https://www.americanrifleman.org/content/this-old-gun-winchester-model-67/"
+    ],
+    [
+     "VALÉORINE: Winchester Model 67",
+     "https://www.valeorine.com/reference/winchester-model-67"
+    ],
+    [
+     "Bidsquare / Cowan's lot",
+     "https://www.bidsquare.com/online-auctions/cowans/extremely-rare-winchester-model-67-miniature-target-bored-rifle-918282"
+    ]
+   ]
+  },
+  {
+   "id": "win-61",
+   "title": "Model 61 \"Shot Only\" (Routledge, later Winchester counterbore)",
+   "plaqueTitle": "Winchester Model 61 “Shot Only”",
+   "subtitle": "Winchester · Routledge: 1938–1939 (~75 guns); counterbore: from ~1940",
+   "plaqueSub": "Routledge: 1938–1939",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "art": "rifle:pump",
+   "summary": "The blue chip of the Hall. Early guns used Fred Routledge's stepped bore; Winchester then made its own counterbore to avoid royalties. Look for matted receivers and \"FOR SHOT ONLY.\"",
+   "details": [
+    [
+     "Maker",
+     "Winchester"
+    ],
+    [
+     "Years",
+     "Routledge: 1938–1939 (~75 guns); counterbore: from ~1940"
+    ],
+    [
+     "Action",
+     "Hammerless pump, tube magazine"
+    ],
+    [
+     "Barrel",
+     "24 in"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot only"
+    ],
+    [
+     "Value snapshot",
+     "$3,000–$6,000 estimates (Rock Island, 2024, restored 1939 Routledge guns); $9,222.50 sold (LSB, 1951 gun, ~97%)."
+    ]
+   ],
+   "sources": [
+    [
+     "Rock Island Auction lot 3498 (25 Aug 2024)",
+     "https://www.rockislandauction.com/detail/4092/3498/winchester-model-61-slide-action-rifle-in-22-lr-for-shot-only"
+    ],
+    [
+     "LSB Auctions Model 61 smoothbore",
+     "https://lsbauctions.com/excellent-winchester-model-61-smooth-routledge-bore-22-pump-action-rifle/"
+    ],
+    [
+     "Westley Richards used-gun note on Routledge vs. Winchester counterbore 61s",
+     "https://www.westleyrichards.com/usedguns/view/shotguns/1532815516-winchester--22-shot-only-model-61-smooth-bore/"
+    ]
+   ]
+  },
+  {
+   "id": "rem-121sb",
+   "title": "121 Fieldmaster SB (Routledge bore)",
+   "plaqueTitle": "Remington 121 SB",
+   "subtitle": "Remington · Routledge shipments from Feb 1939; to 1954",
+   "plaqueSub": "Routledge shipments from Feb 1939",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "art": "rifle:pump",
+   "summary": "The Mo-Skeet-O pump. Barrels stamped \"ROUTLEDGE BORE,\" Mo-Skeet-O, or smoothbore. Routledge partnered with Remington on the bore.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "Routledge shipments from Feb 1939; to 1954"
+    ],
+    [
+     "Action",
+     "Pump, tube magazine, takedown"
+    ],
+    [
+     "Barrel",
+     "24 in"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot"
+    ],
+    [
+     "Value snapshot",
+     "$1,400–$1,650 sold, 2023–Jan 2026 (LSB, CT Firearms, Legacy Collectibles, Horst/HiBid)."
+    ]
+   ],
+   "sources": [
+    [
+     "CT Firearms Auction: 121 Routledge",
+     "https://ctfirearmsauction.com/auction_item/remington-121-fieldmaster-routledge-22-lr-shot-2/"
+    ],
+    [
+     "Rimfire Central: 121 Fieldmaster shot gun",
+     "https://www.rimfirecentral.com/threads/121-fieldmaster-shot-gun.441226/"
+    ],
+    [
+     "SouthCoastToday: \"Moskeet would be a fun shooting game to resurrect\" (24 Jun 2017)",
+     "https://www.southcoasttoday.com/story/sports/columns/2017/06/24/moskeet-would-be-fun-shooting/20440020007/"
+    ]
+   ]
+  },
+  {
+   "id": "rem-510sb",
+   "title": "510SB / 511SB / 512SB",
+   "plaqueTitle": "Remington 510 / 511 / 512 SB",
+   "subtitle": "Remington · 510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs)",
+   "plaqueSub": "510: 1939–1962",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "art": "rifle:bolt",
+   "summary": "The working-class Mo-Skeet-O guns. Watch for SB, Mo-Skeet-O, or Skeetrap stamps. Easy to walk past at a gun show.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs)"
+    ],
+    [
+     "Action",
+     "Bolt: single shot (510), box mag (511), tube mag (512)"
+    ],
+    [
+     "Barrel",
+     "—"
+    ],
+    [
+     "Chamber",
+     ".22 S/L/LR shot"
+    ],
+    [
+     "Value snapshot",
+     "No dated sold comps captured (unverified); generally below 121 SB money."
+    ]
+   ],
+   "sources": [
+    [
+     "Tincanbandit: \"The Remington 500 Series Rifles\" (Dec 2018)",
+     "https://tincanbandit.blogspot.com/2018/12/featured-gun-remington-500-series-rifles.html"
+    ],
+    [
+     "Wikipedia: Garden gun",
+     "https://en.wikipedia.org/wiki/Garden_gun"
+    ],
+    [
+     "Standard Catalog of Remington Firearms (2008, archive.org)",
+     "https://ia800808.us.archive.org/29/items/pricing/Standard%20Catalog%20of%20Remington%20Firearms.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "rem-514",
+   "title": "514 Routledge",
+   "plaqueTitle": "Remington 514 Routledge",
+   "subtitle": "Remington · Within 514 run, 1948–1971 (special order)",
+   "plaqueSub": "Within 514 run, 1948–1971",
+   "tags": [
+    "Postwar & revival"
+   ],
+   "art": "rifle:bolt",
+   "summary": "A special-order Routledge barrel on the humble 514. Gun Digest: add about $100 over a standard 514.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "Within 514 run, 1948–1971 (special order)"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "24 in"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot only"
+    ],
+    [
+     "Value snapshot",
+     "$482–$550 used/sold comps (TrueGunValue, relative dates, checked Nov 2026; unverified calendar dates)."
+    ]
+   ],
+   "sources": [
+    [
+     "Gun Values: Remington 514",
+     "https://gunvalues.gundigest.com/remington-arms-company-inc/10237/model-514/"
+    ],
+    [
+     "TrueGunValue: 514 Routledge",
+     "https://truegunvalue.com/rifle/remington/514-routledge/price-historical-value-661"
+    ]
+   ]
+  },
+  {
+   "id": "mossberg-targo",
+   "title": "Targo: 26T, 42T, 42TR, B42T",
+   "plaqueTitle": "Mossberg Targo 26T / 42T / 42TR",
+   "subtitle": "O.F. Mossberg & Sons · 26T 1938–1942; 42T 1940–1942; 42TR 1940–1946 (NMCA); Targo marketed from fall 1940",
+   "plaqueSub": "26T 1938–1942",
+   "tags": [
+    "Targo"
+   ],
+   "art": "rifle:bolt",
+   "summary": "Mossberg's miniature-skeet system: smoothbore bolt guns, a Model 1A barrel-mounted trap, and 2 11/16-inch birds. All bolt guns, no pumps. 26T and B42T are the scarce ones (+20%); a complete case and accessories add about 50%.",
+   "details": [
+    [
+     "Maker",
+     "O.F. Mossberg & Sons"
+    ],
+    [
+     "Years",
+     "26T 1938–1942; 42T 1940–1942; 42TR 1940–1946 (NMCA); Targo marketed from fall 1940"
+    ],
+    [
+     "Action",
+     "Bolt: single shot (26T) or box-magazine repeaters"
+    ],
+    [
+     "Barrel",
+     "—"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot (42TR also bullets via RA-1 rifled muzzle adapter)"
+    ],
+    [
+     "Value snapshot",
+     "42T $175–$505 (Vogt sold $175, Jul 2026; asks to $505); 42TR $550 sold with trap and extensions (Apple Tree, Jun 2022)."
+    ]
+   ],
+   "sources": [
+    [
+     "NMCA \"100 Years\" model table (PDF)",
+     "https://mossbergcollectors.org/100-years.pdf"
+    ],
+    [
+     "Gun Digest: \"Targo! Gone But Not Forgotten\"",
+     "https://gundigest.com/more/classic-guns/targo-gone-but-not-forgotten"
+    ],
+    [
+     "Gun Values by Gun Digest: Targo Smoothbore Series",
+     "https://gunvalues.gundigest.com/mossberg-o-f-sons-inc/8858/targo-smoothbore-series/"
+    ],
+    [
+     "Apple Tree Auction 42TR (4 Jun 2022)",
+     "https://www.appletreeauction.com/auction-lot/mossberg-model-42tr-targo-.22-caliber-bolt-rifl_ca94d7e8cf"
+    ]
+   ]
+  },
+  {
+   "id": "mossberg-320tr",
+   "title": "Targo revival: 320TR, 340TR",
+   "plaqueTitle": "Mossberg 320TR / 340TR",
+   "subtitle": "O.F. Mossberg & Sons · Early 1960s (1961 NRA \".22 Shotgun Qualification Course\"), dropped within ~2 years",
+   "plaqueSub": "Early 1960s",
+   "tags": [
+    "Postwar & revival"
+   ],
+   "art": "rifle:bolt",
+   "summary": "Mossberg tried again in 1961 with NRA backing. A Mossberg VP later said breaking birds with No. 12 shot was \"just too difficult and discouraging for most shooters.\" We think crackers fix that.",
+   "details": [
+    [
+     "Maker",
+     "O.F. Mossberg & Sons"
+    ],
+    [
+     "Years",
+     "Early 1960s (1961 NRA \".22 Shotgun Qualification Course\"), dropped within ~2 years"
+    ],
+    [
+     "Action",
+     "Bolt: single shot (320TR) / repeater (340TR)"
+    ],
+    [
+     "Barrel",
+     "—"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot"
+    ],
+    [
+     "Value snapshot",
+     "320TR $575 sold (Griffin & Howe listing, undated); 340TR CAD $475 sold (Kidd Family Auctions, ~Feb 2024)."
+    ]
+   ],
+   "sources": [
+    [
+     "SSUSA: \"More Than History: The National Mossberg Collectors Association\"",
+     "https://www.ssusa.org/content/more-than-history-the-national-mossberg-collectors-association/"
+    ],
+    [
+     "Gun Values by Gun Digest: Targo Smoothbore Series",
+     "https://gunvalues.gundigest.com/mossberg-o-f-sons-inc/8858/targo-smoothbore-series/"
+    ],
+    [
+     "Griffin & Howe 320TR",
+     "https://griffinhowe.com/shop/product/mossberg-targo-320tr-22-smooth-nsn"
+    ]
+   ]
+  },
+  {
+   "id": "rem-572sb",
+   "title": "572SB Fieldmaster",
+   "plaqueTitle": "Remington 572SB",
+   "subtitle": "Remington · 1961–1979",
+   "plaqueSub": "1961–1979",
+   "tags": [
+    "Postwar & revival"
+   ],
+   "art": "rifle:pump",
+   "summary": "The last factory smoothbore pump from a big U.S. maker, until the Henry lever gun changed the game.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "1961–1979"
+    ],
+    [
+     "Action",
+     "Pump, tube magazine"
+    ],
+    [
+     "Barrel",
+     "—"
+    ],
+    [
+     "Chamber",
+     ".22 S/L/LR (smooth)"
+    ],
+    [
+     "Value snapshot",
+     "~$750 used price point (TrueGunValue, thin data, unverified)."
+    ]
+   ],
+   "sources": [
+    [
+     "Wikipedia: Remington Model 572 Fieldmaster",
+     "https://en.wikipedia.org/wiki/Remington_Model_572_Fieldmaster"
+    ],
+    [
+     "TrueGunValue: 572 SB",
+     "https://truegunvalue.com/rifle/remington-572-sb/price-historical-value"
+    ]
+   ]
+  },
+  {
+   "id": "rem-nylon10",
+   "title": "Nylon 10 SB",
+   "plaqueTitle": "Remington Nylon 10 SB",
+   "subtitle": "Remington · 1962–1964",
+   "plaqueSub": "1962–1964",
+   "tags": [
+    "Postwar & revival"
+   ],
+   "art": "rifle:nylon",
+   "summary": "Space-age Mohawk-brown nylon meets backyard skeet. Gun Digest singles out the 24-inch SB as a small subset (forum talk: ~200 guns, unverified).",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "1962–1964"
+    ],
+    [
+     "Action",
+     "Bolt single shot, nylon stock"
+    ],
+    [
+     "Barrel",
+     "19.5 in or 24 in (24 in is the rare one)"
+    ],
+    [
+     "Chamber",
+     ".22 S/L/LR shot"
+    ],
+    [
+     "Value snapshot",
+     "No dated comp captured (unverified)."
+    ]
+   ],
+   "sources": [
+    [
+     "Gun Values: Remington Model 10 Nylon",
+     "https://gunvalues.gundigest.com/remington-arms-company-inc/10088/model-10-nylon/"
+    ]
+   ]
+  },
+  {
+   "id": "marlin-25mg",
+   "title": "25MG Garden Gun",
+   "plaqueTitle": "Marlin 25MG",
+   "subtitle": "Marlin · 1999–2002",
+   "plaqueSub": "1999–2002",
+   "tags": [
+    "Modern"
+   ],
+   "art": "rifle:bolt",
+   "summary": "Bright front bead, no rear sight, marketed as a \"Garden Gun\" for snake shot.",
+   "details": [
+    [
+     "Maker",
+     "Marlin"
+    ],
+    [
+     "Years",
+     "1999–2002"
+    ],
+    [
+     "Action",
+     "Bolt, detachable box magazine"
+    ],
+    [
+     "Barrel",
+     "— (confirm)"
+    ],
+    [
+     "Chamber",
+     ".22 WMR shot only"
+    ],
+    [
+     "Value snapshot",
+     "$400–$640 (collector-forum asks/sales, 2014–Mar 2026; not a price guide)."
+    ]
+   ],
+   "sources": [
+    [
+     "Wikipedia: Marlin Model 25MG",
+     "https://en.wikipedia.org/wiki/Marlin_Model_25MG"
+    ],
+    [
+     "MarlinOwners: What's a 25MG worth?",
+     "https://www.marlinowners.com/threads/whats-a-25mg-worth.627904/"
+    ]
+   ]
+  },
+  {
+   "id": "chiappa-badger",
+   "title": "Little Badger Shotgun (and earlier RC 92)",
+   "plaqueTitle": "Chiappa Little Badger",
+   "subtitle": "Chiappa · Current",
+   "plaqueSub": "Current",
+   "tags": [
+    "Modern",
+    "Cousin (not .22)"
+   ],
+   "art": "rifle:break",
+   "summary": "Europe's garden-gun cartridge in a folding modern package. A cousin, not a .22. The common rifled Little Badger .22 is a different gun.",
+   "details": [
+    [
+     "Maker",
+     "Chiappa"
+    ],
+    [
+     "Years",
+     "Current"
+    ],
+    [
+     "Action",
+     "Break-open single shot, folding"
+    ],
+    [
+     "Barrel",
+     "24 in"
+    ],
+    [
+     "Chamber",
+     "9mm Flobert shot"
+    ],
+    [
+     "Value snapshot",
+     "$356 MSRP (cited by GUNS Magazine, 2023)."
+    ]
+   ],
+   "sources": [
+    [
+     "Chiappa USA: Little Badger Shotgun",
+     "https://chiappausa.com/shop/shotgun/shotgun-single-barrel/shotgun-single-barrel-little-badger/little-badger-shotgun/"
+    ],
+    [
+     "The Firearm Blog: The Rimfire Report, 9mm Flobert (26 Jul 2021)",
+     "https://www.thefirearmblog.com/blog/2021/07/26/rimfire-report-9mm-flobert/"
+    ]
+   ]
+  },
+  {
+   "id": "henry-h1",
+   "title": "H1 Garden Gun (H001GG-22 / H001GG-22M)",
+   "plaqueTitle": "Henry H1 Garden Gun",
+   "subtitle": "Henry Repeating Arms · 2019–present",
+   "plaqueSub": "2019–present",
+   "tags": [
+    "Modern"
+   ],
+   "art": "rifle:lever",
+   "summary": "The only smoothbore .22 in current production that we know of. Capacity 14 (LR) / 11 (WMR) per Henry's spec table. Overall length 36.5 in.",
+   "details": [
+    [
+     "Maker",
+     "Henry Repeating Arms"
+    ],
+    [
+     "Years",
+     "2019–present"
+    ],
+    [
+     "Action",
+     "Lever (\"Lever Action Shotgun\")"
+    ],
+    [
+     "Barrel",
+     "18.5 in, smooth"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot / .22 WMR shot"
+    ],
+    [
+     "Value snapshot",
+     "MSRP $505 (LR) / $605 (WMR), Henry site 11 Nov 2026."
+    ]
+   ],
+   "sources": [
+    [
+     "Henry Repeating Arms: H1 Garden Gun (fetched 11 Nov 2026)",
+     "https://www.henryusa.com/firearm/h1-garden-gun/"
+    ],
+    [
+     "American Rifleman: Tested: Henry Smooth Bore Garden Gun",
+     "https://www.americanrifleman.org/content/tested-henry-repeating-arms-smooth-bore-garden-gun/"
+    ]
+   ]
+  }
+ ],
+ "finale": {
+  "id": "honorable-mention",
+  "title": "Honorable mention: the .32 smoothbores",
+  "plaqueTitle": "Honorable Mention: the .32",
+  "plaqueSub": "Stevens Favorite No. 20 & Crack Shot No. 26½ in .32 rimfire shot",
+  "tags": [
+   "End of the hall"
+  ],
+  "art": "cracker",
+  "body": [
+   "<strong>Yes, there really was a .32.</strong> What’s confirmed: Stevens catalogued its boys’-rifle smoothbores for <strong>.32 rimfire shot cartridges</strong> as well as .22. The <strong>Favorite No.&nbsp;20</strong> was “chambered for the 22 or 32 rimfire shot cartridges and has a smoothbore barrel and no rear sight” (Standard Catalog of Firearms, 2001, as quoted), and Wikipedia lists the <strong>Crack Shot No.&nbsp;26½</strong> for “.22LR Shot Cartridges, .32 Rimfire Shot Cartridges.” The gun our club is named for came in .32 shot.",
+   "<strong>Ammo:</strong> .32 rimfire shot loads existed. A Canadian collector reports shooting a No.&nbsp;20 with CIL .32 Long Shot (#10, 1935-dated). That’s one collector’s report.",
+   "<strong>Likely but unverified:</strong> Remington No.&nbsp;4 rolling block (a forum quote of Fjestad’s Blue Book: “the .32 smoothbore was introduced around 1911”) and No.&nbsp;6 smoothbores (a forum quote of the Standard Catalog). Both are secondhand, so we’re waiting on a catalog page before calling them confirmed.",
+   "Original .32 rimfire ammunition is scarce and old. Treat these guns as display pieces unless a gunsmith says otherwise."
+  ],
+  "sources": [
+   [
+    "Wikipedia: Stevens Boys Rifles",
+    "https://en.wikipedia.org/wiki/Stevens_Boys_Rifles"
+   ],
+   [
+    "SASS Wire, 18 Jan 2012 (Standard Catalog / Blue Book quotes)",
+    "https://forums.sassnet.com/index.php?/topic/182391-ot-old-gun-gurus-stevens-favorite-smooth-bore/"
+   ],
+   [
+    "Canadian Gun Nutz: Stevens Favorite .32 Shot",
+    "https://www.canadiangunnutz.com/forum/threads/stevens-favorite-32-shot.2437275"
+   ],
+   [
+    "S&W Forum: Remington Model 4 in .32 rimfire",
+    "https://www.smithandwessonforums.com/threads/remington-model-4-single-shot-in-32-rimfire.9275"
+   ],
+   [
+    "Rimfire Central: Rem. Model 6",
+    "https://www.rimfirecentral.com/threads/rem-model-6-rolling-block-help-needed.79309"
+   ]
+  ]
+ }
+}
