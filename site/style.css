@@ -63,3 +63,31 @@ footer.site p{margin:.4rem 0}
 #age-gate p.fine{font-size:.85rem;text-align:left;opacity:.9}
 #age-gate .left{display:none}
 #age-gate.left .ask{display:none}#age-gate.left .left{display:block}
+/* Smoothbore Hall */
+.lede-s{font-size:1.15rem;max-width:46rem}
+.sr{position:absolute;left:-999px}
+ol.timeline{list-style:none;padding:0;margin:1rem 0;border-left:4px solid var(--brass)}
+ol.timeline li{position:relative;padding:.2rem 0 .9rem 1.2rem}
+ol.timeline li::before{content:"";position:absolute;left:-11px;top:.55rem;width:14px;height:14px;border-radius:50%;background:var(--red);border:2px solid var(--cream)}
+.hall-tools{background:var(--navy);color:var(--cream);padding:.9rem 1rem;border-radius:6px;margin:1rem 0;position:sticky;top:0;z-index:5}
+.hall-tools input{width:100%;font:inherit;padding:.5rem .7rem;border-radius:4px;border:2px solid var(--brass);background:var(--paper);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .2rem}
+.chip{font:inherit;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;background:transparent;color:var(--cream);border:1px solid var(--brass);border-radius:999px;padding:.2rem .7rem;cursor:pointer}
+.chip.on,.chip:hover{background:var(--red);border-color:var(--red)}
+.hall-tools .count{margin:.3rem 0 0;font-size:.85rem;color:var(--brass)}
+.hall-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+.exhibit{background:var(--paper);border:1px solid rgba(28,46,74,.2);border-top:6px solid var(--red);border-radius:6px;padding:.9rem 1rem;scroll-margin-top:9rem}
+.exhibit[data-status=cousin]{border-top-color:var(--brass)}
+.exhibit h3{margin:.2rem 0 .3rem;font-size:1.2rem}
+.exhibit .maker{margin:0 0 .4rem;font-size:.9rem;opacity:.85}
+.exhibit .tag{margin:0;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.exhibit .tag span{display:inline-block;background:var(--navy);color:var(--cream);padding:.05rem .45rem;border-radius:3px;margin-right:.3rem}
+.exhibit .tag .cous{background:var(--brass);color:var(--navy)}
+.exhibit details summary{cursor:pointer;color:var(--red);font-weight:500}
+.exhibit dl{margin:.5rem 0;display:grid;grid-template-columns:auto 1fr;gap:.2rem .7rem;font-size:.92rem}
+.exhibit dt{font-weight:600}.exhibit dd{margin:0}
+.src{font-size:.82rem;opacity:.9}
+.card.hm{border-left:6px solid var(--brass)}
+.hall-table{font-size:.88rem}
+.none{font-style:italic}
+@media (max-width:760px){.hall-tools{position:static}.exhibit{scroll-margin-top:1rem}}
