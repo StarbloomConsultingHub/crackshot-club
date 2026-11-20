@@ -23,6 +23,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&amp;family=Rye&amp;display=swap">
 <link rel="stylesheet" href="/style.css">
 <script src="/gate.js" defer></script>
+<link rel="stylesheet" href="/assets/club.css">
+<script type="module" src="/assets/clubhouse.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,17 +36,60 @@
 <div class="marquee" aria-hidden="true"></div>
 <main id="main"><div class="wrap">
 
+<div class="club-intro">
 <h1>Join the club</h1>
-<p>22 Crack Shot is free, informal, and for adults 18 and older who like small smoothbores, old midway games, and breaking crackers.</p>
-<h2>The message board</h2>
-<div class="todo">Message board (Discourse) link goes here. The forum hasn't been created yet.</div>
-<p>Planned rooms: Welcome &amp; Rules · Cracker Count Scores · Target of the Month · Traps &amp; 3D Designs · Smoothbore Registry · Garden Gun Owners · History &amp; Midway Lore · Safety &amp; Ranges · Show Your Setup · Lounge.</p>
-<h2>Follow along</h2>
-<div class="todo">Social links (X, YouTube, Instagram) go here once the accounts exist.</div>
-<h2>Contribute designs</h2>
-<p>Got a trap, a stand, or a printable target? <a href="https://github.com/StarbloomConsultingHub/crackshot-club/blob/main/CONTRIBUTING.md">Here's how to submit it</a>.</p>
-<p>Before you post anything, read the <a href="/rules">club rules</a> and the <a href="/safety">safety page</a>.</p>
-
+<p class="lede-s">Did you grow up around a smoothbore, inherit an old catalog, or spend summers at a midway? There’s a place for your story here.</p>
+</div>
+<div class="club-layout">
+<section class="club-desk" aria-labelledby="desk-heading">
+<h2 id="desk-heading" tabindex="-1">Free membership</h2>
+<p id="desk-summary">Choose the nickname you’d like other members to see. You’ll get a private member pass to come back with.</p>
+<noscript><p>Enable JavaScript to join and read the noticeboard.</p></noscript>
+<div id="club-status" role="status" aria-live="polite">Opening the clubhouse…</div>
+<button class="club-link" id="club-retry" type="button" hidden>Try again</button>
+<div id="guest-tools" hidden>
+<form id="join-form" method="post">
+<label for="club-name">Club nickname</label>
+<input id="club-name" name="nickname" required minlength="2" maxlength="40" autocomplete="nickname">
+<label class="club-check"><input type="checkbox" required name="accepted"><span>I’m at least 18 and agree to the <a href="/rules">club rules</a>.</span></label>
+<button class="btn" type="submit">Join for free</button>
+</form>
+<details id="returning"><summary>Already a member? Sign in</summary>
+<form id="signin-form" method="post">
+<label for="signin-pass">Your member pass</label>
+<input type="password" id="signin-pass" name="pass" maxlength="60" required autocomplete="current-password" spellcheck="false" autocapitalize="none">
+<button class="btn ghost" type="submit">Sign in</button>
+</form>
+</details>
+</div>
+<div id="pass-card" class="pass-card" hidden>
+<h3>Save your member pass</h3>
+<p>Keep this in your password manager. It signs you in on other devices. A lost pass cannot be recovered by email.</p>
+<label for="member-pass">Private member pass</label>
+<input id="member-pass" readonly autocomplete="off" spellcheck="false">
+<button type="button" class="club-link" id="copy-pass">Copy pass</button>
+</div>
+<div id="member-tools" hidden>
+<form id="note-form" method="post">
+<label for="note-topic">What would you like to share?</label>
+<select id="note-topic" name="topic"><option>Introduction</option><option>Gallery memory</option><option>Research lead</option></select>
+<label for="note-body">Your note</label>
+<textarea id="note-body" name="body" rows="5" required minlength="10" maxlength="1200" aria-describedby="note-help"></textarea>
+<p class="club-fine" id="note-help">Up to 1,200 characters. An editor reviews notes before they appear. Your nickname appears alongside published notes.</p>
+<button type="submit" class="btn">Send for review</button>
+</form>
+<div id="pending-notes" hidden><h3>Your notes in review</h3><ul></ul></div>
+<button class="club-link" id="sign-out" type="button">Sign out</button>
+</div>
+</section>
+<section class="noticeboard" aria-labelledby="board-heading" id="noticeboard">
+<h2 id="board-heading">Club noticeboard</h2>
+<p>Introductions, midway memories, and leads for the <a href="/gallery-atlas">Gallery Map</a>. The latest 20 published notes appear here.</p>
+<div id="board-notes"></div>
+<aside class="club-question"><h3>Does anyone remember Pen Mar?</h3>
+<p>Our <a href="/gallery-atlas#pen-mar">Pen Mar Park entry</a> documents its arcade. Do you have a dated postcard, a newspaper clipping, or a family memory that tells us more? Send a gallery memory and tell us how you know.</p></aside>
+</section>
+</div>
 </div></main>
 <footer class="site"><div class="wrap">
 <p><strong>22 Crack Shot</strong> · an informal hobby club for adults (18+) · a <em>Gallery Games</em> project.</p>

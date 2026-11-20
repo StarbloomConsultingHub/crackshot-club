@@ -1,0 +1,7 @@
+{
+  "name": "22-crack-shot-club",
+  "private": true,
+  "dependencies": {
+    "@neondatabase/serverless": "1.2.1"
+  }
+}
