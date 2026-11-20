@@ -1,0 +1,29 @@
+.club-intro { max-width: 42rem; margin: .7rem 0 1.7rem; }
+.club-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.club-layout h2 { margin: 0 0 .65rem; overflow-wrap: anywhere; }
+.club-desk { padding: clamp(1.1rem, 3vw, 1.8rem); background: var(--paper); border: 1px solid var(--navy); border-top: .4rem solid var(--navy); border-radius: .3rem; }
+.club-desk p, .noticeboard p { margin: .5rem 0 1rem; }
+.club-desk form { display: grid; gap: .45rem; }
+.club-desk label { font-weight: 500; }
+.club-desk input:not([type=checkbox]), .club-desk select, .club-desk textarea { width: 100%; min-width: 0; font: inherit; color: var(--ink); border: 1px solid #627187; background: #fffcf4; border-radius: .2rem; padding: .55rem .65rem; }
+.club-desk textarea { resize: vertical; }
+.club-check { display: flex; align-items: start; gap: .6rem; margin: .35rem 0; }
+.club-check input { width: 1.2rem; height: 1.2rem; margin: .25rem 0 0; flex: none; }
+.club-desk .btn { justify-self: start; margin: .4rem 0; }
+.club-layout :focus-visible { outline: 3px solid #37669a; outline-offset: 3px; }
+.club-desk details { margin-top: 1rem; border-top: 1px solid var(--brass); padding-top: .85rem; }
+.club-desk summary, .club-link { color: var(--red); cursor: pointer; }
+.club-link { padding: .45rem 0; border: 0; background: none; font: inherit; text-decoration: underline; }
+.club-desk details form { margin-top: .75rem; }
+#club-status:not(:empty) { margin: .6rem 0; font-weight: 500; }
+.club-fine { font: .92rem/1.5 Oswald, Arial, sans-serif; }
+.pass-card, .club-question { border-left: .25rem solid var(--brass); padding: .05rem 1rem; margin: 1.2rem 0; }
+.pass-card input { font-family: monospace !important; }
+.noticeboard { padding-top: .45rem; scroll-margin-top: 1rem; }
+.noticeboard article { padding: 1rem 0 .25rem; border-top: 1px solid var(--brass); }
+.noticeboard article h3, .club-question h3, .pass-card h3 { margin: .3rem 0 .5rem; }
+.board-meta { font-size: .9rem; color: #43526b; }
+.note-text, #pending-notes li { white-space: pre-line; overflow-wrap: anywhere; }
+#pending-notes ul { padding-left: 1.2rem; }
+.club-layout [hidden] { display: none; }
+@media (max-width: 45rem) { .club-layout { grid-template-columns: 1fr; } }
