@@ -23,30 +23,35 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&amp;family=Rye&amp;display=swap">
 <link rel="stylesheet" href="/style.css">
 <script src="/gate.js" defer></script><link rel="stylesheet" href="/assets/hall-engine.css"><link rel="stylesheet" href="/assets/gallery-hall.css"><script src="/assets/hall-engine.js" defer></script><script src="/assets/gallery-hall.js" defer></script>
+<script src="/assets/hall-view.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="/"><img src="/assets/cracker.webp" alt="" width="42" height="42"><span>22 Crack Shot<small>SMOOTHBORE ENTHUSIASTS</small></span></a>
 <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav class="main" id="nav" aria-label="Main"><ul><li><a href="/">Home</a></li><li><a href="/about">History</a></li><li><a href="/hall">Smoothbore Hall</a></li><li><a href="/gallery-hall" aria-current=page>Gallery Games Hall</a></li><li><a href="/gallery-atlas">Gallery Map</a></li><li><a href="/games">Arcade</a></li><li><a href="/rules">Rules</a></li><li><a href="/safety">Safety</a></li><li><a href="/cracker-count">Cracker Count</a></li><li><a href="/designs">Designs &amp; Targets</a></li><li><a href="/gear">Gear</a></li><li><a href="/join">Join</a></li></ul></nav>
+<nav class="main" id="nav" aria-label="Main"><ul>
+<li><a href="/hall">Smoothbore Hall</a></li>
+<li><a href="/gallery-atlas">Gallery Map</a></li>
+<li><a href="/games">Arcade</a></li>
+<li><details class="current-group"><summary>More</summary><ul><li><a href="/">Home</a></li><li><a href="/about">History</a></li><li><a href="/gallery-hall" aria-current="page">Gallery Games Hall</a></li><li><a href="/cracker-count">Cracker Count</a></li><li><a href="/rules">Rules</a></li><li><a href="/safety">Safety</a></li><li><a href="/designs">Designs &amp; Targets</a></li><li><a href="/gear">Gear</a></li></ul></details></li>
+<li><a href="/join">Join the club</a></li>
+</ul></nav>
 </div></header>
 <div class="marquee" aria-hidden="true"></div>
 <main id="main"><div class="wrap">
 
 <h1>The Gallery Games Hall</h1>
-<p class="lede-s">Step right up. Before the light gun and long before Duck Hunt, there were iron ducks on a chain, owls with a bullseye belly, bells that rang, clay pipes that shattered, and a Winchester chained to the counter. This hall enshrines the shooting galleries and carnival shooting games that 22 Crack Shot is bringing back to the backyard.</p>
-<div class="note"><strong>How to read this hall.</strong> Every card lists its sources. Prices are auction results as published by the auction house or reported by the cited writer, with the date. They are not appraisals, and most iron targets carry no maker's mark, so attributions are the seller's. Where we couldn't verify a claim, we say so. Corrections with sources are welcome. See also the <a href="/hall">Smoothbore Hall</a>.</div>
-
-<p><a class="more" href="/gallery-atlas">Explore the Gallery Games Atlas</a></p>
-<div class="viewtoggle" role="group" aria-label="Choose how to view the hall">
+<p class="lede-s">Follow the midway from cast-iron ducks and mechanical galleries to electric arcade games. Open a plaque to read its story.</p>
+<div class="viewtoggle" hidden data-preference="cs-gallery-hall-view" role="group" aria-label="Choose how to view the hall">
 <button type="button" class="vt on" data-view="walk" aria-pressed="true">Walk-in hall</button><button type="button" class="vt" data-view="list" aria-pressed="false">List view</button>
 </div>
-<section id="walk-view" aria-label="Walk-in hall">
-<div class="hx" data-hall-src="/assets/halls/gallery-games.json" id="gallery-walk"><noscript><p style="color:#fff;padding:1rem">The walk-in hall needs JavaScript. Use the list view below.</p></noscript></div>
+<p class="src" id="hall-status" role="status" hidden></p>
+<section id="walk-view" hidden aria-label="Walk-in hall">
+<div class="hx" data-hall-manual data-hall-src="/assets/halls/gallery-games.json" id="gallery-walk"><noscript><p style="color:#fff;padding:1rem">The walk-in hall needs JavaScript. Use the list view below.</p></noscript></div>
 <p class="src"><strong>How to walk:</strong> scroll or swipe, use <kbd>↑</kbd>/<kbd>↓</kbd> (or <kbd>W</kbd>/<kbd>S</kbd>), or hold <em>Forward</em>/<em>Back</em>. Use <kbd>←</kbd>/<kbd>→</kbd> or ⏮/⏭ to jump between exhibits, and click or tap a plaque (or press <em>Read</em>) to open its card. The Revival plaque waits at the end of the hall. Prefer a plain page? Choose <em>List view</em>.</p>
 </section>
-<section id="list-view" aria-label="List view" hidden>
+<section id="list-view" aria-label="List view">
 <h2>The exhibits (list view)</h2>
 <div class="hall-tools" role="search">
 <label class="sr" for="hall-q">Search the hall</label>
@@ -214,6 +219,10 @@
 </div>
 <p class="none" id="hall-none" hidden>No exhibits match. Try "Mangels" or clear the filter.</p>
 </section>
+<div class="note"><strong>How to read this hall.</strong> Every card lists its sources. Prices are auction results as published by the auction house or reported by the cited writer, with the date. They are not appraisals, and most iron targets carry no maker's mark, so attributions are the seller's. Where we couldn't verify a claim, we say so. Corrections with sources are welcome. See also the <a href="/hall">Smoothbore Hall</a>.</div>
+
+<p><a class="more" href="/gallery-atlas">Explore the Gallery Games Atlas</a></p>
+
 
 <h2>A short timeline</h2>
 <ol class="timeline">

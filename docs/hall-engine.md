@@ -36,3 +36,5 @@ Set CSS variables on the `.hx` element. The card copies them when it opens: `--h
 - Click or tap a plaque to open it. Tab focuses the plaques, and the camera follows.
 - The card has Prev/Next buttons and a focus trap. `#id` deep links open a card.
 - `prefers-reduced-motion` turns off the smoothing.
+
+The club pages use the shared view controller in `site/assets/hall-view.js`. A fresh visit opens the walk-in hall when CSS 3D is available. The exhibit list works as plain HTML, honors the reader’s saved preference and `#list`, and opens automatically if the walk data cannot load. The controller mounts the scene on first use.
