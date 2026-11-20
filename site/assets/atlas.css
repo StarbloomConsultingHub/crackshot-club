@@ -12,10 +12,11 @@
 .atlas-map figcaption {padding:.55rem .8rem;color:var(--cream);font:.86rem/1.5 Arial,sans-serif}
 .atlas-map figcaption a {color:inherit}
 .atlas-map svg a {cursor:pointer}
+.atlas-map .atlas-hit {fill:transparent;stroke:transparent;stroke-width:44;vector-effect:non-scaling-stroke;pointer-events:all;cursor:pointer}
 .atlas-map line {stroke:#302414;stroke-width:1.7;pointer-events:stroke}
-.atlas-map circle {fill:#752337;stroke:white;stroke-width:3}
+.atlas-map .atlas-dot {fill:#752337;stroke:white;stroke-width:3}
 .atlas-map text {font:bold 19px Georgia,serif;fill:#fff;stroke:#1c2e4a;stroke-width:4;paint-order:stroke;stroke-linejoin:round}
-.atlas-map a:is(:focus,:hover,[aria-current]) circle {r:11;fill:#aa203a;stroke:#fff0a6;stroke-width:4}
+.atlas-map a:is(:focus,:hover,[aria-current]) .atlas-dot {r:11;fill:#aa203a;stroke:#fff0a6;stroke-width:4}
 .atlas-map a:is(:focus,:hover,[aria-current]) text {fill:#ffedab}
 .atlas-record {border-top:4px solid #963048;padding:.8rem .35rem .5rem;scroll-margin-top:1rem;font:1.025rem/1.58 Georgia,serif}
 .atlas-record h2 {margin:.3em 0 .2em;font: bold clamp(1.6rem,2.5vw,2.15rem)/1.14 Georgia,serif}

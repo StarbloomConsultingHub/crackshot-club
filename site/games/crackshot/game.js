@@ -1,4 +1,4 @@
-/* Crack Shot: an original thrown-cracker shot-shell game for the Crack Shot .22 LR Club.
+/* Crack Shot: an original thrown-cracker shot-shell game for 22 Crack Shot.
    Inspired by classic light-gun games; all art, code, and sound are original. MIT. */
 (function(){
 'use strict';
@@ -101,7 +101,7 @@ function finalScreen(lastB){
   g.mode='over';A.sad();
   var isNew=HI.set(g.score),hi=HI.get(),bestS=HIS.get(),acc=g.shotsFired?Math.round(g.successfulShots/g.shotsFired*100):0;
   var title=g.cleanCount?'Clean Sleeve club':g.best>=22?'Crack Shot':g.best>=18?'Sharpshooter':g.best>=15?'Cracker Smasher':'Crumb Bum';
-  var share='Cracker Count (arcade): best sleeve '+g.best+'/25, '+g.sleeveBreaks.length+' sleeve'+(g.sleeveBreaks.length>1?'s':'')+', '+CS.fmt(g.score)+' pts in Crack Shot, the thrown-cracker game from the Crack Shot .22 LR Club. Can you clean a sleeve? '+location.origin+'/games/crackshot';
+  var share='Cracker Count (arcade): best sleeve '+g.best+'/25, '+g.sleeveBreaks.length+' sleeve'+(g.sleeveBreaks.length>1?'s':'')+', '+CS.fmt(g.score)+' pts in Crack Shot, the thrown-cracker game from 22 Crack Shot. Can you clean a sleeve? '+location.origin+'/games/crackshot';
   ui.show('<p class="kicker">Out of crackers \u00b7 sleeve '+g.sleeve+'</p><h2>'+title+'</h2><p class="big">'+CS.fmt(g.score)+'</p>'+(isNew?'<p class="new">\u2605 New high score \u2605</p>':'<p>High score: <strong>'+CS.fmt(hi)+'</strong></p>')+
     sleeveRow()+
     '<div class="stats"><span><b>'+lastB+'/25</b>last sleeve (needed '+cfg().quota+')</span><span><b>'+bestS+'/25</b>best ever</span><span><b>'+acc+'%</b>shots that broke</span></div>'+

@@ -1,4 +1,4 @@
-/* Gallery Row: an original carnival shooting-gallery game for the Crack Shot .22 LR Club. MIT. */
+/* Gallery Row: an original carnival shooting-gallery game for 22 Crack Shot. MIT. */
 (function(){
 'use strict';
 var P=CS.PAL,R=CS.rand,A=CS.audio,TAU=Math.PI*2;
@@ -133,7 +133,7 @@ function endRound(){
 function finalScreen(){
   g.mode='over';var isNew=HI.set(g.score),hi=HI.get(),acc=g.shots?Math.round(g.hits/g.shots*100):0;
   var rank=g.score>=2600?'Midway Legend':g.score>=1900?'Crack Shot':g.score>=1300?'Sharpshooter':g.score>=700?'Marksman':'Plinker';
-  var share='I scored '+CS.fmt(g.score)+' ('+rank+', '+acc+'% hits) at Gallery Row, the carnival shooting gallery game from the Crack Shot .22 LR Club. Step right up: '+location.origin+'/games/gallery';
+  var share='I scored '+CS.fmt(g.score)+' ('+rank+', '+acc+'% hits) at Gallery Row, the carnival shooting gallery game from 22 Crack Shot. Step right up: '+location.origin+'/games/gallery';
   if(isNew)A.fanfare();
   ui.show('<p class="kicker">Final score</p><h2>'+rank+'</h2><p class="big">'+CS.fmt(g.score)+'</p>'+(isNew?'<p class="new">\u2605 New high score \u2605</p>':'<p>High score: <strong>'+CS.fmt(hi)+'</strong></p>')+
     '<div class="stats"><span><b>'+acc+'%</b>accuracy</span><span><b>'+g.hits+'</b>hits</span><span><b>'+g.best+'</b>best streak</span></div>'+

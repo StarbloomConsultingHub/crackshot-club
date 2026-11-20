@@ -1,10 +1,12 @@
 /* Crack Shot arcade: shared helpers (stage, input, synth audio, scores, share, overlay).
-   Original code for the Crack Shot .22 LR Club. MIT. */
+   Original code for 22 Crack Shot. MIT. */
 (function(){
 'use strict';
 var CS=window.CS={};
-// Adults-only site: bounce to the games lobby (which carries the click-through gate) if not confirmed.
-try{ if(localStorage.getItem('crackshot-age-ok-v1')!=='yes'){ location.replace('/games'); } }catch(e){}
+// The lobby carries the 18+ gate; keep the requested game for the return trip.
+var ageConfirmed=false;
+try{ageConfirmed=localStorage.getItem('crackshot-age-ok-v1')==='yes'}catch(e){}
+if(!ageConfirmed){location.replace('/games?returnTo='+encodeURIComponent(location.pathname+location.search+location.hash))}
 
 CS.PAL={red:'#C41E3A',cream:'#F3E6C8',navy:'#1C2E4A',brass:'#C4A354',paper:'#FBF4E2',ink:'#1C2E4A',dark:'#121e31',tan:'#D7BF83'};
 const motion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
