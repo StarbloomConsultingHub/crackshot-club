@@ -1,6 +1,6 @@
 # Designs (3D-printable)
 
-Traps, cracker rails, target holders, stands, and score boards for Crack Shot games.
+Traps, cracker rails, target holders, stands, and score boards for 22 Crack Shot games.
 
 **Status:** placeholder. The first club designs (a mini cracker trap and a gallery-row cracker rail) are being prototyped.
 

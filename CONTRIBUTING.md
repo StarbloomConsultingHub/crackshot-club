@@ -1,6 +1,6 @@
 # Contributing a design or target
 
-Thanks for building something for the club. Crack Shot shares designs so anyone can print a trap or a target and play.
+Thanks for building something for the club. 22 Crack Shot shares designs so anyone can print a trap or a target and play.
 
 ## What we accept
 

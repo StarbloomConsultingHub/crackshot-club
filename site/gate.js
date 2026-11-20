@@ -3,13 +3,33 @@
   var KEY='crackshot-age-ok-v1', d=document, root=d.documentElement;
   var gate=d.getElementById('age-gate'); if(!gate) return;
   function ok(){try{return localStorage.getItem(KEY)==='yes'}catch(e){return false}}
-  if(ok()){root.classList.remove('gate-on');return}
+  // Only the arcade lobby accepts a return link, and only to one of our games.
+  var returnTo='';
+  if(/^\/games(?:\/(?:index\.html)?)?$/.test(location.pathname)){
+    try{
+      var target=new URL(new URLSearchParams(location.search).get('returnTo')||'',location.origin);
+      if(target.origin===location.origin && /^\/games\/(?:gallery|crackshot)(?:\/(?:index\.html)?)?$/.test(target.pathname)){
+        returnTo=target.pathname+target.search+target.hash;
+      }
+    }catch(e){}
+  }
+  if(ok()){root.classList.remove('gate-on');if(returnTo)location.replace(returnTo);return}
   root.classList.add('gate-on');
   var yes=gate.querySelector('[data-gate=yes]'), no=gate.querySelector('[data-gate=no]');
   setTimeout(function(){yes&&yes.focus()},50);
   yes.addEventListener('click',function(){
     try{localStorage.setItem(KEY,'yes')}catch(e){}
+    if(returnTo && !ok()){
+      var error=d.getElementById('gate-storage-error');
+      if(!error){
+        error=d.createElement('p');error.id='gate-storage-error';error.setAttribute('role','alert');
+        error.textContent='Your browser could not save your age confirmation. Allow site storage, then try again to open the game.';
+        yes.parentNode.appendChild(error);
+      }
+      return;
+    }
     root.classList.remove('gate-on');
+    if(returnTo)location.replace(returnTo);
   });
   no.addEventListener('click',function(){
     gate.classList.add('left');
