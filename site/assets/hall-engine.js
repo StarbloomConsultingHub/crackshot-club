@@ -180,9 +180,16 @@
     modal.addEventListener('keydown',function(e){if(e.key!=='Tab')return;var f=modal.querySelectorAll('button:not([disabled]),a[href]');if(!f.length)return;var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}});
     var ro=global.ResizeObserver?new ResizeObserver(function(){layout()}):null; if(ro)ro.observe(stage); else addEventListener('resize',layout);
     layout(); requestAnimationFrame(tick);
-    // deep link #id
-    var hid=location.hash.slice(1); if(hid){for(var q=0;q<all.length;q++)if(all[q].id===hid){target=cam=camFor(q);render(true);show(q);break;}}
-    var api={show:show,hide:hide,goTo:goTo,layout:layout,get index(){return nearest()},get count(){return all.length},el:root};
+    function openExhibit(id) {
+      if (!id || root.closest('[hidden]')) return;
+      var index = all.findIndex(function (exhibit) { return exhibit.id === id; });
+      if (index < 0) return;
+      target = cam = camFor(index);
+      render(true);
+      show(index);
+    }
+    openExhibit(location.hash.slice(1));
+    var api={show:show,hide:hide,goTo:goTo,openExhibit:openExhibit,layout:layout,get index(){return nearest()},get count(){return all.length},el:root};
     root.hallEngine=api; return api;
   }
   var HallEngine={mount:mount,art:ART,version:'1.0.0'};

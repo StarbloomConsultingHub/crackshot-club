@@ -17,14 +17,21 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .brand img{width:42px;height:42px}
 .brand small{display:block;font-family:Oswald,sans-serif;font-size:.7rem;letter-spacing:.2em;color:var(--brass)}
 nav.main ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.15rem .9rem}
-nav.main a{color:var(--cream);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.88rem;padding:.2rem 0;border-bottom:2px solid transparent}
-nav.main a:hover,nav.main a[aria-current=page]{border-bottom-color:var(--red);color:#fff}
+nav.main a,nav.main summary{color:var(--cream);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.88rem;padding:.2rem 0;border-bottom:2px solid transparent}
+nav.main a:hover,nav.main a[aria-current=page],nav.main .current-group>summary,nav.main summary:hover{border-bottom-color:var(--red);color:#fff}
+nav.main details{position:relative}
+nav.main summary{cursor:pointer}
+nav.main details ul{position:absolute;right:0;z-index:30;top:calc(100% + .35rem);display:grid;gap:0;min-width:12rem;padding:.4rem;background:var(--navy);border:1px solid var(--brass);border-radius:4px;box-shadow:0 6px 14px #0003}
+nav.main details li a{display:block;padding:.35rem .55rem}
+nav.main :focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 .menu-btn{display:none;background:none;border:2px solid var(--brass);color:var(--cream);font:inherit;text-transform:uppercase;letter-spacing:.1em;padding:.25rem .7rem;border-radius:4px;cursor:pointer}
 @media (max-width:760px){
  .menu-btn{display:block}
  nav.main{width:100%;display:none}
  nav.main.open{display:block}
  nav.main ul{flex-direction:column;gap:0;padding:.4rem 0 .6rem}
+ nav.main details ul{position:static;min-width:0;margin-left:.6rem;box-shadow:none;border:0;border-left:2px solid var(--brass)}
+ nav.main summary{padding:.55rem 0}
  nav.main a{display:block;padding:.55rem 0;border-bottom:1px solid rgba(243,230,200,.15)}
 }
 .marquee{height:14px;background:radial-gradient(circle,var(--brass) 3.5px,transparent 4px) 0 50%/22px 14px repeat-x,var(--red)}
@@ -101,3 +108,5 @@ ol.timeline li::before{content:"";position:absolute;left:-11px;top:.55rem;width:
 .viewtoggle .vt{font:inherit;text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;padding:.45rem 1rem;border:none;background:transparent;color:var(--navy);cursor:pointer}
 .viewtoggle .vt.on{background:var(--navy);color:var(--cream)}
 kbd{font-family:inherit;font-size:.85em;background:var(--paper);border:1px solid rgba(28,46,74,.4);border-bottom-width:2px;border-radius:3px;padding:0 .3em}
+
+.viewtoggle[hidden]{display:none}
