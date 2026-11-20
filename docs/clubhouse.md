@@ -4,9 +4,16 @@ The static Join page calls one same-origin Vercel Function, `/api/club`. A visit
 
 New notes go to an editorial queue. Guests can read the latest 20 approved notes. Signed-in members can see their own 10 most recent pending notes. Avoid posting contact details or material you do not have permission to share. The account handle credits a contributor. A memory can be published as a recollection. A proposed correction to a hall or atlas entry still needs a source and an editorial change to that entry.
 
-## Preview setup
+## Membership environments
 
-Use the Vercel project with `site/` as its root and a separate Postgres database for each environment. In the preview database, run `db/001-club.sql` once as the owner, create a dedicated login named `club_web` with a generated secret, then apply `db/web-grants.sql`. The web login has no privilege to approve a note. Put its Neon connection string in the sensitive Vercel variable `CLUB_DATABASE_URL` scoped to the appropriate preview. Redeploy the preview after setting it. Production needs its own database and environment value before merging or announcing signup. No secrets belong in source control.
+| Environment | Neon project and branch | Vercel variable |
+| --- | --- | --- |
+| Preview | `22-crack-shot` / `preview` | `CLUB_DATABASE_URL`, Preview scope |
+| Production | `22-crack-shot-production` / `production` | `CLUB_DATABASE_URL`, Production scope |
+
+Both projects use database `club`. Each has its own `club_web` login and generated password. The application role can submit notes. An editor approves them separately. Vercel stores each connection as a sensitive value. Keep the credentials out of Git.
+
+Both databases already have the initial schema. For a new empty environment, run `db/001-club.sql` once as the database owner, create a login named `club_web` with a generated secret, and apply `db/web-grants.sql`. The production database was initialized empty. The production credential was checked with a transaction that exercised member, session, note, and quota writes and rolled back its test records.
 
 ## Review notes
 
