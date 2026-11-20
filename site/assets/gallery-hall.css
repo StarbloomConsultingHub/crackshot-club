@@ -1,0 +1,7 @@
+/* Gallery Games Hall (list view extras) */
+.gx .gx-art{margin:-.2rem 0 .5rem;border-radius:4px;overflow:hidden;line-height:0}
+.gx .gx-art svg{width:100%;height:auto;display:block}
+.exhibit.gx{border-top-color:var(--navy)}
+.exhibit.gx[data-tag="Revival"]{border-top-color:var(--brass)}
+ol.src-list{font-size:.9rem;padding-left:1.4rem}
+ol.src-list li{margin:.2rem 0;overflow-wrap:anywhere}
