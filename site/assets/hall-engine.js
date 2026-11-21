@@ -215,7 +215,18 @@
       modal.querySelector('.hx-close').focus({preventScroll:true});
       if(exhibit.id&&history.replaceState)history.replaceState(null,'','#'+exhibit.id);
     }
-    function hide(){modal.classList.remove('open');open=-1;if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+    function hide(){
+      modal.classList.remove('open');
+      var was=open; open=-1;
+      // Only clear the hash when it still names this exhibit, so closing a card
+      // on the way to #targo-dates (or another in-page note) keeps that target.
+      if(history.replaceState){
+        var hash=location.hash.slice(1);
+        var exhibit=was>=0?all[was]:null;
+        if(!hash || (exhibit && hash===exhibit.id)) history.replaceState(null,'',location.pathname+location.search);
+      }
+      if(lastFocus&&lastFocus.focus)lastFocus.focus();
+    }
     modal.querySelector('.hx-close').onclick=hide;
     modal.onclick=function(e){if(e.target===modal)hide();};
     modal.querySelector('.hx-mprev').onclick=function(){step(-1,true)};

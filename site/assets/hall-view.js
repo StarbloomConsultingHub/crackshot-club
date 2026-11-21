@@ -56,8 +56,14 @@
       if (localStorage.getItem(toggle.dataset.preference) === 'list') preferred = 'list';
     } catch {}
     setView(location.hash === '#list' ? 'list' : preferred, false);
+    const id = location.hash.slice(1);
+    // Close any open card before a non-exhibit hash (e.g. #targo-dates) so the
+    // card does not stay up over the target. Exhibit hashes still open/switch.
+    if (gallery.hallEngine && !linkedExhibit()) gallery.hallEngine.hide();
     if (walk.hidden) revealExhibit();
-    else if (gallery.hallEngine) gallery.hallEngine.openExhibit(location.hash.slice(1));
+    else if (gallery.hallEngine) gallery.hallEngine.openExhibit(id);
+    const note = id && !linkedExhibit() ? document.getElementById(id) : null;
+    if (note) note.scrollIntoView();
   }
 
   toggle.hidden = !canWalk;

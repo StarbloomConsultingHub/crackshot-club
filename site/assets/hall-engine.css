@@ -529,7 +529,7 @@
 }
 @media (max-width: 360px) {
   .hx-hud { gap: .18rem; padding-inline: .2rem; }
-  .hx-hud .hx-btn { min-width: 40px; padding-inline: .3rem; }
+  .hx-hud .hx-btn { min-width: 44px; padding-inline: .3rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hx-hint { transition: none; }
