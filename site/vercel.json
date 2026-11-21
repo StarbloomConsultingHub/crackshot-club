@@ -28,5 +28,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/cracker-count",
+      "destination": "/pull-the-sleeve",
+      "permanent": true
+    },
+    {
+      "source": "/cracker-count.html",
+      "destination": "/pull-the-sleeve",
+      "permanent": true
+    }
   ]
 }

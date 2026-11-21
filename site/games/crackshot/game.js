@@ -5,13 +5,13 @@
 var P=CS.PAL,R=CS.rand,A=CS.audio,TAU=Math.PI*2,lerp=CS.lerp;
 var cv=document.getElementById('c'),L={},st,ctx,bg=document.createElement('canvas'),parts=CS.particles(),pops=[],halves=[];
 var HI=CS.hi('crackshot'),HIS=CS.hi('crackshot-sleeve');
-var SLEEVE=25,THROWS=13; // 12 pairs + 1 single = 25 crackers, same as the club's Cracker Count string
+var SLEEVE=30,THROWS=15; // 15 pairs = 30 crackers, a typical retail sleeve in Pull the Sleeve
 var g={mode:'title',sleeve:1,score:0,res:[],throwIdx:0,phase:'pull',phaseT:0,shots:3,crackers:[],paused:false,successfulShots:0,shotsFired:0,best:0,stop:0,shake:0,flash:0,crow:{y:0,mood:'',t:0},outcome:'',cleanCount:0,sleeveBreaks:[]};
 var aim={x:480,y:260,show:false,tap:0,kick:0,pellets:[],pt:0,over:false};
 var img=new Image();img.src='/games/assets/cracker.png';
 st=CS.stage(cv,layout);ctx=st.ctx;
 
-function cfg(){var n=g.sleeve;return{T:Math.max(1.05,2.55*Math.pow(0.86,n-1)),quota:Math.min(22,15+2*(n-1)),stagger:n>=3?0.35:0.15,spread:Math.min(0.46,0.3+n*0.03)}}
+function cfg(){var n=g.sleeve;return{T:Math.max(1.05,2.55*Math.pow(0.86,n-1)),quota:Math.min(27,18+2*(n-1)),stagger:n>=3?0.35:0.15,spread:Math.min(0.46,0.3+n*0.03)}}
 
 /* ---------------- layout + background ---------------- */
 function layout(s){
@@ -56,13 +56,13 @@ function newGame(){g.sleeve=1;g.score=0;g.best=0;g.successfulShots=0;g.shotsFire
 function startSleeve(){
   g.res=[];for(var i=0;i<SLEEVE;i++)g.res.push(null);g.throwIdx=0;g.crackers=[];halves.length=0;pops.length=0;parts.clear();
   g.mode='play';g.paused=false;ui.hide();ui.pauseIcon(false);
-  var c=cfg();g.banner={t:0,dur:1.8,text:'SLEEVE '+g.sleeve,sub:'25 CRACKERS \u00b7 BREAK '+c.quota+' TO MOVE ON'};
+  var c=cfg();g.banner={t:0,dur:1.8,text:'SLEEVE '+g.sleeve,sub:SLEEVE+' CRACKERS \u00b7 BREAK '+c.quota+' TO MOVE ON'};
   setPhase('pull',1.9);A.start();
 }
 function setPhase(p,t){g.phase=p;g.phaseT=t||0}
 function slotStart(i){return i*2}
 function launch(){
-  var c=cfg(),i=g.throwIdx,n=i<THROWS-1?2:1,base=slotStart(i),side=Math.random()<0.5?-1:1;
+  var c=cfg(),i=g.throwIdx,base=slotStart(i),n=Math.min(2,Math.max(1,SLEEVE-base)),side=Math.random()<0.5?-1:1;
   g.shots=3;g.crackers=[];
   for(var k=0;k<n;k++){
     var s=n===2?(k?side:-side):(Math.random()<0.5?-1:1),x1=L.W/2+s*R(0.12,c.spread)*L.W*(st.portrait?1.05:1);
@@ -89,33 +89,35 @@ function endSleeve(){
   if(clean){bonus=2000*g.sleeve;g.cleanCount++;g.score+=bonus}
   if(!pass){finalScreen(b);return}
   A.fanfare();
-  ui.show('<p class="kicker">Sleeve '+g.sleeve+' done</p><h2>'+(clean?'Clean Sleeve!':'Cracker Count: '+b+'/25')+'</h2>'+
+  var pct=Math.round(b/SLEEVE*100);
+  ui.show('<p class="kicker">Sleeve '+g.sleeve+' done</p><h2>'+(clean?'Clean Sleeve!':'Pull the Sleeve: '+b+'/'+SLEEVE+' ('+pct+'%)')+'</h2>'+
     sleeveRow()+
-    '<div class="stats"><span><b>'+b+'/25</b>breaks</span><span><b>'+c.quota+'</b>needed</span><span><b>'+CS.fmt(g.score)+'</b>score</span></div>'+
+    '<div class="stats"><span><b>'+b+'/'+SLEEVE+'</b>breaks ('+pct+'%)</span><span><b>'+c.quota+'</b>needed</span><span><b>'+CS.fmt(g.score)+'</b>score</span></div>'+
     (clean?'<p><span class="badge">Clean Sleeve +'+CS.fmt(bonus)+'</span></p>':'')+
-    '<p>Next sleeve throws faster and needs <strong>'+Math.min(22,c.quota+2)+'</strong>.</p>'+
+    '<p>Next sleeve throws faster and needs <strong>'+Math.min(27,c.quota+2)+'</strong>.</p>'+
     '<div class="btns"><button data-focus data-act="next">Sleeve '+(g.sleeve+1)+' \u2192</button></div>');
 }
 function sleeveRow(){return '<p aria-hidden="true" style="letter-spacing:2px;font-size:1.1rem;line-height:1.2;word-break:break-all">'+g.res.map(function(r){return r==='hit'?'<span style="color:#b8913a">\u25CF</span>':'<span style="color:#C41E3A">\u00d7</span>'}).join('')+'</p>'}
 function finalScreen(lastB){
   g.mode='over';A.sad();
   var isNew=HI.set(g.score),hi=HI.get(),bestS=HIS.get(),acc=g.shotsFired?Math.round(g.successfulShots/g.shotsFired*100):0;
-  var title=g.cleanCount?'Clean Sleeve club':g.best>=22?'Crack Shot':g.best>=18?'Sharpshooter':g.best>=15?'Cracker Smasher':'Crumb Bum';
-  var share='Cracker Count (arcade): best sleeve '+g.best+'/25, '+g.sleeveBreaks.length+' sleeve'+(g.sleeveBreaks.length>1?'s':'')+', '+CS.fmt(g.score)+' pts in Crack Shot, the thrown-cracker game from 22 Crack Shot. Can you clean a sleeve? '+location.origin+'/games/crackshot';
+  var title=g.cleanCount?'Clean Sleeve club':g.best>=27?'Crack Shot':g.best>=22?'Sharpshooter':g.best>=18?'Cracker Smasher':'Crumb Bum';
+  var bestPct=Math.round((g.best||0)/SLEEVE*100), lastPct=Math.round((lastB||0)/SLEEVE*100);
+  var share='Pull the Sleeve (arcade): best sleeve '+g.best+'/'+SLEEVE+' ('+bestPct+'%), '+g.sleeveBreaks.length+' sleeve'+(g.sleeveBreaks.length>1?'s':'')+', '+CS.fmt(g.score)+' pts in Crack Shot, the thrown-cracker game from 22 Crack Shot. Can you clean a sleeve? '+location.origin+'/games/crackshot';
   ui.show('<p class="kicker">Out of crackers \u00b7 sleeve '+g.sleeve+'</p><h2>'+title+'</h2><p class="big">'+CS.fmt(g.score)+'</p>'+(isNew?'<p class="new">\u2605 New high score \u2605</p>':'<p>High score: <strong>'+CS.fmt(hi)+'</strong></p>')+
     sleeveRow()+
-    '<div class="stats"><span><b>'+lastB+'/25</b>last sleeve (needed '+cfg().quota+')</span><span><b>'+bestS+'/25</b>best ever</span><span><b>'+acc+'%</b>shots that broke</span></div>'+
+    '<div class="stats"><span><b>'+lastB+'/'+SLEEVE+'</b>last sleeve ('+lastPct+'%, needed '+cfg().quota+')</span><span><b>'+bestS+'/'+SLEEVE+'</b>best ever</span><span><b>'+acc+'%</b>shots that broke</span></div>'+
     '<textarea rows="3" readonly aria-label="Share text">'+share+'</textarea>'+
-    '<div class="btns"><button data-act="share">Copy my score</button><button class="ghost" data-focus data-act="again">Play again</button><a class="btn ghost" href="/cracker-count">Real Cracker Count</a></div>'+
+    '<div class="btns"><button data-act="share">Copy my score</button><button class="ghost" data-focus data-act="again">Play again</button><a class="btn ghost" href="/pull-the-sleeve">Pull the Sleeve</a></div>'+
     '<p class="fine">Copying just puts the text on your clipboard. Nothing is posted.</p>');
   ui.el.querySelector('[data-act=share]').onclick=function(){CS.copy(share,this)};
 }
 function titleScreen(){
   g.mode='title';
   ui.show('<p class="kicker">22 Crack Shot Arcade</p><h2>Crack Shot</h2>'+
-    '<p>A sleeve of 25 crackers and a crow keeping score. Tap or click the flying crackers and see how far you can go.</p>'+
+    '<p>A sleeve of 30 crackers and a crow keeping score. Tap or click the flying crackers and see how far you can go.</p>'+
     '<div class="btns"><button data-focus data-act="start">Play Crack Shot</button></div>'+
-    '<details class="cabinet-rules"><summary>Scoring and controls</summary><ul><li>A sleeve contains 25 crackers. A complete sleeve of breaks earns the Clean Sleeve badge.</li><li>Your score counts both crackers in a double break. Accuracy counts a successful click or tap once.</li><li>Each completed quota unlocks the next sleeve.</li></ul><p>P or Esc to pause. M to mute.</p></details>'+
+    '<details class="cabinet-rules"><summary>Scoring and controls</summary><ul><li>A sleeve contains 30 crackers, like a typical retail sleeve. Score is breaks out of 30, shown as a percent. A complete sleeve of breaks earns the Clean Sleeve badge.</li><li>Your score counts both crackers in a double break. Accuracy counts a successful click or tap once.</li><li>Each completed quota unlocks the next sleeve.</li></ul><p>P or Esc to pause. M to mute.</p></details>'+
     '<p class="fine">Personal best · '+CS.fmt(HI.get())+' points</p>');
 }
 function pauseScreen(){
@@ -262,7 +264,7 @@ function drawHUD(){
   ctx.textAlign='left';ctx.fillStyle=P.brass;ctx.font='500 12px Oswald, sans-serif';ctx.fillText('SHOTS',18,cy-hh*0.28);
   for(i=0;i<3;i++){var x=18+i*20,y=cy-hh*0.12,on=i<g.shots||g.phase!=='flight';ctx.fillStyle=on?P.red:'rgba(243,230,200,.18)';ctx.fillRect(x,y,13,24);ctx.fillStyle=on?P.brass:'rgba(243,230,200,.12)';ctx.fillRect(x,y+18,13,8)}
   // sleeve tracker
-  var two=st.portrait,per=two?13:25,sp=two?25:22,rw=(per-1)*sp,x0=W/2-rw/2+(two?18:0),y0=two?cy-hh*0.2:cy+2;
+  var two=st.portrait,per=two?15:SLEEVE,sp=two?22:18,rw=(per-1)*sp,x0=W/2-rw/2+(two?18:0),y0=two?cy-hh*0.2:cy+2;
   ctx.textAlign='center';ctx.fillStyle=P.brass;ctx.font='500 12px Oswald, sans-serif';
   ctx.fillText('SLEEVE '+g.sleeve+' \u00b7 '+breaks()+' BROKEN \u00b7 NEED '+c.quota,W/2+(two?18:0),two?top+11:cy-hh*0.3);
   var cur=g.mode==='play'&&g.phase!=='pull'?[slotStart(g.throwIdx),slotStart(g.throwIdx)+1]:[];

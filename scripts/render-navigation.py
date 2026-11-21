@@ -8,7 +8,7 @@ site = Path(__file__).resolve().parents[1] / "site"
 primary = [("/hall", "Smoothbore Hall"), ("/gallery-atlas", "Gallery Map"), ("/games", "Arcade")]
 more = [
     ("/", "Home"), ("/about", "History"), ("/gallery-hall", "Gallery Games Hall"),
-    ("/cracker-count", "Cracker Count"), ("/rules", "Rules"), ("/safety", "Safety"),
+    ("/pull-the-sleeve", "Pull the Sleeve"), ("/rules", "Rules"), ("/safety", "Safety"),
     ("/designs", "Designs & Targets"), ("/gear", "Gear"),
 ]
 

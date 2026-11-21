@@ -110,3 +110,21 @@ ol.timeline li::before{content:"";position:absolute;left:-11px;top:.55rem;width:
 kbd{font-family:inherit;font-size:.85em;background:var(--paper);border:1px solid rgba(28,46,74,.4);border-bottom-width:2px;border-radius:3px;padding:0 .3em}
 
 .viewtoggle[hidden]{display:none}
+
+/* Pull the Sleeve score cards */
+.scorecard-block{margin:1.6rem 0 2rem}
+.scorecard-preview{margin:0;background:var(--paper);border:2px solid var(--navy);border-radius:8px;padding:.85rem 1rem 1rem;text-align:center;box-shadow:4px 4px 0 var(--brass)}
+.scorecard-preview img{width:100%;max-width:36rem;height:auto;border:1px solid rgba(28,46,74,.2);background:#fff}
+.scorecard-preview figcaption{margin:.65rem 0 0;font-size:.92rem}
+.scorecard-downloads{display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;margin:.8rem 0 0}
+@media print{
+  header.site,.marquee,footer.site,#age-gate,.menu-btn,nav.main,.skip,.scorecard-downloads,.note{display:none!important}
+  body{background:#fff;color:#000}
+  a{color:#000}
+  main{padding:0}
+  .wrap{max-width:none;padding:0}
+  .scorecard-block{margin:0 0 1rem;break-inside:avoid;page-break-inside:avoid}
+  .scorecard-preview{border:0;box-shadow:none;background:none;padding:0}
+  .scorecard-preview img{max-width:100%;border:0}
+  h1,h2,h3{color:#000}
+}
