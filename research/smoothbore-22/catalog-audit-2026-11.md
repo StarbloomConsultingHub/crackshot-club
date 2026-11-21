@@ -1,11 +1,13 @@
 ---
 title: Smoothbore Hall completeness audit (factory .22 smoothbores)
-status: open (likely items still need catalog pages)
+status: superseded by verification-2026-11.md
 researched: 2026-11-20
 backs: site/hall.html, site/assets/halls/smoothbore.json
 ---
 
 # Smoothbore Hall completeness audit: factory .22 smoothbores
+
+> **Reviewed and superseded:** Read [the verification and implementation decisions](verification-2026-11.md) before using this original audit. Several confidence labels and proposed corrections below were overturned by factory evidence. This file preserves the initial research record.
 
 Prepared Fri Nov 20, 2026 (ET) for Darren's question: *"Are you sure we have covered every production model smoothbore .22 rifle ever made?"*
 Research only; no site content was changed by this audit. The inventory was read from `origin/main` @ `0efc149` (`site/assets/halls/smoothbore.json`, `site/hall.html`, `site/gallery-hall.html`, `site/gallery-atlas.html`).

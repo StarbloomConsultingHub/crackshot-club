@@ -41,6 +41,10 @@
    ],
    "sources": [
     [
+     "ATF historical Curios or Relics list, printed p. 39 (No. 20 smoothbore identification)",
+     "https://www.atf.gov/media/19846/download"
+    ],
+    [
      "Wikipedia: Stevens Boys Rifles",
      "https://en.wikipedia.org/wiki/Stevens_Boys_Rifles"
     ],
@@ -92,6 +96,10 @@
    ],
    "sources": [
     [
+     "John Dunn, Australian Shooter, June 2020, p. 32",
+     "https://www.ssaa.org.au/wp-content/uploads/2021/02/June_2020_web.pdf#page=32"
+    ],
+    [
      "Wikipedia: Stevens Boys Rifles",
      "https://en.wikipedia.org/wiki/Stevens_Boys_Rifles"
     ],
@@ -113,7 +121,7 @@
    "plaqueSub": "1920–1927",
    "tags": [
     "Boys’ rifles",
-    "Cousin (not .22)"
+    "9 mm Flobert · not .22"
    ],
    "summary": "Winchester's only U.S. 9mm Flobert garden gun, roughly 20,000 made and unserialized. A cousin, not a .22, but it belongs in any shot-cartridge hall.",
    "details": [
@@ -154,6 +162,45 @@
    ]
   },
   {
+   "id": "rem-33",
+   "title": "Model 33 Smooth Bore",
+   "plaqueTitle": "Remington Model 33 Smooth Bore",
+   "subtitle": "Remington · 1932–1935 (Model 33 family; smoothbore dates not isolated)",
+   "plaqueSub": "1932–1935 family",
+   "tags": [
+    "Interwar"
+   ],
+   "summary": "The smoothbore story began before the 41 and 510. Remington’s historical model record names a Model 33 Smooth Bore alongside the familiar rifled single shot. Its separate shot-cartridge entry confirms a factory variant, rather than a worn-out rifled barrel.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "1932–1935 (Model 33 family; smoothbore dates not isolated)"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "Variant length not established by the factory history record"
+    ],
+    [
+     "Chamber",
+     ".22 shot cartridges"
+    ]
+   ],
+   "sources": [
+    [
+     "Remington historical model record: Model 33 (archived July 2025)",
+     "https://web.archive.org/web/20250720023830/https://www.remarms.com/firearm-history/model-33"
+    ]
+   ]
+  },
+  {
    "id": "rem-41sb",
    "title": "41 SB Targetmaster",
    "plaqueTitle": "Remington 41 SB",
@@ -162,7 +209,7 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "summary": "Smoothbore variant of the prewar Model 41, listed on Remington's history pages. Uncommon and thinly documented.",
+   "summary": "Remington’s history records a smoothbore in the Model 41 family and notes that the 41A smoothbore designation became 41 SB in 1938. This prewar single shot belongs alongside the Model 33 and repeating 341SB.",
    "details": [
     [
      "Maker",
@@ -182,7 +229,7 @@
     ],
     [
      "Chamber",
-     ".22 S/L/LR shot"
+     ".22 shot cartridges"
     ],
     [
      "Value snapshot",
@@ -191,8 +238,63 @@
    ],
    "sources": [
     [
-     "Tincanbandit: \"The Remington 500 Series Rifles\" (Dec 2018)",
-     "https://tincanbandit.blogspot.com/2018/12/featured-gun-remington-500-series-rifles.html"
+     "Remington historical model record: Model 41 Targetmaster",
+     "https://www.remarms.com/firearm-history/model-41-targetmaster"
+    ]
+   ]
+  },
+  {
+   "id": "rem-341sb",
+   "title": "341SB Sportmaster",
+   "plaqueTitle": "Remington 341SB",
+   "subtitle": "Remington · 1936–1940 (Model 341 family; smoothbore dates not isolated)",
+   "plaqueSub": "1936–1940 family",
+   "tags": [
+    "Mo-Skeet-O era"
+   ],
+   "summary": "A prewar tubular-magazine repeater in Remington’s smoothbore family. The manufacturer’s history explicitly lists the 341SB for .22 Long Rifle shot. A Remington Society account describes its bead front sight and lack of a rear sight.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "1936–1940 (Model 341 family; smoothbore dates not isolated)"
+    ],
+    [
+     "Action",
+     "Bolt, tubular magazine"
+    ],
+    [
+     "Barrel",
+     "24 in (Rock Island catalog specimen)"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot"
+    ],
+    [
+     "Bore description",
+     "The 2008 Standard Catalog describes a Routledge version; the factory history identifies the SB without detailing its bore profile."
+    ]
+   ],
+   "sources": [
+    [
+     "Remington historical model record: Model 341 (archived July 2025)",
+     "https://web.archive.org/web/20250720023854/https://www.remarms.com/firearm-history/model-341-speedmaster"
+    ],
+    [
+     "Remington Society: “Remington Sportsmaster and Me—Best Friends”",
+     "https://remingtonsociety.org/remington-sportsmaster-and-me-best-friends/"
+    ],
+    [
+     "Standard Catalog of Remington Firearms (2008), Model 341SB",
+     "https://ia800808.us.archive.org/29/items/pricing/Standard%20Catalog%20of%20Remington%20Firearms.pdf"
+    ],
+    [
+     "Rock Island historical specimen record, October 2022, lot 2856",
+     "https://www.rockislandauction.com/detail/1041/2856/remington-model-341-sportmaster-smoothbore-bolt-action-rifle"
     ]
    ]
   },
@@ -205,7 +307,7 @@
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "summary": "Barrel stamped \"SMOOTH BORE – RECESS CHOKE\" with a shotgun bead. Marlin collectors also mention rare 101SB and 80SB smoothbores from the 1940s (unverified).",
+   "summary": "The 100SB is documented with a SMOOTH BORE – RECESS CHOKE barrel legend. Other Marlin names need care: a 1945 catalog index lists 80 CSB, while owner reports mention 80SB and 101SB. Those additional variants remain unresolved pending inspection of the original catalog pages.",
    "details": [
     [
      "Maker",
@@ -244,6 +346,10 @@
     [
      "Marlin Collectors forum: .22 smoothbores",
      "https://marlin-collectors.com/forum/viewtopic.php?t=13308"
+    ],
+    [
+     "Index to the 1945 Marlin catalog (80 CSB research lead)",
+     "https://cornellpubs.com/product/1598/"
     ]
    ]
   },
@@ -305,7 +411,8 @@
    "subtitle": "Winchester · Routledge: 1938–1939 (~75 guns); counterbore: from ~1940",
    "plaqueSub": "Routledge: 1938–1939",
    "tags": [
-    "Mo-Skeet-O era"
+    "Mo-Skeet-O era",
+    "Shot-only · stepped / counterbored"
    ],
    "summary": "The blue chip of the Hall. Early guns used Fred Routledge's stepped bore; Winchester then made its own counterbore to avoid royalties. Look for matted receivers and \"FOR SHOT ONLY.\"",
    "details": [
@@ -332,6 +439,10 @@
     [
      "Value snapshot",
      "$3,000–$6,000 estimates (Rock Island, 2024, restored 1939 Routledge guns); $9,222.50 sold (LSB, 1951 gun, ~97%)."
+    ],
+    [
+     "Bore",
+     "Routledge stepped smoothbore or later Winchester counterbore; not one uniform bore profile"
     ]
    ],
    "sources": [
@@ -346,6 +457,58 @@
     [
      "Westley Richards used-gun note on Routledge vs. Winchester counterbore 61s",
      "https://www.westleyrichards.com/usedguns/view/shotguns/1532815516-winchester--22-shot-only-model-61-smooth-bore/"
+    ],
+    [
+     "American Rifleman: The Winchester Model 61, a historical review",
+     "https://www.americanrifleman.org/content/the-winchester-model-61-a-look-back/"
+    ]
+   ]
+  },
+  {
+   "id": "win-62sb",
+   "title": "Model 62 Smooth Bore",
+   "plaqueTitle": "Winchester Model 62 Smooth Bore",
+   "subtitle": "Winchester · Documented examples around 1940; complete production dates unknown",
+   "plaqueSub": "Around 1940",
+   "tags": [
+    "Mo-Skeet-O era",
+    "Documented rare variant"
+   ],
+   "summary": "An exception to the familiar rifled gallery pump. A collector-documented Model 62 carries a factory-style SMOOTH BORE barrel legend, and an archived specimen catalog records another as a factory smoothbore. Published collector observations establish the variant, but not a complete production total.",
+   "details": [
+    [
+     "Maker",
+     "Winchester"
+    ],
+    [
+     "Years",
+     "Documented examples around 1940; complete production dates unknown"
+    ],
+    [
+     "Action",
+     "Visible-hammer pump, tubular magazine"
+    ],
+    [
+     "Barrel",
+     "23 in on the documented specimen"
+    ],
+    [
+     "Chamber",
+     ".22 Long Rifle shot"
+    ],
+    [
+     "Distinction",
+     "The smoothbore is a separate rare variant. Ordinary Model 62 Gallery guns were rifled .22 Shorts."
+    ]
+   ],
+   "sources": [
+    [
+     "Winchester Arms Collectors Association: Model 62 Smooth Bore (specimen photographs)",
+     "https://winchestercollector.org/forum/winchester-22-rim-fire/winchester-model-62-smooth-bore/"
+    ],
+    [
+     "LSB historical specimen record: Winchester Model 62 Smooth Bore",
+     "https://lsbauctions.com/rare-winchester-model-62-smooth-bore-pump-action-takedown-rifle/"
     ]
    ]
   },
@@ -402,14 +565,14 @@
   },
   {
    "id": "rem-510sb",
-   "title": "510SB / 511SB / 512SB",
+   "title": "510SB / 511SB / 512SB and 510-X SB",
    "plaqueTitle": "Remington 510 / 511 / 512 SB",
-   "subtitle": "Remington · 510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs)",
+   "subtitle": "Remington · 510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs); 510-X family: 1964–1966",
    "plaqueSub": "510: 1939–1962",
    "tags": [
     "Mo-Skeet-O era"
    ],
-   "summary": "The working-class Mo-Skeet-O guns. Watch for SB, Mo-Skeet-O, or Skeetrap stamps. Easy to walk past at a gun show.",
+   "summary": "All three SB designations appear in Remington’s historical model records: the single-shot 510, box-magazine 511 and tubular-magazine 512. The 511 record also lists a Routledge Bore variant. The dates below describe the parent models, not a proven continuous smoothbore production run. The later 510-X was also offered in Smooth Bore grade, explicitly named in Remington’s own model brochure.",
    "details": [
     [
      "Maker",
@@ -417,7 +580,7 @@
     ],
     [
      "Years",
-     "510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs)"
+     "510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs); 510-X family: 1964–1966"
     ],
     [
      "Action",
@@ -429,72 +592,37 @@
     ],
     [
      "Chamber",
-     ".22 S/L/LR shot"
+     ".22 rimfire shot cartridges (SB variants)"
     ],
     [
      "Value snapshot",
      "No dated sold comps captured (unverified); generally below 121 SB money."
+    ],
+    [
+     "Later variant",
+     "510-X Smooth Bore; 1964–1966 parent family according to Remington historian John Gyde"
     ]
    ],
    "sources": [
     [
-     "Tincanbandit: \"The Remington 500 Series Rifles\" (Dec 2018)",
-     "https://tincanbandit.blogspot.com/2018/12/featured-gun-remington-500-series-rifles.html"
+     "Remington historical model record: Model 510 Targetmaster",
+     "https://www.remarms.com/firearm-history/model-510-targetmaster"
     ],
     [
-     "Wikipedia: Garden gun",
-     "https://en.wikipedia.org/wiki/Garden_gun"
+     "Remington historical model record: Model 511 (archived July 2025)",
+     "https://web.archive.org/web/20250720023844/https://www.remarms.com/firearm-history/model-511-scoremaster"
     ],
     [
-     "Standard Catalog of Remington Firearms (2008, archive.org)",
-     "https://ia800808.us.archive.org/29/items/pricing/Standard%20Catalog%20of%20Remington%20Firearms.pdf"
-    ]
-   ]
-  },
-  {
-   "id": "rem-514",
-   "title": "514 Routledge",
-   "plaqueTitle": "Remington 514 Routledge",
-   "subtitle": "Remington · Within 514 run, 1948–1971 (special order)",
-   "plaqueSub": "Within 514 run, 1948–1971",
-   "tags": [
-    "Postwar & revival"
-   ],
-   "summary": "A special-order Routledge barrel on the humble 514. Gun Digest: add about $100 over a standard 514.",
-   "details": [
-    [
-     "Maker",
-     "Remington"
+     "Remington historical model record: Model 512 (archived July 2025)",
+     "https://web.archive.org/web/20250720023852/https://www.remarms.com/firearm-history/model-512-sportsmaster"
     ],
     [
-     "Years",
-     "Within 514 run, 1948–1971 (special order)"
+     "Remington 510-X / 511-X / 512-X factory brochure, cover (510-X SB designation)",
+     "https://classicamericangunsmith.com/wp-content/uploads/2017/12/Remington-Field-Service-Manual-for-Model-510-X-Model-511-X-Model-512-X.pdf#page=1"
     ],
     [
-     "Action",
-     "Bolt single shot"
-    ],
-    [
-     "Barrel",
-     "24 in"
-    ],
-    [
-     "Chamber",
-     ".22 LR shot only"
-    ],
-    [
-     "Value snapshot",
-     "$482–$550 used/sold comps (TrueGunValue, relative dates, checked Nov 2026; unverified calendar dates)."
-    ]
-   ],
-   "sources": [
-    [
-     "Gun Values: Remington 514",
-     "https://gunvalues.gundigest.com/remington-arms-company-inc/10237/model-514/"
-    ],
-    [
-     "TrueGunValue: 514 Routledge",
-     "https://truegunvalue.com/rifle/remington/514-routledge/price-historical-value-661"
+     "John Gyde, Remington Society, June 18, 2005 (510-X family dates)",
+     "https://www.remingtonsociety.org/forums/viewtopic.php?p=1391"
     ]
    ]
   },
@@ -554,6 +682,53 @@
    ]
   },
   {
+   "id": "rem-514",
+   "title": "514 Routledge",
+   "plaqueTitle": "Remington 514 Routledge",
+   "subtitle": "Remington · Within 514 run, 1948–1971 (special order)",
+   "plaqueSub": "Within 514 run, 1948–1971",
+   "tags": [
+    "Postwar & revival"
+   ],
+   "summary": "A special-order Routledge barrel on the humble 514. Gun Digest: add about $100 over a standard 514.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "Within 514 run, 1948–1971 (special order)"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "24 in"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot only"
+    ],
+    [
+     "Value snapshot",
+     "$482–$550 used/sold comps (TrueGunValue, relative dates, checked Nov 2026; unverified calendar dates)."
+    ]
+   ],
+   "sources": [
+    [
+     "Gun Values: Remington 514",
+     "https://gunvalues.gundigest.com/remington-arms-company-inc/10237/model-514/"
+    ],
+    [
+     "TrueGunValue: 514 Routledge",
+     "https://truegunvalue.com/rifle/remington/514-routledge/price-historical-value-661"
+    ]
+   ]
+  },
+  {
    "id": "mossberg-320tr",
    "title": "Targo revival: 320TR, 340TR",
    "plaqueTitle": "Mossberg 320TR / 340TR",
@@ -606,14 +781,14 @@
   },
   {
    "id": "rem-572sb",
-   "title": "572SB Fieldmaster",
-   "plaqueTitle": "Remington 572SB",
-   "subtitle": "Remington · 1961–1979",
-   "plaqueSub": "1961–1979",
+   "title": "572SB Fieldmaster / 572 BDL Smoothbore",
+   "plaqueTitle": "Remington 572 Smoothbores",
+   "subtitle": "Remington · 572SB: 1961–1979; BDL Smoothbore introduced in 2007",
+   "plaqueSub": "1961–1979; BDL revival in 2007",
    "tags": [
     "Postwar & revival"
    ],
-   "summary": "The last factory smoothbore pump from a big U.S. maker, until the Henry lever gun changed the game.",
+   "summary": "Remington’s smoothbore pump returned. After the earlier 572SB, the Spring 2007 factory catalog introduced a 572 BDL Smoothbore with polished walnut furniture, a tubular magazine and bead sights. The older “last pump until Henry” claim misses this later edition.",
    "details": [
     [
      "Maker",
@@ -621,7 +796,7 @@
     ],
     [
      "Years",
-     "1961–1979"
+     "572SB: 1961–1979; BDL Smoothbore introduced in 2007"
     ],
     [
      "Action",
@@ -629,11 +804,11 @@
     ],
     [
      "Barrel",
-     "—"
+     "22 in (BDL, Spring 2007 factory catalog); later specifications differ"
     ],
     [
      "Chamber",
-     ".22 S/L/LR (smooth)"
+     ".22 LR shot (2007 BDL catalog designation)"
     ],
     [
      "Value snapshot",
@@ -642,12 +817,16 @@
    ],
    "sources": [
     [
-     "Wikipedia: Remington Model 572 Fieldmaster",
-     "https://en.wikipedia.org/wiki/Remington_Model_572_Fieldmaster"
+     "Remington Spring 2007 catalog, printed pp. 18–19",
+     "https://bayanay.ru/forum/data/cats/Spring2007.pdf#page=20"
     ],
     [
-     "TrueGunValue: 572 SB",
-     "https://truegunvalue.com/rifle/remington-572-sb/price-historical-value"
+     "Standard Catalog of Remington Firearms (2008), Model 572 BDL Smoothbore",
+     "https://ia800808.us.archive.org/29/items/pricing/Standard%20Catalog%20of%20Remington%20Firearms.pdf"
+    ],
+    [
+     "Remington historical model record: Model 572",
+     "https://www.remarms.com/firearm-history/model-572-fieldmaster"
     ]
    ]
   },
@@ -660,7 +839,7 @@
    "tags": [
     "Postwar & revival"
    ],
-   "summary": "Space-age Mohawk-brown nylon meets backyard skeet. Gun Digest singles out the 24-inch SB as a small subset (forum talk: ~200 guns, unverified).",
+   "summary": "Remington paired a smoothbore barrel with its Mohawk-brown nylon-stocked bolt-action single shot. The 2008 Standard Catalog estimates roughly 2,000 smoothbores, including about 200 with the longer 24-inch barrel. Blue Book gives a different total and leaves the long-barrel count unknown; no factory tally has been verified.",
    "details": [
     [
      "Maker",
@@ -685,12 +864,71 @@
     [
      "Value snapshot",
      "No dated comp captured (unverified)."
+    ],
+    [
+     "Production estimate",
+     "About 10,700 Nylon 10s of all types, including about 2,000 smoothbores and about 200 long-barrel smoothbores (2008 Standard Catalog)"
     ]
    ],
    "sources": [
     [
      "Gun Values: Remington Model 10 Nylon",
      "https://gunvalues.gundigest.com/remington-arms-company-inc/10088/model-10-nylon/"
+    ],
+    [
+     "Standard Catalog of Remington Firearms (2008), Model 10 Nylon",
+     "https://ia800808.us.archive.org/29/items/pricing/Standard%20Catalog%20of%20Remington%20Firearms.pdf"
+    ],
+    [
+     "Blue Book: Nylon 10 SB (conflicting production estimate)",
+     "https://bluebookofgunvalues.com/products/remington-nylon-10-sb-single-shot"
+    ]
+   ]
+  },
+  {
+   "id": "rem-580sb",
+   "title": "580SB Smooth Bore",
+   "plaqueTitle": "Remington 580SB",
+   "subtitle": "Remington · 1967–1978 (Model 580 family; smoothbore dates not isolated)",
+   "plaqueSub": "1967–1978 family",
+   "tags": [
+    "Postwar & revival"
+   ],
+   "summary": "The single-shot member of Remington’s later bolt-action rimfire line also had a factory smoothbore variant. Remington names the 580SB in its historical record. Surviving catalogued examples show a bead sight and a barrel marked for .22 Long Rifle shot.",
+   "details": [
+    [
+     "Maker",
+     "Remington"
+    ],
+    [
+     "Years",
+     "1967–1978 (Model 580 family; smoothbore dates not isolated)"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "24 in on documented examples"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot"
+    ],
+    [
+     "Production",
+     "The manufacturer’s approximately 60,000 figure covers the entire Model 580 family. A smoothbore-only total has not been verified."
+    ]
+   ],
+   "sources": [
+    [
+     "Remington historical model record: Model 580 (archived July 2025)",
+     "https://web.archive.org/web/20250720023839/https://www.remarms.com/firearm-history/model-580"
+    ],
+    [
+     "Amoskeag historical specimen record: 1974 Model 580SB",
+     "https://live.amoskeagauction.com/lot-details/index/catalog/51/lot/27364/Remington-Model-580-SB-Bolt-Action-Smoothbore-Rifle"
     ]
    ]
   },
@@ -742,16 +980,107 @@
    ]
   },
   {
+   "id": "savage-mark1gsb",
+   "title": "Mark I-GSB / Mark I G Smooth Bore",
+   "plaqueTitle": "Savage Mark I-GSB",
+   "subtitle": "Savage Arms · Listed by Savage in November 2026; smoothbore introduction year unverified",
+   "plaqueSub": "Catalogued in 2026",
+   "tags": [
+    "Modern"
+   ],
+   "summary": "A modern factory smoothbore hidden under the broader Mark I G name. Savage’s model-specific specification table identifies SKU 50703 as Smooth Bore. California’s firearm safety-device record independently names the Mark I-GSB in .22 LR shot cartridges.",
+   "details": [
+    [
+     "Maker",
+     "Savage Arms"
+    ],
+    [
+     "Years",
+     "Listed by Savage in November 2026; smoothbore introduction year unverified"
+    ],
+    [
+     "Action",
+     "Bolt single shot"
+    ],
+    [
+     "Barrel",
+     "21 in (Savage specification)"
+    ],
+    [
+     "Chamber",
+     ".22 LR shot cartridges"
+    ],
+    [
+     "Source note",
+     "Savage reuses rifled-family promotional text on this page. The SKU-specific table says Smooth Bore; the catalog listing does not establish continuous production."
+    ]
+   ],
+   "sources": [
+    [
+     "Savage Arms: SKU 50703 specification table (checked 20 Nov 2026)",
+     "https://savagearms.com/firearms/sku/50703"
+    ],
+    [
+     "California DOJ: Savage Mark I-GSB firearm identification",
+     "https://oag.ca.gov/firearms/certified-firearm/savage-mark-i-gsb"
+    ]
+   ]
+  },
+  {
+   "id": "chiappa-rc92",
+   "title": "RC92 6 mm Flobert",
+   "plaqueTitle": "Chiappa RC92 · 6 mm Flobert",
+   "subtitle": "Chiappa Firearms · Documented in the 2012 catalog and 2013 manual; full production span unverified",
+   "plaqueSub": "Documented in 2012",
+   "tags": [
+    "European rimfire",
+    "6 mm Flobert"
+   ],
+   "summary": "A named European smoothbore missing from the original audit. Chiappa’s 2012 catalog separates the RC92 in 6 mm Flobert from its 9 mm Flobert sibling and the rifled .22 LR RC92. It belongs to the wider rimfire story without being relabelled as a .22 LR model.",
+   "details": [
+    [
+     "Maker",
+     "Chiappa Firearms"
+    ],
+    [
+     "Years",
+     "Documented in the 2012 catalog and 2013 manual; full production span unverified"
+    ],
+    [
+     "Action",
+     "Break-open single shot"
+    ],
+    [
+     "Barrel",
+     "60 cm / 23.6 in (2013 model table)"
+    ],
+    [
+     "Chamber",
+     "6 mm Flobert"
+    ]
+   ],
+   "sources": [
+    [
+     "Chiappa 2012 Magalog, printed p. 98 (PDF p. 51)",
+     "https://www.all4shooters.com/it/tiro/cultura/chiappa-magalog-2012/magalog-chiappa-firearms.pdf?cid=mox#page=51"
+    ],
+    [
+     "Chiappa Firearms: Little Badger / RC92 / Double Badger manual, Sept 2013, p. 6",
+     "https://www.taylorsfirearms.com/media/binaryanvil/media_library/CHIAPPA_LITTLE_BADGER_RC92_DOUBLE_BADGER_RIFLE_MANUAL.pdf#page=6"
+    ]
+   ]
+  },
+  {
    "id": "chiappa-badger",
-   "title": "Little Badger Shotgun (and earlier RC 92)",
+   "title": "Little Badger Shotgun · 9 mm Flobert",
    "plaqueTitle": "Chiappa Little Badger",
    "subtitle": "Chiappa · Current",
    "plaqueSub": "Current",
    "tags": [
     "Modern",
-    "Cousin (not .22)"
+    "9 mm Flobert · not .22"
    ],
-   "summary": "Europe's garden-gun cartridge in a folding modern package. A cousin, not a .22. The common rifled Little Badger .22 is a different gun.",
+   "summary": "Chiappa’s folding 9 mm Flobert shotgun continues a European garden-gun tradition. The earlier RC92 in 9 mm is documented in the manufacturer’s 2013 manual. The rifled .22 LR Little Badger is a different firearm; the 6 mm Flobert RC92 has its own exhibit.",
    "details": [
     [
      "Maker",
@@ -786,6 +1115,10 @@
     [
      "The Firearm Blog: The Rimfire Report, 9mm Flobert (26 Jul 2021)",
      "https://www.thefirearmblog.com/blog/2021/07/26/rimfire-report-9mm-flobert/"
+    ],
+    [
+     "Chiappa 2013 manual, RC92 model table, p. 6",
+     "https://www.taylorsfirearms.com/media/binaryanvil/media_library/CHIAPPA_LITTLE_BADGER_RC92_DOUBLE_BADGER_RIFLE_MANUAL.pdf#page=6"
     ]
    ]
   },
@@ -793,12 +1126,12 @@
    "id": "henry-h1",
    "title": "H1 Garden Gun (H001GG-22 / H001GG-22M)",
    "plaqueTitle": "Henry H1 Garden Gun",
-   "subtitle": "Henry Repeating Arms · 2019–present",
-   "plaqueSub": "2019–present",
+   "subtitle": "Henry Repeating Arms · Garden Gun family from 2019; current H1 models listed in 2026",
+   "plaqueSub": "Garden Gun family from 2019",
    "tags": [
     "Modern"
    ],
-   "summary": "The only smoothbore .22 in current production that we know of. Capacity 14 (LR) / 11 (WMR) per Henry's spec table. Overall length 36.5 in.",
+   "summary": "Henry introduced the original .22 LR Garden Gun in 2019. Its current H1 specification sheet lists separate .22 LR and .22 WMR shotshell models, with capacities of 14 and 11 respectively. Savage also lists a .22 smoothbore, so the Henry is not presented as the only current offering.",
    "details": [
     [
      "Maker",
@@ -806,7 +1139,7 @@
     ],
     [
      "Years",
-     "2019–present"
+     "Garden Gun family from 2019; current H1 models listed in 2026"
     ],
     [
      "Action",
@@ -827,12 +1160,16 @@
    ],
    "sources": [
     [
-     "Henry Repeating Arms: H1 Garden Gun (fetched 11 Nov 2026)",
-     "https://www.henryusa.com/firearm/h1-garden-gun/"
+     "Henry: current lever-action shotgun specifications, pp. 6–7 (checked 20 Nov 2026)",
+     "https://www.henryusa.com/media-kit/firearm-specifications/lever-action-shotguns/"
     ],
     [
-     "American Rifleman: Tested: Henry Smooth Bore Garden Gun",
-     "https://www.americanrifleman.org/content/tested-henry-repeating-arms-smooth-bore-garden-gun/"
+     "Henry: Garden Gun launch, August 2019",
+     "https://www.henryusa.com/news/the-garden-gun-makes-a-comeback-with-new-henry-offering/"
+    ],
+    [
+     "Henry: 2026 H1 model substitution list",
+     "https://www.henryusa.com/media-kit/2026-h1-suggested-substitution-list/"
     ]
    ]
   }
@@ -848,7 +1185,7 @@
   "body": [
    "<strong>Yes, there really was a .32.</strong> What’s confirmed: Stevens catalogued its boys’-rifle smoothbores for <strong>.32 rimfire shot cartridges</strong> as well as .22. The <strong>Favorite No.&nbsp;20</strong> was “chambered for the 22 or 32 rimfire shot cartridges and has a smoothbore barrel and no rear sight” (Standard Catalog of Firearms, 2001, as quoted), and Wikipedia lists the <strong>Crack Shot No.&nbsp;26½</strong> for “.22LR Shot Cartridges, .32 Rimfire Shot Cartridges.” The gun our club is named for came in .32 shot.",
    "<strong>Ammo:</strong> .32 rimfire shot loads existed. A Canadian collector reports shooting a No.&nbsp;20 with CIL .32 Long Shot (#10, 1935-dated). That’s one collector’s report.",
-   "<strong>Likely but unverified:</strong> Remington No.&nbsp;4 rolling block (a forum quote of Fjestad’s Blue Book: “the .32 smoothbore was introduced around 1911”) and No.&nbsp;6 smoothbores (a forum quote of the Standard Catalog). Both are secondhand, so we’re waiting on a catalog page before calling them confirmed.",
+   "<strong>Remington’s rolling blocks:</strong> A factory catalog excerpt on printed page 88 offers both the No.&nbsp;4 and No.&nbsp;6 with smooth bores. Separate specimen records establish .32 rimfire examples: Amoskeag’s 2019 No.&nbsp;4 record describes a matching-number barrel marked SMOOTH BORE, and John Dunn photographed a No.&nbsp;6 marked for .32 Short or Long rimfire with a Smooth Bore inscription beneath the barrel. These are documented examples, not proof that every family caliber was offered smooth.",
    "Original .32 rimfire ammunition is scarce and old. Treat these guns as display pieces unless a gunsmith says otherwise."
   ],
   "sources": [
@@ -865,12 +1202,16 @@
     "https://www.canadiangunnutz.com/forum/threads/stevens-favorite-32-shot.2437275"
    ],
    [
-    "S&W Forum: Remington Model 4 in .32 rimfire",
-    "https://www.smithandwessonforums.com/threads/remington-model-4-single-shot-in-32-rimfire.9275"
+    "Remington factory catalog excerpt, printed p. 88 (in Model 4 historical document)",
+    "https://www.remarms.com/sites/default/files/2026%20Revised%20Historical%20OMs/Model%204%20Rolling%20Block%20%28REV%200426%29.pdf"
    ],
    [
-    "Rimfire Central: Rem. Model 6",
-    "https://www.rimfirecentral.com/threads/rem-model-6-rolling-block-help-needed.79309"
+    "Amoskeag 2019 historical catalog, lot 433: .32 RF No. 4",
+    "https://live.amoskeagauction.com/lot-details/index/catalog/25/lot/13693/Remington-No-4-Smoothbore-Rolling-Block-Rifle"
+   ],
+   [
+    "John Dunn, Australian Shooter, September 2020, pp. 22–24: .32 No. 6",
+    "https://www.ssaa.org.au/wp-content/uploads/2020/09/September_2020_web.pdf#page=24"
    ]
   ]
  }

@@ -6,7 +6,8 @@ Sourced research notes behind the club's site content: hall exhibits, challenge 
 
 | Note | Topic | Status | Researched | Backs |
 |---|---|---|---|---|
-| [smoothbore-22/catalog-audit-2026-11.md](smoothbore-22/catalog-audit-2026-11.md) | Is the Smoothbore Hall complete? Covered vs. missing factory .22 smoothbores, likely or rumored models, suggested fixes and collector tiers | Open | 2026-11-20 | `site/hall.html`, `site/assets/halls/smoothbore.json` |
+| [smoothbore-22/catalog-audit-2026-11.md](smoothbore-22/catalog-audit-2026-11.md) | Is the Smoothbore Hall complete? Covered vs. missing factory .22 smoothbores, likely or rumored models, suggested fixes and collector tiers | Superseded by verification below | 2026-11-20 | `site/hall.html`, `site/assets/halls/smoothbore.json` |
+| [smoothbore-22/verification-2026-11.md](smoothbore-22/verification-2026-11.md) | Verification of PR 7, corrected confidence labels, additional omissions and hall implementation | Reviewed; leads remain open | 2026-11-20 | Both hall pages and their JSON records |
 | [pull-the-sleeve/cracker-and-ammo-counts.md](pull-the-sleeve/cracker-and-ammo-counts.md) | Real sleeve and pack counts (about 30 per sleeve, 13 per Fresh Stacks-style pack, 32 foodservice) and shot-shell cost per round | Settled | 2026-11-20 | `site/pull-the-sleeve.html`, `targets/`, arcade game |
 
 Add a row when you add a note. Keep the newest audit for a topic alongside the older ones, and date the file name (`topic/what-YYYY-MM.md`) when a note is a point-in-time snapshot.
