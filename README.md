@@ -9,6 +9,7 @@ An informal club for smoothbore rimfire enthusiasts (18+), reviving backyard .22
 | `site/` | The club website (plain HTML/CSS, no build step), deployed on Vercel | MIT ([LICENSE](LICENSE)) |
 | `designs/` | 3D-printable traps, cracker rails, stands, holders, score boards | CC BY-NC-SA 4.0 ([LICENSE-DESIGNS.txt](LICENSE-DESIGNS.txt)) |
 | `targets/` | Printable Letter-size PDF targets and Pull the Sleeve / Short Stack score cards | CC BY-NC-SA 4.0 |
+| `research/` | Sourced research notes behind site content (hall audits, challenge counts, costs). Not deployed. See [research/README.md](research/README.md) | MIT ([LICENSE](LICENSE)) |
 
 The 22 Crack Shot name, logos, and cracker mark are club branding and are **not** covered by either license; please don't use them on merchandise.
 
