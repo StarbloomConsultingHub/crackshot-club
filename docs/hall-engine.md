@@ -1,6 +1,6 @@
 # Hall Engine (shared walk-in hall)
 
-`site/assets/hall-engine.js` + `site/assets/hall-engine.css`. No dependencies, CSS 3D. Used by `/hall` (Smoothbore Hall); built to be reused by the Gallery Games Hall.
+`site/assets/hall-engine.js` + `site/assets/hall-engine.css`. No dependencies, CSS 3D. Both `/hall` and `/gallery-hall` use the engine.
 
 ## Mount
 ```html
@@ -15,24 +15,29 @@ Auto-mounts every `[data-hall-src]` (add `data-hall-manual` to skip), or call
 ```json
 {"schema":"crackshot-hall/1","title":"...","exhibits":[
   {"id":"win-61","title":"Full card title","plaqueTitle":"Short wall title","subtitle":"Maker · years",
-   "plaqueSub":"years","tags":["Era"],"art":"rifle:pump","summary":"Plain text",
+   "plaqueSub":"years","tags":["Era"],"summary":"Plain text",
    "details":[["Maker","Winchester"]],"sources":[["Label","https://..."]]}],
  "finale":{"id":"...","title":"...","plaqueTitle":"...","plaqueSub":"...","tags":["End of the hall"],
-   "art":"cracker","body":["<p>trusted HTML</p>"],"sources":[["Label","https://..."]]}}
+   "body":["<p>trusted HTML</p>"],"sources":[["Label","https://..."]]}}
 ```
 Exhibits alternate left/right walls. `finale` (optional) goes on the end wall. Text is escaped, except `finale.body`, which is trusted HTML from our own repo.
 
-Art keys: `rifle:pump`, `rifle:lever`, `rifle:bolt`, `rifle:nylon`, `rifle:block`, `rifle:break`, `duck`, `target`, `cracker`. You can also pass `{"svg":"<svg…>"}` or `{"img":"/path.png","alt":"…"}`.
+## Exhibit media
+
+The HTML catalog entry with the matching exhibit ID holds the image. Use a `figure.hx-photo[data-hall-media]` with an image, descriptive alt text, intrinsic width and height, and a figcaption. Set `data-thumb` on the image to a small local WebP for the wall display. The dialog copies the catalog figure with its attribution. This also keeps pictures, sources and credits available without JavaScript.
+
+Identify the pictured variant or object in the caption. Label photographs of related models and period documents explicitly. Include the photographer or collection, a link to the specific source, and the license or editorial-use basis. For a source-only entry use a paragraph with `data-hall-media` and a link to the record. Wall displays without images use a text label.
 
 ## Theme
-Set CSS variables on the `.hx` element. The card copies them when it opens: `--hx-wall --hx-wainscot --hx-trim --hx-floor-a --hx-floor-b --hx-ceil --hx-ink --hx-plaque --hx-accent`.
+
+The pages use `body.museum-hall`. Set `data-collection` to `smoothbore` or `midway` to select the room palette. Both use local photographic parquet and plaster textures, credited on the hall pages.
 
 ## Controls
 - Wheel or trackpad walks. Page scroll resumes at either end.
 - ↑/↓ or W/S walk. ←/→, [ ], or PgUp/PgDn jump to the previous/next exhibit. Home/End jump to the start/end.
 - Enter or Space opens the nearest plaque. Esc closes the card.
 - Drag or swipe on touch screens.
-- HUD buttons: ⏮ / ⏭ jump an exhibit, hold Back/Forward to walk, Read opens a card.
+- The previous and next controls jump one exhibit. Hold Back or Forward to walk. Read opens the nearest card.
 - Click or tap a plaque to open it. Tab focuses the plaques, and the camera follows.
 - The card has Prev/Next buttons and a focus trap. `#id` deep links open a card.
 - `prefers-reduced-motion` turns off the smoothing.

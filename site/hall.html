@@ -25,7 +25,7 @@
 <script src="/gate.js" defer></script><link rel="stylesheet" href="/assets/hall-engine.css"><script src="/assets/hall-engine.js" defer></script><script src="/hall.js" defer></script>
 <script src="/assets/hall-view.js" defer></script>
 </head>
-<body>
+<body class="museum-hall" data-collection="smoothbore">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="/"><img src="/assets/cracker.webp" alt="" width="42" height="42"><span>22 Crack Shot<small>SMOOTHBORE ENTHUSIASTS</small></span></a>
@@ -42,17 +42,17 @@
 <main id="main"><div class="wrap">
 
 <h1>The Smoothbore Hall</h1>
-<p class="lede-s">Walk among the Stevens, Mossberg, and Remington models in the club collection, or use the exhibit list to compare their histories.</p>
+<p class="lede-s">Trace the history of the smoothbore rimfire, from the early Stevens models to the modern garden gun.</p>
 <div class="viewtoggle" hidden data-preference="cs-hall-view" role="group" aria-label="Choose how to view the hall">
-<button type="button" class="vt on" data-view="walk" aria-pressed="true">Walk-in hall</button><button type="button" class="vt" data-view="list" aria-pressed="false">List view</button>
+<button type="button" class="vt on" data-view="walk" aria-pressed="true">Walk-in hall</button><button type="button" class="vt" data-view="list" aria-pressed="false">Exhibit catalog</button>
 </div>
 <p class="src" id="hall-status" role="status" hidden></p>
 <section id="walk-view" hidden aria-label="Walk-in hall">
 <div class="hx" data-hall-manual data-hall-src="/assets/halls/smoothbore.json" id="smoothbore-walk"><noscript><p style="color:#fff;padding:1rem">The walk-in hall needs JavaScript. Use the list view below.</p></noscript></div>
-<p class="src"><strong>How to walk:</strong> scroll or swipe up and down, use <kbd>↑</kbd>/<kbd>↓</kbd> (or <kbd>W</kbd>/<kbd>S</kbd>), or hold <em>Forward</em>/<em>Back</em>. Use <kbd>←</kbd>/<kbd>→</kbd> or ⏮/⏭ to jump between exhibits. Click or tap a rifle, or press <em>Read</em>, to open its card. The .32 honorable mention is the plaque at the end of the hall. Prefer a plain page? Switch to <strong>List view</strong>.</p>
+<p class="src hall-directions">Scroll or swipe to walk. Use the left and right arrow keys to move between exhibits. Select a frame or choose <em>Read</em> to open its record.</p>
 </section>
 <section id="list-view" aria-label="List view">
-<h2>The exhibits (list view)</h2>
+<h2>Exhibit catalog</h2>
 <div class="hall-tools" role="search">
 <label class="sr" for="hall-q">Search the hall</label>
 <input id="hall-q" type="search" placeholder="Search: Routledge, pump, .32, Targo…" autocomplete="off">
@@ -66,6 +66,10 @@
 <p class="tag"><span class="era">Boys’ rifles (1890s–1920s)</span></p>
 <h3>Favorite No. 20</h3>
 <p class="maker">J. Stevens Arms · c. 1894–1935 (Favorite family; No. 20 end date not isolated)</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/stevens-20.webp" data-thumb="/assets/halls/objects/smoothbore/stevens-20-wall.webp" width="400" height="145" loading="lazy" decoding="async" alt="Two Stevens Favorites with wood stocks. The smoothbore No. 20 is the lower gun.">
+<figcaption><span class="hx-photo-label">Object photograph</span>John Dunn’s No. 20 in .32 rimfire shot, below his rifled No. 17. Compare the two barrel profiles just forward of the receivers. The rear sight visible on the No. 17 is absent on the No. 20. <small class="hx-credit"><a href="https://www.ssaa.org.au/wp-content/uploads/2021/02/May_2020_Shooter_web.pdf#page=22" rel="noopener">John Dunn collection, Australian Shooter, May 2020, p. 22</a> · Editorial comparison detail, original publication retains rights</small></figcaption>
+</figure>
 <p>The smoothbore Favorite: same as the No. 17 but with a smooth barrel and no rear sight. Exists in .32 rimfire shot too, which makes it the core of our .32 honorable mention.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Falling-block single shot, takedown</dd><dt>Barrel</dt><dd>24 in (some reported 22 in)</dd><dt>Chamber</dt><dd>.22 rimfire shot or .32 rimfire shot</dd><dt>Value snapshot</dt><dd>$75–$250 (2011 Blue Book grades, 60%–100%); $150 sold (2011 Proxibid). Unverified for today&#x27;s market.</dd></dl>
@@ -74,6 +78,10 @@
 <p class="tag"><span class="era">Boys’ rifles (1890s–1920s)</span></p>
 <h3>Crack Shot No. 26½</h3>
 <p class="maker">J. Stevens Arms · Within No. 26 run, 1912–1939 (+1943 batch); exact 26½ years disputed</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/stevens-26half.webp" data-thumb="/assets/halls/objects/smoothbore/stevens-26half-wall.webp" width="440" height="235" loading="lazy" decoding="async" alt="Side detail of the Stevens receiver, with the Crack Shot model mark stamped below the barrel.">
+<figcaption><span class="hx-photo-label">Object photograph</span>The faint “Crack Shot” and model number on this receiver identify the No. 26½ itself. The 2025 catalog traces the specimen to the Tombstone Western Heritage Museum in Arizona. <small class="hx-credit"><a href="https://dygtyjqp7pi0m.cloudfront.net/i/73457/57207488_13m.jpg" rel="noopener">North American Auction Company, Tombstone Western Heritage Museum collection, July 2025, lot 197, photograph 13</a> · Editorial detail of the model stamp, original photograph under copyright</small></figcaption>
+</figure>
 <p>Our namesake. Stevens sold the side-lever Crack Shot from 1890 and the under-lever No. 26 from 1912; the 26½ is the same gun with a smooth bore &quot;intended for shot cartridges.&quot; In 1902 a Crack Shot cost $2.25.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Falling-block single shot, under-lever, takedown</dd><dt>Barrel</dt><dd>18 or 22 in (as No. 26)</dd><dt>Chamber</dt><dd>.22 LR shot or .32 rimfire shot</dd><dt>Value snapshot</dt><dd>$250 sold (iCollector, 2025). One comp only: unverified as a range. 2011 Blue Book put it about $25 under a No. 20.</dd></dl>
@@ -82,6 +90,10 @@
 <p class="tag"><span class="era">Boys’ rifles (1890s–1920s)</span> <span class="cous">Shot-gun cousin (not .22)</span></p>
 <h3>Model 36</h3>
 <p class="maker">Winchester · 1920–1927</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/win-36.webp" data-thumb="/assets/halls/objects/smoothbore/win-36-wall.webp" width="900" height="675" loading="lazy" decoding="async" alt="A wooden-stock Winchester Model 36 in side profile on a dark museum background.">
+<figcaption><span class="hx-photo-label">Collection photograph</span>This Model 36 is the Smithsonian’s 9 mm smoothbore. Its paper tag accompanies the specimen in the museum photograph. <small class="hx-credit"><a href="https://americanhistory.si.edu/collections/object/nmah_415563" rel="noopener">Smithsonian Institution, National Museum of American History · AF.59667M, gift of Normal Duvall</a> · <a href="https://www.si.edu/termsofuse" rel="noopener">Smithsonian educational, noncommercial use</a></small></figcaption>
+</figure>
 <p>Winchester&#x27;s only U.S. 9mm Flobert garden gun, roughly 20,000 made and unserialized. A cousin, not a .22, but it belongs in any shot-cartridge hall.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt single shot (cocking-piece)</dd><dt>Barrel</dt><dd>18 in</dd><dt>Chamber</dt><dd>9mm Flobert rimfire shot (also 9mm ball)</dd><dt>Value snapshot</dt><dd>$400–$800 typical (GUNS Magazine, 2023); individual hammers to ~$1,080 reported, unverified.</dd></dl>
@@ -90,6 +102,10 @@
 <p class="tag"><span class="era">Mo-Skeet-O era (1936–1941)</span></p>
 <h3>41 SB Targetmaster</h3>
 <p class="maker">Remington · c. 1936–1939 (parent 41)</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/rem-41sb.webp" data-thumb="/assets/halls/objects/smoothbore/rem-41sb-wall.webp" width="335" height="160" loading="lazy" decoding="async" alt="Detail of the peep sight, bolt and wood stock on a Remington Model 41P.">
+<figcaption><span class="hx-photo-label">Related object</span>Model-family comparison. The upright peep sight identifies the target configuration on this 41P. The photograph documents a sibling of the smoothbore 41 SB. <small class="hx-credit"><a href="https://sportingshooter.com.au/ask-uncle-nick/remington-targetmaster-22-rimfire/" rel="noopener">Sporting Shooter, “Remington Targetmaster .22 Rimfire,” column by Nick Harvey.</a> · Copyright retained · editorial detail</small></figcaption>
+</figure>
 <p>Smoothbore variant of the prewar Model 41, listed on Remington&#x27;s history pages. Uncommon and thinly documented.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt single shot</dd><dt>Barrel</dt><dd>—</dd><dt>Chamber</dt><dd>.22 S/L/LR shot</dd><dt>Value snapshot</dt><dd>No reliable comp found (unverified).</dd></dl>
@@ -98,6 +114,10 @@
 <p class="tag"><span class="era">Mo-Skeet-O era (1936–1941)</span></p>
 <h3>Model 100SB</h3>
 <p class="maker">Marlin · 1936–1941</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/marlin-100sb.webp" data-thumb="/assets/halls/objects/smoothbore/marlin-100sb-wall.webp" width="186" height="66" loading="lazy" decoding="async" alt="Side profile of the wood stock and fore-end on a Marlin Model 100SB.">
+<figcaption><span class="hx-photo-label">Object photograph</span>Serial no. 1 in profile. The rounded fore-end and shallow curve beneath the stock are visible in this catalog detail. The catalog records the 100SB together with a case and clay thrower. <small class="hx-credit"><a href="https://forum.vintageairgunsgallery.com/n54_archive/beeman_collection/RIA_Catalog%20%231043.pdf#page=82" rel="noopener">Rock Island Auction Company, catalog 1043, lot 1169, p. 82 (PDF).</a> · Copyright retained · editorial detail</small></figcaption>
+</figure>
 <p>Barrel stamped &quot;SMOOTH BORE – RECESS CHOKE&quot; with a shotgun bead. Marlin collectors also mention rare 101SB and 80SB smoothbores from the 1940s (unverified).</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt single shot</dd><dt>Barrel</dt><dd>—</dd><dt>Chamber</dt><dd>.22 S/L/LR; marked &quot;FOR 22 LONG RIFLE SHOT CTGS&quot;</dd><dt>Value snapshot</dt><dd>No dated sold price captured (unverified).</dd></dl>
@@ -106,6 +126,10 @@
 <p class="tag"><span class="era">Mo-Skeet-O era (1936–1941)</span></p>
 <h3>Model 67 Smoothbore / Miniature Target Bore</h3>
 <p class="maker">Winchester · SB from 1936 or 1937; Miniature Target Bore from 1940</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/win-67sb.webp" data-thumb="/assets/halls/objects/smoothbore/win-67sb-wall.webp" width="590" height="161" loading="lazy" decoding="async" alt="Winchester Model 67 smoothbore stock, receiver, and bolt in profile on a red background.">
+<figcaption><span class="hx-photo-label">Object photograph</span>Collector JWA identified this prewar Model 67 as his G6720R Smooth Bore. He photographed it to distinguish that variant from the G6716R Miniature Target Bore. <small class="hx-credit"><a href="https://winchestercollector.org/wp-content/sp-resources/forum-image-uploads/jwa/2018/11/IMG_1857.JPG" rel="noopener">JWA, Winchester Arms Collectors Association forum, November 17, 2018</a> · Editorial detail of the collector’s original comparison photograph</small></figcaption>
+</figure>
 <p>The plain-Jane Winchester smoothbore. The Miniature Target Bore version is the rare one.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt single shot, takedown</dd><dt>Barrel</dt><dd>— (standard 67 was 27 in; confirm)</dd><dt>Chamber</dt><dd>.22 S/L/LR shot; Miniature Target Bore: .22 LR shot</dd><dt>Value snapshot</dt><dd>About $500 in NRA Good (American Rifleman method: +100% over a $250 67A); Miniature Target Bore est. $1,700–$2,300 (Cowan&#x27;s estimate, unrealized).</dd></dl>
@@ -114,6 +138,10 @@
 <p class="tag"><span class="era">Mo-Skeet-O era (1936–1941)</span></p>
 <h3>Model 61 &quot;Shot Only&quot; (Routledge, later Winchester counterbore)</h3>
 <p class="maker">Winchester · Routledge: 1938–1939 (~75 guns); counterbore: from ~1940</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/win-61.webp" data-thumb="/assets/halls/objects/smoothbore/win-61-wall.webp" width="359" height="146" loading="lazy" decoding="async" alt="Collector photograph of the Winchester Model 61 barrel inscription alongside its grooved wooden fore-end.">
+<figcaption><span class="hx-photo-label">Object photograph</span>This detail belongs to a Routledge-bore Model 61 recorded in the Winchester collectors’ survey. The stamped barrel legend sits just above the grooves of the wooden fore-end. <small class="hx-credit"><a href="https://winchestercollector.org/wp-content/sp-resources/forum-image-uploads/strumrapidcity-net/2025/05/IMG_4100.jpg" rel="noopener">Kmbr, Winchester Arms Collectors Association forum, May 17, 2025</a> · Editorial crop from the collector’s two specimen photographs</small></figcaption>
+</figure>
 <p>The blue chip of the Hall. Early guns used Fred Routledge&#x27;s stepped bore; Winchester then made its own counterbore to avoid royalties. Look for matted receivers and &quot;FOR SHOT ONLY.&quot;</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Hammerless pump, tube magazine</dd><dt>Barrel</dt><dd>24 in</dd><dt>Chamber</dt><dd>.22 LR shot only</dd><dt>Value snapshot</dt><dd>$3,000–$6,000 estimates (Rock Island, 2024, restored 1939 Routledge guns); $9,222.50 sold (LSB, 1951 gun, ~97%).</dd></dl>
@@ -122,6 +150,10 @@
 <p class="tag"><span class="era">Mo-Skeet-O era (1936–1941)</span></p>
 <h3>121 Fieldmaster SB (Routledge bore)</h3>
 <p class="maker">Remington · Routledge shipments from Feb 1939; to 1954</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/rem-121sb.webp" data-thumb="/assets/halls/objects/smoothbore/rem-121sb-wall.webp" width="610" height="128" loading="lazy" decoding="async" alt="Side view of the polished walnut and steel on a Mo-Skeet-O-marked Remington 121, showing the receiver and ridged fore-end.">
+<figcaption><span class="hx-photo-label">Object photograph</span>The 2021 catalog identifies this Model 121 by its Mo-Skeet-O barrel inscription. The side view shows the narrow ringed fore-end that gives the Fieldmaster its distinctive profile. <small class="hx-credit"><a href="https://cdn.rockislandauction.com/dev_cdn/84/3486.jpg?cachebust=2021-10-23T04%3A59%3A39.000Z" rel="noopener">Rock Island Auction Company, December 2021, lot 3486</a> · Editorial detail of the 2021 historical catalog photograph</small></figcaption>
+</figure>
 <p>The Mo-Skeet-O pump. Barrels stamped &quot;ROUTLEDGE BORE,&quot; Mo-Skeet-O, or smoothbore. Routledge partnered with Remington on the bore.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Pump, tube magazine, takedown</dd><dt>Barrel</dt><dd>24 in</dd><dt>Chamber</dt><dd>.22 LR shot</dd><dt>Value snapshot</dt><dd>$1,400–$1,650 sold, 2023–Jan 2026 (LSB, CT Firearms, Legacy Collectibles, Horst/HiBid).</dd></dl>
@@ -130,6 +162,10 @@
 <p class="tag"><span class="era">Mo-Skeet-O era (1936–1941)</span></p>
 <h3>510SB / 511SB / 512SB</h3>
 <p class="maker">Remington · 510: 1939–1962; 511: 1939–1963; 512: 1940–1962 (parent runs)</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/rem-510sb.webp" data-thumb="/assets/halls/objects/smoothbore/rem-510sb-wall.webp" width="610" height="117" loading="lazy" decoding="async" alt="A walnut-stocked Remington 510 smoothbore photographed from the side against a white background.">
+<figcaption><span class="hx-photo-label">Object photograph</span>A 2023 catalog records this surviving smoothbore as the second of four objects in one group. The plain walnut stock and slender barrel show how closely it resembles the standard Targetmaster. <small class="hx-credit"><a href="https://forum.vintageairgunsgallery.com/n54_archive/beeman_collection/RIA_Catalog%20%232076.pdf#page=48" rel="noopener">Rock Island Auction Company, August 2023, catalog 2076, lot 770B</a> · One specimen cropped from the four-object editorial catalog photograph</small></figcaption>
+</figure>
 <p>The working-class Mo-Skeet-O guns. Watch for SB, Mo-Skeet-O, or Skeetrap stamps. Easy to walk past at a gun show.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt: single shot (510), box mag (511), tube mag (512)</dd><dt>Barrel</dt><dd>—</dd><dt>Chamber</dt><dd>.22 S/L/LR shot</dd><dt>Value snapshot</dt><dd>No dated sold comps captured (unverified); generally below 121 SB money.</dd></dl>
@@ -138,6 +174,10 @@
 <p class="tag"><span class="era">Postwar &amp; revival</span></p>
 <h3>514 Routledge</h3>
 <p class="maker">Remington · Within 514 run, 1948–1971 (special order)</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/rem-514.webp" data-thumb="/assets/halls/objects/smoothbore/rem-514-wall.webp" width="680" height="121" loading="lazy" decoding="async" alt="Side view of a wood-stocked Model 514 with a rounded bolt handle.">
+<figcaption><span class="hx-photo-label">Object photograph</span>The lower specimen in Handloader’s comparison plate is the Remington 514. Its long fore-end and exposed bolt distinguish it from the Stevens above it on the original plate. <small class="hx-credit"><a href="https://www.handloadermagazine.com/Media/Articles/2021%20Issues/1%20Feb-Mar/CB-09.jpg" rel="noopener">Handloader, Gil Sengel’s “Cartridge Board,” February 2021</a> · Editorial excerpt of a published comparison photograph</small></figcaption>
+</figure>
 <p>A special-order Routledge barrel on the humble 514. Gun Digest: add about $100 over a standard 514.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt single shot</dd><dt>Barrel</dt><dd>24 in</dd><dt>Chamber</dt><dd>.22 LR shot only</dd><dt>Value snapshot</dt><dd>$482–$550 used/sold comps (TrueGunValue, relative dates, checked Nov 2026; unverified calendar dates).</dd></dl>
@@ -146,6 +186,10 @@
 <p class="tag"><span class="era">Targo (1938–1946)</span></p>
 <h3>Targo: 26T, 42T, 42TR, B42T</h3>
 <p class="maker">O.F. Mossberg &amp; Sons · 26T 1938–1942; 42T 1940–1942; 42TR 1940–1946 (NMCA); Targo marketed from fall 1940</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/mossberg-targo.webp" data-thumb="/assets/halls/objects/smoothbore/mossberg-targo-wall.webp" width="357" height="101" loading="lazy" decoding="async" alt="Detail of the dark bolt and reddish-brown wooden fore-end of a Mossberg 42TR.">
+<figcaption><span class="hx-photo-label">Object detail</span>The collector archive identifies this example as a 42TR. The rounded bolt handle sits just above the curved line of the wooden grip. <small class="hx-credit"><a href="https://home.epix.net/~damguy/42tr-2.jpg" rel="noopener">Mossberg .22 LR Targo archive, first 42TR photograph. Photographer unlisted.</a> · Editorial detail of the archived specimen photograph</small></figcaption>
+</figure>
 <p>Mossberg&#x27;s miniature-skeet system: smoothbore bolt guns, a Model 1A barrel-mounted trap, and 2 11/16-inch birds. All bolt guns, no pumps. 26T and B42T are the scarce ones (+20%); a complete case and accessories add about 50%.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt: single shot (26T) or box-magazine repeaters</dd><dt>Barrel</dt><dd>—</dd><dt>Chamber</dt><dd>.22 LR shot (42TR also bullets via RA-1 rifled muzzle adapter)</dd><dt>Value snapshot</dt><dd>42T $175–$505 (Vogt sold $175, Jul 2026; asks to $505); 42TR $550 sold with trap and extensions (Apple Tree, Jun 2022).</dd></dl>
@@ -154,6 +198,10 @@
 <p class="tag"><span class="era">Postwar &amp; revival</span></p>
 <h3>Targo revival: 320TR, 340TR</h3>
 <p class="maker">O.F. Mossberg &amp; Sons · Early 1960s (1961 NRA &quot;.22 Shotgun Qualification Course&quot;), dropped within ~2 years</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/mossberg-320tr.webp" data-thumb="/assets/halls/objects/smoothbore/mossberg-320tr-wall.webp" width="480" height="112" loading="lazy" decoding="async" alt="Small black-and-white period photograph of a Mossberg 340TR in profile.">
+<figcaption><span class="hx-photo-label">Period photograph</span>This halftone shows the 340TR. The July 1961 caption names the related 320TR alongside it, giving both models a place in the same period record. <small class="hx-credit"><a href="https://gunsmagazine.com/wp-content/uploads/2018/12/G0761.pdf#page=58" rel="noopener">GUNS Magazine, July 1961, p. 58</a> · Editorial excerpt from the magazine’s 1961 photographic plate</small></figcaption>
+</figure>
 <p>Mossberg tried again in 1961 with NRA backing. A Mossberg VP later said breaking birds with No. 12 shot was &quot;just too difficult and discouraging for most shooters.&quot; We think crackers fix that.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt: single shot (320TR) / repeater (340TR)</dd><dt>Barrel</dt><dd>—</dd><dt>Chamber</dt><dd>.22 LR shot</dd><dt>Value snapshot</dt><dd>320TR $575 sold (Griffin &amp; Howe listing, undated); 340TR CAD $475 sold (Kidd Family Auctions, ~Feb 2024).</dd></dl>
@@ -162,6 +210,10 @@
 <p class="tag"><span class="era">Postwar &amp; revival</span></p>
 <h3>572SB Fieldmaster</h3>
 <p class="maker">Remington · 1961–1979</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/rem-572sb.webp" data-thumb="/assets/halls/objects/smoothbore/rem-572sb-wall.webp" width="620" height="123" loading="lazy" decoding="async" alt="Remington 572 SB with a wooden fore-end, dark receiver, and straight walnut stock.">
+<figcaption><span class="hx-photo-label">Object photograph</span>This studio profile survived on a 2009 Remington press disc, decades after the SB production run. The squared receiver and separate wooden fore-end are especially clear in side view. <small class="hx-credit"><a href="https://www.americanrifleman.org/media/xbym3wfs/remington-572-sb-1.jpg" rel="noopener">Remington Arms, 2009 press photograph, identified by Guy J. Sagi in American Rifleman (2021)</a> · Manufacturer press photograph, reduced editorial reproduction</small></figcaption>
+</figure>
 <p>The last factory smoothbore pump from a big U.S. maker, until the Henry lever gun changed the game.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Pump, tube magazine</dd><dt>Barrel</dt><dd>—</dd><dt>Chamber</dt><dd>.22 S/L/LR (smooth)</dd><dt>Value snapshot</dt><dd>~$750 used price point (TrueGunValue, thin data, unverified).</dd></dl>
@@ -170,6 +222,10 @@
 <p class="tag"><span class="era">Postwar &amp; revival</span></p>
 <h3>Nylon 10 SB</h3>
 <p class="maker">Remington · 1962–1964</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/rem-nylon10.webp" data-thumb="/assets/halls/objects/smoothbore/rem-nylon10-wall.webp" width="480" height="240" loading="lazy" decoding="async" alt="Detail of the brown molded fore-end on a collector’s Remington Nylon 10 smoothbore.">
+<figcaption><span class="hx-photo-label">Object detail</span>A collector’s photograph shows the angular decoration molded into this Nylon 10 smoothbore’s fore-end. The glossy surface and recessed panels are details a silhouette misses. <small class="hx-credit"><a href="https://www.hunttalk.com/data/attachments/282/282402-4d9fb96a28906edb4fbf9395cfe528d8.jpg?hash=TZ-5aiiQbt" rel="noopener">X13, Hunt Talk, January 25, 2024</a> · Editorial crop from one photograph in a nine-image specimen study</small></figcaption>
+</figure>
 <p>Space-age Mohawk-brown nylon meets backyard skeet. Gun Digest singles out the 24-inch SB as a small subset (forum talk: ~200 guns, unverified).</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt single shot, nylon stock</dd><dt>Barrel</dt><dd>19.5 in or 24 in (24 in is the rare one)</dd><dt>Chamber</dt><dd>.22 S/L/LR shot</dd><dt>Value snapshot</dt><dd>No dated comp captured (unverified).</dd></dl>
@@ -178,6 +234,10 @@
 <p class="tag"><span class="era">Modern</span></p>
 <h3>25MG Garden Gun</h3>
 <p class="maker">Marlin · 1999–2002</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/marlin-25mg.webp" data-thumb="/assets/halls/objects/smoothbore/marlin-25mg-wall.webp" width="470" height="142" loading="lazy" decoding="async" alt="Close-up of the North Haven barrel inscription and “SHOTSHELL ONLY” marking on a Marlin 25MG.">
+<figcaption><span class="hx-photo-label">Object detail</span>The inscription documents the shotshell designation on the metal itself. The checkering below it belongs to the wood-stocked example in Christopher Eger’s 2013 study. <small class="hx-credit"><a href="https://web.archive.org/web/20160918005923im_/http://www.marlinforum.com/images/8/8/3/00bb73c4273ffcdd3fbb94af63714061-118.jpg" rel="noopener">Christopher Eger’s Marlin Forum study (2013), preserved by the Internet Archive</a> · Editorial detail of a specimen marking from the archived photo series</small></figcaption>
+</figure>
 <p>Bright front bead, no rear sight, marketed as a &quot;Garden Gun&quot; for snake shot.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Bolt, detachable box magazine</dd><dt>Barrel</dt><dd>— (confirm)</dd><dt>Chamber</dt><dd>.22 WMR shot only</dd><dt>Value snapshot</dt><dd>$400–$640 (collector-forum asks/sales, 2014–Mar 2026; not a price guide).</dd></dl>
@@ -186,6 +246,10 @@
 <p class="tag"><span class="era">Modern</span> <span class="cous">Shot-gun cousin (not .22)</span></p>
 <h3>Little Badger Shotgun (and earlier RC 92)</h3>
 <p class="maker">Chiappa · Current</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/chiappa-badger.webp" data-thumb="/assets/halls/objects/smoothbore/chiappa-badger-wall.webp" width="650" height="115" loading="lazy" decoding="async" alt="Printed catalog photograph of the wire-stock Little Badger 9 Flobert with its original caption.">
+<figcaption><span class="hx-photo-label">Catalog photograph</span>On page 23, Chiappa placed the wire-stock shotgun below the wood-stock Deluxe. The original printed caption identifies the 9 Flobert version. <small class="hx-credit"><a href="https://edi.chiappafirearms.com/pdf/catalogs_documento_6.pdf#page=23" rel="noopener">Chiappa Firearms, 2017 catalog, p. 23</a> · Editorial excerpt of a single labeled catalog photograph</small></figcaption>
+</figure>
 <p>Europe&#x27;s garden-gun cartridge in a folding modern package. A cousin, not a .22. The common rifled Little Badger .22 is a different gun.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Break-open single shot, folding</dd><dt>Barrel</dt><dd>24 in</dd><dt>Chamber</dt><dd>9mm Flobert shot</dd><dt>Value snapshot</dt><dd>$356 MSRP (cited by GUNS Magazine, 2023).</dd></dl>
@@ -194,6 +258,10 @@
 <p class="tag"><span class="era">Modern</span></p>
 <h3>H1 Garden Gun (H001GG-22 / H001GG-22M)</h3>
 <p class="maker">Henry Repeating Arms · 2019–present</p>
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/henry-h1.webp" data-thumb="/assets/halls/objects/smoothbore/henry-h1-wall.webp" width="1072" height="250" loading="lazy" decoding="async" alt="Henry Garden Gun with a dark ash stock and fore-end, shown in profile.">
+<figcaption><span class="hx-photo-label">Press photograph</span>Henry’s August 2019 announcement pictured the .22 LR Garden Gun in black-stained ash. The grain remains visible through the finish on this launch-era example. <small class="hx-credit"><a href="https://www.henryusa.com/news/the-garden-gun-makes-a-comeback-with-new-henry-offering/" rel="noopener">Henry Repeating Arms, August 2019 press photograph</a> · <a href="https://www.henryusa.com/media-kit/" rel="noopener">Manufacturer press photography</a></small></figcaption>
+</figure>
 <p>The only smoothbore .22 in current production that we know of. Capacity 14 (LR) / 11 (WMR) per Henry&#x27;s spec table. Overall length 36.5 in.</p>
 <details><summary>Specs, value &amp; sources</summary>
 <dl><dt>Action</dt><dd>Lever (&quot;Lever Action Shotgun&quot;)</dd><dt>Barrel</dt><dd>18.5 in, smooth</dd><dt>Chamber</dt><dd>.22 LR shot / .22 WMR shot</dd><dt>Value snapshot</dt><dd>MSRP $505 (LR) / $605 (WMR), Henry site 11 Nov 2026.</dd></dl>
@@ -202,13 +270,20 @@
 </div>
 <p class="none" id="hall-none" hidden>No exhibits match. Try "Remington" or clear the filter.</p>
 
-<h2 id="honorable-mention">Honorable mention: the .32 smoothbores</h2>
+<section id="honorable-mention" data-hall-finale>
+<h2>Honorable mention: the .32 smoothbores</h2>
 <div class="card hm">
+<figure class="hx-photo" data-hall-media>
+<img src="/assets/halls/objects/smoothbore/honorable-mention.webp" data-thumb="/assets/halls/objects/smoothbore/honorable-mention-wall.webp" width="540" height="199" loading="lazy" decoding="async" alt="Green Winchester box label printed with .32 Long, rim fire and shot cartridges, with two specimens standing on its lid.">
+<figcaption><span class="hx-photo-label">Object photograph</span>The green label preserves Winchester’s own wording for .32 Long rimfire shot cartridges. The package is a surviving record of the cartridge named in the Stevens exhibit. <small class="hx-credit"><a href="https://www.americanrifleman.org/media/j54p010d/qrimf.jpg" rel="noopener">American Rifleman, Q&amp;A column, October 17, 2021. Photographer unlisted.</a> · Editorial detail of the historical package label</small></figcaption>
+</figure>
 <p><strong>Yes, there really was a .32.</strong> What's confirmed: Stevens catalogued its boys' rifle smoothbores for <strong>.32 rimfire shot cartridges</strong> as well as .22. The <strong>Favorite No.&nbsp;20</strong> was "chambered for the 22 or 32 rimfire shot cartridges and has a smoothbore barrel and no rear sight" (Standard Catalog of Firearms, 2001, as quoted). Wikipedia lists the <strong>Crack Shot No.&nbsp;26½</strong> for ".22LR Shot Cartridges, .32 Rimfire Shot Cartridges." So the gun that gave our club its name came in .32 shot too.</p>
 <p><strong>Ammo:</strong> .32 rimfire shot loads did exist. A Canadian collector reports shooting a Favorite No.&nbsp;20 with CIL .32 Long Shot (#10, 1935-dated) (<a href="https://www.canadiangunnutz.com/forum/threads/stevens-favorite-32-shot.2437275" rel="noopener">CGN forum</a>). That's a single collector's report.</p>
 <p><strong>Likely but unverified:</strong> Remington's No.&nbsp;4 rolling block. A forum post cites Fjestad's Blue Book that "the .32 smoothbore was introduced around 1911" (<a href="https://www.smithandwessonforums.com/threads/remington-model-4-single-shot-in-32-rimfire.9275" rel="noopener">forum</a>). A Rimfire Central post says the Standard Catalog lists No.&nbsp;6 smoothbores (<a href="https://www.rimfirecentral.com/threads/rem-model-6-rolling-block-help-needed.79309" rel="noopener">forum</a>). Both are secondhand, so we're waiting on a catalog page before we call them confirmed.</p>
 <p class="src">Sources: <a href="https://en.wikipedia.org/wiki/Stevens_Boys_Rifles" rel="noopener">Wikipedia: Stevens Boys Rifles</a> · <a href="https://forums.sassnet.com/index.php?/topic/182391-ot-old-gun-gurus-stevens-favorite-smooth-bore/" rel="noopener">SASS Wire, 18 Jan 2012</a>. A .32 rimfire smoothbore's chamber isn't interchangeable with a .22's, and original .32 rimfire ammunition is scarce, collectible, and old. Treat these as display pieces unless a gunsmith says otherwise.</p>
 </div>
+
+</section>
 
 <h2>The model table</h2>
 <p>Every exhibit on one sheet. Click a model to jump to its card.</p>
@@ -244,6 +319,8 @@
 <p>Own one? Photos of the barrel stamp, muzzle, and receiver help collectors tell factory smoothbores from shot-out or honed rifles. The future <strong>Smoothbore Registry</strong> will log model and year only. It will never record serial numbers, owner names, or locations. Send corrections and sources through the <a href="https://github.com/StarbloomConsultingHub/crackshot-club/issues" rel="noopener">GitHub repo</a> for now.</p>
 <p class="src">Value data last checked November 2026. Prices change, and none of this is an appraisal.</p>
 
+<h2>Image credits</h2>
+<p>Each exhibit image includes its source and credit. The room uses <a href="https://polyhaven.com/a/herringbone_parquet">parquet photographed by Sergej Majboroda</a> and <a href="https://polyhaven.com/a/beige_wall_001">plaster photographed by Dimitrios Savva</a>, both from <a href="https://polyhaven.com/license">Poly Haven (CC0)</a>.</p>
 </div></main>
 <footer class="site"><div class="wrap">
 <p><strong>22 Crack Shot</strong> · an informal hobby club for adults (18+) · a <em>Gallery Games</em> project.</p>

@@ -10,7 +10,7 @@
 
   function linkedExhibit() {
     const item = document.getElementById(location.hash.slice(1));
-    return item?.classList.contains('exhibit') ? item : null;
+    return item?.matches('.exhibit, [data-hall-finale]') ? item : null;
   }
 
   function revealExhibit() {
