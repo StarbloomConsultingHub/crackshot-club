@@ -32,6 +32,10 @@ The Join page uses a small Vercel Function for member passes and moderated notes
 
 The shared sponsor panel supports dated campaigns and optional anonymous impression totals. No paid campaign is enabled by default. See [configuration and reporting](docs/sponsorship.md) and the [sponsor brief](docs/sponsor-brief.md). The public introduction is at `/sponsor`.
 
+## Website monitoring
+
+[Monitoring dashboards, costs, privacy controls and activation](docs/monitoring.md). Free Speed Insights is prepared for the next authorized release. Metered visitor analytics stays off until approved. Local previews do not send measurement data.
+
 ## Running the site locally
 
 ```sh
