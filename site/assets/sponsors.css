@@ -1,0 +1,42 @@
+.sponsor-layout{display:grid;grid-template-columns:minmax(0,1fr) 18.75rem;gap:2rem;align-items:start}
+.sponsor-layout>div{min-width:0}
+.sponsor-layout .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sponsor-layout>.sponsor-slot{margin-top:2rem}
+.sponsor-slot{font-family:Arial,sans-serif;font-size:.94rem;line-height:1.6;color:#263a35;min-width:0}
+.sponsor-card{padding:1.5rem;background:#f8f4e9;border:1px solid #b5ae98;border-top:3px solid #a78a48;box-shadow:0 5px 16px #1c2e4a0a}
+.sponsor-slot .sponsor-card h2{font-family:Georgia,serif;color:#263a35;font-size:1.8rem;line-height:1.15;font-weight:400;margin:.65rem 0 1rem;letter-spacing:-.025em}
+.sponsor-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin:0 0 1.4rem;color:#58675c}
+.sponsor-card--house{background:linear-gradient(155deg,#293f39,#1d302c);color:#f3eddf;border-color:#9b8148;position:relative}
+.sponsor-card--house .sponsor-label{color:#dbc38b}
+.sponsor-slot .sponsor-card--house h2{color:#fff7e7;font-size:2rem;max-width:12ch}
+.sponsor-card--house .sponsor-description{color:#e0e2d7}
+.sponsor-slot .sponsor-card--house .sponsor-link{color:#f4dba1}
+.sponsor-rule{width:2.5rem;border:0;border-top:1px solid #b99c61;margin:1.5rem 0}
+.sponsor-description{margin:0 0 1.4rem}
+.sponsor-slot .sponsor-card .sponsor-link{font-weight:700;text-decoration-thickness:1px;text-underline-offset:5px;display:inline-block;padding:.35rem 0}
+.sponsor-slot .sponsor-card--paid .sponsor-link{color:#364f3f}
+.sponsor-slot .sponsor-card--house .sponsor-link:hover{color:white}
+.sponsor-link:focus-visible,.sponsor-page a:focus-visible{outline:3px solid #b28c32;outline-offset:5px}
+.sponsor-name{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin:0}
+.sponsor-image{display:block;width:100%;aspect-ratio:6/5;object-fit:contain;background:#fff;margin:0 0 1.2rem}
+.sponsor-slot--end{max-width:42rem;margin:3rem auto 0}
+.sponsor-slot--end .sponsor-card--house{padding:1.6rem 2rem}
+.sponsor-slot--end .sponsor-card--house h2{max-width:none}
+.sponsor-slot--end .sponsor-rule{display:none}
+.sponsor-slot--end .sponsor-card--paid{max-width:22rem;margin:auto}
+.sponsor-page{background:#f5f1e7;color:#263a35}
+.sponsor-page main{font-family:Arial,sans-serif}
+.sponsor-page .sponsor-intro{padding:2rem 0 1rem;max-width:44rem}
+.sponsor-page h1,.sponsor-page main h2,.sponsor-page main h3{font-family:Georgia,serif;color:#263a35}
+.sponsor-page h1{font-size:clamp(2.5rem,6vw,4rem);line-height:1.05;max-width:13ch;letter-spacing:-.04em}
+.sponsor-page .lede{font-size:1.15rem;line-height:1.7;max-width:37rem}
+.sponsor-page .sponsor-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin:2rem 0}
+.sponsor-option{border-top:1px solid #ac9870;padding:1rem 0}
+.sponsor-option h2{font-size:1.45rem;margin:.5rem 0}
+.sponsor-option p{font-size:.95rem}
+.sponsor-inquiry{border:1px solid #c6c0ad;background:#fbf8ef;padding:1.5rem 2rem;margin:2rem 0}
+.sponsor-inquiry h2{margin:.25rem 0 1rem}
+.sponsor-page [hidden]{display:none}
+@media(min-width:1000px){.sponsor-home>main>.wrap{max-width:76rem}}
+@media(max-width:999px){.sponsor-layout{grid-template-columns:1fr}.sponsor-layout>.sponsor-slot{max-width:32rem;width:100%;margin:1.5rem auto 0}}
+@media(max-width:640px){.sponsor-layout .grid,.sponsor-page .sponsor-options{grid-template-columns:1fr}.sponsor-page .sponsor-options{gap:.5rem}.sponsor-card,.sponsor-slot--end .sponsor-card--house,.sponsor-inquiry{padding:1.4rem}.sponsor-slot{margin-top:2rem}}
